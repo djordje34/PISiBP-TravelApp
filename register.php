@@ -25,7 +25,7 @@ DF711B
 <body>
 
 <section class="vh-100 bg-image"
-  style="background-image: url('https://images.hdqwalls.com/download/mountains-minimal-landscape-4k-5b-2560x1440.jpg');background-size: cover;">
+  style="background-image: url('imgs/background.jpg');background-size: cover;">
   <div class="mask d-flex align-items-center h-100 gradient-custom-3">
     <div class="container h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">

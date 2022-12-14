@@ -10,16 +10,16 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="bootstraped.css">
     </head>
     <body>
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <a class="navbar-brand" href="">
-                <img src="" alt="logo" style="width:30px">
+                <a class="navbar-brand m-3 mb-0 mt-0" href="">
+                <img src="imgs/logo.png" alt="logo" width="50px">
                 </a>
     <?php #$_SESSION['loggedin']
     if(0){ 

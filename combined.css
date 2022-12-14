@@ -1,5 +1,38 @@
+
+
+
+
 body {
     font-family: Cambria, serif !important;
   }
 
-  
+  .backgroundable {
+    /* fallback for old browsers */
+    background-size: 400% 400% !important;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: rgba(81, 61, 28,0.8);
+
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    .helloworld{
+      text-align: center;
+      font-size: 30px;
+    }
+
+    .hookthem{
+      text-align: center;
+      font-size: 22px;
+    }
+    .prikaz{
+      transition:transform 0.5s;
+      transition-timing-function: ease-out;
+    }
+    .prikaz:hover{
+      transform: scale(120%);
+    }
+
+    .card:hover{
+      transform: scale(120%);
+    }
