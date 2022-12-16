@@ -1,4 +1,5 @@
 <?php
+include('server.php');
 require_once('navbar.php');
 ?>
 <!--   
@@ -22,7 +23,6 @@ DF711B
     <title>Registracija</title>
 </head>
 <body>
-
 <section class="vh-100 bg-image"
   style="background-image: url('imgs/background.jpg');background-size: cover;">
   <div class="mask d-flex align-items-center h-100 gradient-custom-3">
@@ -33,8 +33,8 @@ DF711B
             <div class="card-body p-5 ">
               <h2 class="text-uppercase text-center mb-4">Prijava</h2>
 
-              <form>
-
+              <form method="post">
+              <?php include('errors.php'); ?>
                 <div class="form-outline m-5 mb-3">
                   <input size="15" type="text" id="username" name="username" class="form-control form-control-lg" />
                   <label class="form-label" for="form3Example1cg">Korisničko ime</label>
@@ -48,7 +48,7 @@ DF711B
 
 
                 <div class="d-flex justify-content-center">
-                  <input type="button"
+                  <input type="submit"
                     class="btn btn-success btn-block btn-lg gradient-custom-4 text-body proceed" name="login" id="login" value="Uloguj me">
                 </div>
 
