@@ -36,8 +36,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`drzava` (
   CONSTRAINT `fk_drzava_kontinent`
     FOREIGN KEY (`k_id`)
     REFERENCES `mydb`.`kontinent` (`k_id`)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON DELETE CASCADE 
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`grad` (
     FOREIGN KEY (`d_id`)
     REFERENCES `mydb`.`drzava` (`d_id`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -76,6 +76,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`korisnik` (
   `korisnik_id` INT NOT NULL,
   `email` VARCHAR(45) NULL,
   `password` VARCHAR(45) NULL,
+  `username` VARCHAR(45) NULL,
   PRIMARY KEY (`korisnik_id`))
 ENGINE = InnoDB;
 
@@ -94,7 +95,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`kupac` (
     FOREIGN KEY (`kupac_id`)
     REFERENCES `mydb`.`korisnik` (`korisnik_id`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -110,7 +111,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`zaposleni` (
     FOREIGN KEY (`zaposleni_id`)
     REFERENCES `mydb`.`korisnik` (`korisnik_id`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -119,14 +120,14 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`admin` (
   `admin_id` INT NOT NULL,
-  `Ime` VARCHAR(30) NULL,
-  `Prezime` VARCHAR(45) NULL,
+  `ime` VARCHAR(30) NULL,
+  `prezime` VARCHAR(45) NULL,
   PRIMARY KEY (`admin_id`),
   CONSTRAINT `fk_admin_korisnik1`
     FOREIGN KEY (`admin_id`)
     REFERENCES `mydb`.`korisnik` (`korisnik_id`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -144,12 +145,12 @@ CREATE TABLE IF NOT EXISTS `mydb`.`admin_uticao_zaposleni` (
     FOREIGN KEY (`admin_id`)
     REFERENCES `mydb`.`admin` (`admin_id`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE,
+    ON UPDATE NO ACTION,
   CONSTRAINT `fk_admin_has_zaposleni_zaposleni1`
     FOREIGN KEY (`zaposleni_id`)
     REFERENCES `mydb`.`zaposleni` (`zaposleni_id`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -167,12 +168,12 @@ CREATE TABLE IF NOT EXISTS `mydb`.`admin_uticao_kupac` (
     FOREIGN KEY (`admin_id`)
     REFERENCES `mydb`.`admin` (`admin_id`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE,
+    ON UPDATE NO ACTION,
   CONSTRAINT `fk_admin_has_kupac_kupac1`
     FOREIGN KEY (`kupac_id`)
     REFERENCES `mydb`.`kupac` (`kupac_id`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -207,8 +208,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`Rezervacije` (
   `idRezervacije` INT NOT NULL,
-  `Ime` VARCHAR(45) NULL,
-  `Prezime` VARCHAR(45) NULL,
+  `ime` VARCHAR(45) NULL,
+  `prezime` VARCHAR(45) NULL,
   `brojclanova` VARCHAR(45) NULL,
   `korisnik_id` INT NOT NULL,
   `g_id` INT NOT NULL,
@@ -223,22 +224,22 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Rezervacije` (
     FOREIGN KEY (`korisnik_id`)
     REFERENCES `mydb`.`kupac` (`kupac_id`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE,
+    ON UPDATE NO ACTION,
   CONSTRAINT `fk_Rezervacije_grad1`
     FOREIGN KEY (`g_id`)
     REFERENCES `mydb`.`grad` (`g_id`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE,
+    ON UPDATE NO ACTION,
   CONSTRAINT `fk_Rezervacije_smestaj1`
     FOREIGN KEY (`smestaj_id`)
     REFERENCES `mydb`.`smestaj` (`smestaj_id`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE,
+    ON UPDATE NO ACTION,
   CONSTRAINT `fk_Rezervacije_prevoz1`
     FOREIGN KEY (`p_id`)
     REFERENCES `mydb`.`prevoz` (`p_id`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -254,12 +255,12 @@ CREATE TABLE IF NOT EXISTS `mydb`.`soba_sadrzi_dodatak` (
     FOREIGN KEY (`dodaci_id`)
     REFERENCES `mydb`.`dodaci` (`dodaci_id`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE,
+    ON UPDATE NO ACTION,
   CONSTRAINT `fk_soba_sadrzi_dodatak_smestaj1`
     FOREIGN KEY (`smestaj_id`)
     REFERENCES `mydb`.`smestaj` (`smestaj_id`)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
