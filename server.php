@@ -5,8 +5,7 @@ session_start();
 // initializing variables
 $username = "";
 $email    = "";
-$errors = array(); 
-$choice="";
+$errors = array();
 date_default_timezone_set('Europe/Belgrade');
 // connect to the database
 $db = mysqli_connect('localhost', 'root','', 'mydb');
@@ -50,6 +49,11 @@ if (isset($_POST['register']))
     $hashed_password = password_hash($password,PASSWORD_BCRYPT);//encrypt the password before saving in the database
     mysqli_stmt_prepare($db1, "INSERT INTO korisnik (email, password, username) VALUES(?,?,?)");
     mysqli_stmt_bind_param($db1, "sss", $email, $hashed_password, $username);
+    mysqli_stmt_execute($db1);
+
+    $kupac_id=get_user_ID($username);
+    mysqli_stmt_prepare($db1, "INSERT INTO kupac (kupac_id) VALUES(?)");
+    mysqli_stmt_bind_param($db1, "i", $kupac_id);
     mysqli_stmt_execute($db1);
   }
 }
