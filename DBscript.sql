@@ -18,8 +18,8 @@ USE `mydb` ;
 -- Table `mydb`.`kontinent`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`kontinent` (
-  `k_id` INT NOT NULL,
-  `ime` VARCHAR(255) NULL,
+  `k_id` INT NOT NULL AUTO_INCREMENT,
+  `ime` VARCHAR(80) NULL,
   PRIMARY KEY (`k_id`))
 ENGINE = InnoDB;
 
@@ -28,15 +28,15 @@ ENGINE = InnoDB;
 -- Table `mydb`.`drzava`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`drzava` (
-  `d_id` INT NOT NULL,
-  `ime` VARCHAR(255) NULL,
+  `d_id` INT NOT NULL AUTO_INCREMENT,
+  `ime` VARCHAR(80) NULL,
   `k_id` INT NOT NULL,
   PRIMARY KEY (`d_id`),
   INDEX `fk_drzava_kontinent_idx` (`k_id` ASC) VISIBLE,
   CONSTRAINT `fk_drzava_kontinent`
     FOREIGN KEY (`k_id`)
     REFERENCES `mydb`.`kontinent` (`k_id`)
-    ON DELETE CASCADE 
+    ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
@@ -45,8 +45,8 @@ ENGINE = InnoDB;
 -- Table `mydb`.`grad`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`grad` (
-  `g_id` INT NOT NULL,
-  `ime` VARCHAR(45) NULL,
+  `g_id` INT NOT NULL AUTO_INCREMENT,
+  `ime` VARCHAR(80) NULL,
   `d_id` INT NOT NULL,
   PRIMARY KEY (`g_id`),
   INDEX `fk_grad_drzava1_idx` (`d_id` ASC) VISIBLE,
@@ -62,9 +62,9 @@ ENGINE = InnoDB;
 -- Table `mydb`.`prevoz`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`prevoz` (
-  `p_id` INT NOT NULL,
-  `tip` VARCHAR(45) NULL,
-  `ime_komp` VARCHAR(45) NULL,
+  `p_id` INT NOT NULL AUTO_INCREMENT,
+  `tip` VARCHAR(80) NULL,
+  `ime_komp` VARCHAR(80) NULL,
   PRIMARY KEY (`p_id`))
 ENGINE = InnoDB;
 
@@ -73,10 +73,10 @@ ENGINE = InnoDB;
 -- Table `mydb`.`korisnik`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`korisnik` (
-  `korisnik_id` INT NOT NULL,
-  `email` VARCHAR(45) NULL,
-  `password` VARCHAR(45) NULL,
-  `username` VARCHAR(45) NULL,
+  `korisnik_id` INT NOT NULL AUTO_INCREMENT,
+  `email` VARCHAR(80) NULL,
+  `password` VARCHAR(80) NULL,
+  `username` VARCHAR(80) NULL,
   PRIMARY KEY (`korisnik_id`))
 ENGINE = InnoDB;
 
@@ -85,11 +85,11 @@ ENGINE = InnoDB;
 -- Table `mydb`.`kupac`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`kupac` (
-  `ime` VARCHAR(45) NULL,
-  `prezime` VARCHAR(45) NULL,
-  `adresa` VARCHAR(45) NULL,
-  `br_kartice` VARCHAR(45) NULL,
-  `kupac_id` INT NOT NULL,
+  `ime` VARCHAR(80) NULL,
+  `prezime` VARCHAR(80) NULL,
+  `adresa` VARCHAR(80) NULL,
+  `br_kartice` VARCHAR(80) NULL,
+  `kupac_id` INT NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`kupac_id`),
   CONSTRAINT `fk_kupac_korisnik1`
     FOREIGN KEY (`kupac_id`)
@@ -103,9 +103,9 @@ ENGINE = InnoDB;
 -- Table `mydb`.`zaposleni`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`zaposleni` (
-  `ime` VARCHAR(45) NULL,
-  `prezime` VARCHAR(45) NULL,
-  `zaposleni_id` INT NOT NULL,
+  `ime` VARCHAR(80) NULL,
+  `prezime` VARCHAR(80) NULL,
+  `zaposleni_id` INT NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`zaposleni_id`),
   CONSTRAINT `fk_zaposleni_korisnik1`
     FOREIGN KEY (`zaposleni_id`)
@@ -119,9 +119,9 @@ ENGINE = InnoDB;
 -- Table `mydb`.`admin`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`admin` (
-  `admin_id` INT NOT NULL,
-  `ime` VARCHAR(30) NULL,
-  `prezime` VARCHAR(45) NULL,
+  `admin_id` INT NOT NULL AUTO_INCREMENT,
+  `ime` VARCHAR(80) NULL,
+  `prezime` VARCHAR(80) NULL,
   PRIMARY KEY (`admin_id`),
   CONSTRAINT `fk_admin_korisnik1`
     FOREIGN KEY (`admin_id`)
@@ -144,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`admin_uticao_zaposleni` (
   CONSTRAINT `fk_admin_has_zaposleni_admin1`
     FOREIGN KEY (`admin_id`)
     REFERENCES `mydb`.`admin` (`admin_id`)
-    ON DELETE CASCADE
+    ON DELETE CASCADE 
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_admin_has_zaposleni_zaposleni1`
     FOREIGN KEY (`zaposleni_id`)
@@ -181,14 +181,14 @@ ENGINE = InnoDB;
 -- Table `mydb`.`smestaj`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`smestaj` (
-  `smestaj_id` INT NOT NULL,
-  `tip` VARCHAR(45) NULL,
-  `naziv` VARCHAR(45) NULL,
+  `smestaj_id` INT NOT NULL AUTO_INCREMENT,
+  `tip` VARCHAR(80) NULL,
+  `naziv` VARCHAR(80) NULL,
   `kapacitet` INT NULL,
-  `soba` VARCHAR(45) NULL,
-  `ulica` VARCHAR(45) NULL,
+  `soba` VARCHAR(80) NULL,
+  `ulica` VARCHAR(80) NULL,
   `br.ulice` INT NULL,
-  `postbroj` VARCHAR(45) NULL,
+  `postbroj` VARCHAR(80) NULL,
   PRIMARY KEY (`smestaj_id`))
 ENGINE = InnoDB;
 
@@ -197,7 +197,7 @@ ENGINE = InnoDB;
 -- Table `mydb`.`dodaci`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`dodaci` (
-  `dodaci_id` INT NOT NULL,
+  `dodaci_id` INT NOT NULL AUTO_INCREMENT,
   `naziv` VARCHAR(255) NULL,
   PRIMARY KEY (`dodaci_id`))
 ENGINE = InnoDB;
@@ -207,10 +207,10 @@ ENGINE = InnoDB;
 -- Table `mydb`.`Rezervacije`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`Rezervacije` (
-  `idRezervacije` INT NOT NULL,
-  `ime` VARCHAR(45) NULL,
-  `prezime` VARCHAR(45) NULL,
-  `brojclanova` VARCHAR(45) NULL,
+  `idRezervacije` INT NOT NULL AUTO_INCREMENT,
+  `ime` VARCHAR(80) NULL,
+  `prezime` VARCHAR(80) NULL,
+  `brojclanova` VARCHAR(80) NULL,
   `korisnik_id` INT NOT NULL,
   `g_id` INT NOT NULL,
   `smestaj_id` INT NOT NULL,
