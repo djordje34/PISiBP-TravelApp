@@ -36,3 +36,14 @@ body {
     .card:hover{
       transform: scale(120%);
     }
+
+    .packer{
+      background-color:#FEFEFE;
+    }
+
+
+    .backgroundable2{
+      background-size: 400% 400% !important;
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: rgba(100, 201, 207, 0.3);
+    }

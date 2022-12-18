@@ -1,7 +1,10 @@
 
 <?php
-include('server.php');
 require_once('navbar.php');
+
+if (checkIfLogged()){
+  header("location:landing.php");
+}
 ?>
 <!--   
 64C9CF
@@ -15,13 +18,50 @@ DF711B
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
 <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <link rel="stylesheet" href="forms.css">
 <link rel="stylesheet" href="combined.css">
+<link rel="stylesheet" href="bootstrapped.css">
+<script src="usernameSchecker.js"></script>
+
+
+
     <title>Registracija</title>
+
+
+    <script>
+
+
+$(document).ready(function(){
+    
+   $("#username").keyup(function(){
+      var username = $(this).val().trim();
+    console.log(username);
+      if(username != ''){
+
+         $.ajax({
+            url: 'server.php',
+            type: 'post',
+            data: {username: username},
+            success: function(response){
+                $('#uname_response').html(response);
+                
+             }
+         });
+      }
+      else{
+         $('#uname_response').html("");
+      }
+
+    })
+
+ });
+
+    </script>
 </head>
 <body>
 <section class="vh-100 bg-image"
@@ -39,6 +79,7 @@ DF711B
                 <div class="form-outline m-5 mb-3">
                   <input size="15" type="text" id="username" name="username" class="form-control form-control-lg" />
                   <label class="form-label" for="form3Example1cg">Korisničko ime</label>
+                  <span id="uname_response"></span>
                 </div>
                 <div class="form-outline  m-5 mb-3">
                   <input size="15" type="email" id="email" name="email" class="form-control form-control-lg" />

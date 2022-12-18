@@ -1,4 +1,10 @@
-<?php require 'navbar.php'; ?>
+<?php 
+require 'navbar.php';
+
+if (!checkIfLogged()){
+  header('location:login.php');
+}
+?>
 
 
 <!DOCTYPE html>
@@ -33,7 +39,7 @@
         </div>
     </section>
 
-    <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100 m-0">
 
     <div>
     <p class= "helloworld m-5">UPOZNAJTE NAŠ TIM</p>
@@ -77,7 +83,7 @@
   </div>
 </div>
 
-<footer class="bg-dark text-center text-white">
+<footer class="bg-dark text-center text-white p-0">
   <!-- Grid container -->
   <div class="container p-4 pb-0">
     <!-- Section: Social media -->

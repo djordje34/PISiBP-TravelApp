@@ -1,6 +1,11 @@
 <?php
-include('server.php');
 require_once('navbar.php');
+
+
+
+if (checkIfLogged()){
+  header("location:landing.php");
+}
 ?>
 <!--   
 64C9CF
