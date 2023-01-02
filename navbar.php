@@ -24,10 +24,10 @@
                 <a class="navbar-brand m-3 mb-0 mt-0" href="">
                 <img src="imgs/logo.png" alt="logo" width="50px">
                 </a>
-    <?php #$_SESSION['loggedin']
-    if($_SESSION)
+    <?php
+    require_once 'core/init.php';
+    if(Session::exists(Config::get('session/session_name')))
     {
-        if($_SESSION['loggedin']){ 
             echo "
                 <ul class=\"navbar-nav mr-auto mt-2 mt-lg-0\">
                 <li class=\"nav-item active\">
@@ -52,7 +52,6 @@
                 </form>
 
         ";
-            }
         }
 
             ?>

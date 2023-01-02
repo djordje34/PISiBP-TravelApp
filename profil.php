@@ -1,8 +1,9 @@
 <?php 
-require 'navbar.php';
+require_once 'navbar.php';
+require_once 'core/init.php';
 
-if (!checkIfLogged()){
-  header('location:login.php');
+if(!Session::exists(Config::get('session/session_name'))){
+  Redirect::to('login.php');
 }
 ?>
 

@@ -1,7 +1,7 @@
 
 <?php 
 require_once 'core/init.php';
-
+require_once 'navbar.php';
 if(Input::exists()) {
     if(Token::check(Input::get('token'))) {
         $validate = new Validate();
@@ -30,13 +30,13 @@ if(Input::exists()) {
                     'password' => password_hash(Input::get('password'), PASSWORD_BCRYPT),
                     'username' => Input::get('username')
                 ));
-                Session::flash('home','You are registered and can log in');
-                //Redirect::to(404);
                 $db=DB::getInstance();
                 $id=get_object_vars($db->get('korisnik', array('username','=',Input::get('username')))->first())['korisnik_id'];//DONT ASK ME 
                 if(!$db->insert('kupac', array('kupac_id'=>$id))) {//TODO: This is cringe
                   throw new Exception('There was a problem creating this account.');
                 }
+                Session::flash('home','You are registered and can log in');
+                Redirect::to('login.php');
             }
             catch(Exception $e){
                 die($e->getMessage());
@@ -45,7 +45,7 @@ if(Input::exists()) {
         else
         {
             foreach($validation->errors() as $error){
-                echo $error, '<br>';
+                echo $error, '<br>'; //TODO: Make this look nice
             }
         }
     }
@@ -80,7 +80,6 @@ DF711B
 
     <script>
 
-/*
 $(document).ready(function(){
     
    $("#username").keyup(function(){
@@ -105,7 +104,6 @@ $(document).ready(function(){
     })
 
  });
- */
 
     </script>
 </head>
@@ -121,6 +119,7 @@ $(document).ready(function(){
               <h2 class="text-uppercase text-center mb-4">Pridružite nam se</h2>
 
               <form method="post">
+                <?php include('errors.php');?>
                 <div class="form-outline m-5 mb-3">
                   <input size="15" type="text" id="username" name="username" class="form-control form-control-lg" value="<?php echo escape(Input::get('username')); ?>"/>
                   <label class="form-label" for="form3Example1cg">Korisničko ime</label>

@@ -2,6 +2,9 @@
 require_once 'core/init.php';
 require_once 'navbar.php';
 
+if(Session::exists(Config::get('session/session_name'))){
+  Redirect::to('landing.php');
+}
 if(Input::exists()) {
 	if(Token::check(Input::get('token'))) {
 
@@ -30,12 +33,6 @@ if(Input::exists()) {
 
 	}
 }
-
-/*
-if (checkIfLogged()){
-  header("location:landing.php");
-}
-*/
 ?>
 <!--   
 64C9CF
