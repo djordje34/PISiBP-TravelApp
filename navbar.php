@@ -1,6 +1,4 @@
-<?php
-require_once 'server.php';
-?>
+
 
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -28,6 +26,7 @@ require_once 'server.php';
                 </a>
     <?php #$_SESSION['loggedin']
     if($_SESSION)
+    {
         if($_SESSION['loggedin']){ 
             echo "
                 <ul class=\"navbar-nav mr-auto mt-2 mt-lg-0\">
@@ -54,6 +53,7 @@ require_once 'server.php';
 
         ";
             }
+        }
 
             ?>
             </div>

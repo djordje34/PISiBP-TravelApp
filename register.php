@@ -1,9 +1,54 @@
 
-<?php
-require_once('navbar.php');
+<?php 
+require_once 'core/init.php';
 
-if (checkIfLogged()){
-  header("location:landing.php");
+if(Input::exists()) {
+    if(Token::check(Input::get('token'))) {
+        $validate = new Validate();
+        $validation = $validate->check($_POST, array(
+            'username' => array(
+                'required' => true,
+                'min' => 2,
+                'max' => 20,
+                'unique' => 'korisnik'
+            ),
+            'password' => array(
+                'required' => true,    
+                'min' => 6
+            ),
+            'email' => array(
+                'required' => true,
+                'min' => 2,
+                'max' => 50
+            )
+        ));
+        if($validation->passed()){
+            $user = new User();
+            try{
+                $user->create(array(
+                    'email' => Input::get('email'),
+                    'password' => password_hash(Input::get('password'), PASSWORD_BCRYPT),
+                    'username' => Input::get('username')
+                ));
+                Session::flash('home','You are registered and can log in');
+                //Redirect::to(404);
+                $db=DB::getInstance();
+                $id=get_object_vars($db->get('korisnik', array('username','=',Input::get('username')))->first())['korisnik_id'];//DONT ASK ME 
+                if(!$db->insert('kupac', array('kupac_id'=>$id))) {//TODO: This is cringe
+                  throw new Exception('There was a problem creating this account.');
+                }
+            }
+            catch(Exception $e){
+                die($e->getMessage());
+            }
+        }
+        else
+        {
+            foreach($validation->errors() as $error){
+                echo $error, '<br>';
+            }
+        }
+    }
 }
 ?>
 <!--   
@@ -35,7 +80,7 @@ DF711B
 
     <script>
 
-
+/*
 $(document).ready(function(){
     
    $("#username").keyup(function(){
@@ -60,6 +105,7 @@ $(document).ready(function(){
     })
 
  });
+ */
 
     </script>
 </head>
@@ -75,14 +121,13 @@ $(document).ready(function(){
               <h2 class="text-uppercase text-center mb-4">Pridružite nam se</h2>
 
               <form method="post">
-              <?php include('errors.php'); ?>
                 <div class="form-outline m-5 mb-3">
-                  <input size="15" type="text" id="username" name="username" class="form-control form-control-lg" />
+                  <input size="15" type="text" id="username" name="username" class="form-control form-control-lg" value="<?php echo escape(Input::get('username')); ?>"/>
                   <label class="form-label" for="form3Example1cg">Korisničko ime</label>
                   <span id="uname_response"></span>
                 </div>
                 <div class="form-outline  m-5 mb-3">
-                  <input size="15" type="email" id="email" name="email" class="form-control form-control-lg" />
+                  <input size="15" type="email" id="email" name="email" class="form-control form-control-lg" value="<?php echo escape(Input::get('email')); ?>"/>
                   <label class="form-label" for="form3Example3cg">E-mail adresa</label>
                 </div>
 
@@ -92,11 +137,10 @@ $(document).ready(function(){
                 </div>
 
 
-
+                <input type="hidden" value="<?php echo Token::generate(); ?>" name='token'/>
                 <div class="d-flex justify-content-center">
                   <input type="submit"
-                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body proceed" name="register"
-                    id="register" value="Registruj me">
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body proceed" value="Registruj me">
                 </div>
 
                 <p class="text-center text-muted mt-4 mb-0">Imate nalog? <a href="login.php"

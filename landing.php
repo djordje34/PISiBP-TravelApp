@@ -1,9 +1,5 @@
 <?php 
-require 'navbar.php';
-
-if (!checkIfLogged()){
-  header('location:login.php');
-}
+require_once 'navbar.php';
 ?>
 
 

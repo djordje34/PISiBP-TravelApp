@@ -1,11 +1,41 @@
 <?php
-require_once('navbar.php');
+require_once 'core/init.php';
+require_once 'navbar.php';
 
+if(Input::exists()) {
+	if(Token::check(Input::get('token'))) {
 
+		$validate = new Validate();
+		$validation = $validate->check($_POST, array(
+			'username' => array('required' => true),
+			'password' => array('required' => true)
+		));
 
+		if($validation->passed()) {
+			// Login user
+			$user = new User();
+			$login = $user->login(Input::get('username'), Input::get('password'));
+
+			if($login) {
+				Redirect::to('landing.php');
+			} else {
+				echo '<p>Sorry, logging in failed';
+			}
+
+		} else {
+			foreach($validation->errors() as $error) {
+				echo $error, '<br>';
+			}
+		}
+
+	}
+}
+
+/*
 if (checkIfLogged()){
   header("location:landing.php");
 }
+*/
 ?>
 <!--   
 64C9CF
@@ -25,7 +55,7 @@ DF711B
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <link rel="stylesheet" href="forms.css">
 <link rel="stylesheet" href="combined.css">
-    <title>Registracija</title>
+    <title>Log-in</title>
 </head>
 <body>
 <section class="vh-100 bg-image"
@@ -39,7 +69,6 @@ DF711B
               <h2 class="text-uppercase text-center mb-4">Prijava</h2>
 
               <form method="post">
-              <?php include('errors.php'); ?>
                 <div class="form-outline m-5 mb-3">
                   <input size="15" type="text" id="username" name="username" class="form-control form-control-lg" />
                   <label class="form-label" for="form3Example1cg">Korisničko ime</label>
@@ -51,10 +80,10 @@ DF711B
                 </div>
 
 
-
+	              <input type="hidden" name="token" value="<?php echo Token::generate(); ?>" />
                 <div class="d-flex justify-content-center">
                   <input type="submit"
-                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body proceed" name="login" id="login" value="Uloguj me">
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body proceed" value="Uloguj me">
                 </div>
 
                 <p class="text-center text-muted mt-4 mb-0">Nemate nalog? <a href="register.php"

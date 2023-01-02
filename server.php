@@ -5,11 +5,10 @@ session_start();
 // initializing variables
 $username = "";
 $email    = "";
-$errors = array(); 
-$choice="";
+$errors = array();
 date_default_timezone_set('Europe/Belgrade');
 // connect to the database
-$db = mysqli_connect('localhost', 'root','', 'travel');
+$db = mysqli_connect('localhost', 'root','', 'mydb');
 
 function checkIfLogged(){
   if (!$_SESSION){
@@ -20,7 +19,7 @@ function checkIfLogged(){
 
 
 function checkIfUsernameExists($uname,$optId){
-  $db = mysqli_connect('localhost', 'root','', 'travel');
+  $db = mysqli_connect('localhost', 'root','', 'mydb');
   $db1=mysqli_stmt_init($db);
   if (!$optId){
   mysqli_stmt_prepare($db1, "SELECT korisnik_id FROM korisnik WHERE username=?");
@@ -44,6 +43,7 @@ function checkIfUsernameExists($uname,$optId){
   }
   return true;
 }
+
 if(isset($_POST["logout"])){
   session_destroy();
   header('location:login.php');
@@ -52,15 +52,12 @@ if(isset($_POST["logout"])){
 
   #UNUTRASNJE IF IZDVOJITI KAO ZASEBNU FUNKCIJU SA OPCIJOM DA SE MENJA IZMEDJU USERNAME I EMAIL
 if (isset($_POST["username"])) {
-  $db = mysqli_connect('localhost', 'root','', 'travel');
+  $db = mysqli_connect('localhost', 'root','', 'mydb');
   $uname = mysqli_real_escape_string($db,$_POST["username"]);
 
   if (!$_SESSION){
     if (checkIfUsernameExists($uname,0)){
       $response = "<span style='color: red;text-align:center'>Zauzeto</span><script>$(':submit').attr('disabled', true);</script>";
-    }
-    else if(strlen($uname)<7){
-      $response="<span style='color: red;text-align:center'>Minimum 7 karaktera</span><script>$(':submit').attr('disabled', true);</script>";
     }
     else{
       $response = "<span style='color: green;text-align:center'>Slobodno</span><script>$(':submit').attr('disabled', false);</script>";
@@ -85,7 +82,7 @@ if (isset($_POST["username"])) {
 function get_user_ID($korisnik)
 {
   $id_user='';
-  $db = mysqli_connect('localhost', 'root','', 'travel');
+  $db = mysqli_connect('localhost', 'root','', 'mydb');
   $db1=mysqli_stmt_init($db);
   mysqli_stmt_prepare($db1, "SELECT korisnik_id FROM korisnik WHERE username=?");
   mysqli_stmt_bind_param($db1, "s", $korisnik);
@@ -94,7 +91,7 @@ function get_user_ID($korisnik)
   mysqli_stmt_fetch($db1);
   return $id_user;
 }
-
+/*
 if (isset($_POST['register']))
 {
   $username = mysqli_real_escape_string($db, $_POST['username']);
@@ -128,7 +125,6 @@ if (isset($_POST['register']))
     mysqli_stmt_execute($db1);
     mysqli_stmt_bind_result($db1, $id);
     mysqli_stmt_fetch($db1);
-    echo $id;
 
     mysqli_stmt_prepare($db1, "INSERT INTO kupac (kupac_id) VALUES(?)");
     mysqli_stmt_bind_param($db1, "i", $id);
@@ -138,7 +134,8 @@ if (isset($_POST['register']))
   }
   
 }
-
+*/
+/*
 if (isset($_POST['login']))
 {
   $username = mysqli_real_escape_string($db, $_POST['username']);
@@ -174,3 +171,4 @@ if (isset($_POST['login']))
     }
   }
 }
+*/
