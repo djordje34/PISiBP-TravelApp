@@ -24,6 +24,7 @@ if(!Session::exists(Config::get('session/session_name'))){
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 <script>var exports = {};</script>
     <title>Dobrodoslica</title>
+
 </head>
 <body>
 <section class="vh-100 bg-image"
@@ -35,7 +36,7 @@ if(!Session::exists(Config::get('session/session_name'))){
         <form action="" class = "p-5 d-flex flex-column align-items-center">
         <h4>Postavke profila</h4>
         <div id = "personal" style="" class = "m-5 mt-0 mb-0 w-50 d-flex flex-column d-flex justify-content-center flex-row"> 
-
+      
 
         </div>
         </form>
