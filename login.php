@@ -10,14 +10,14 @@ if(Input::exists()) {
 
 		$validate = new Validate();
 		$validation = $validate->check($_POST, array(
-			'username' => array('required' => true),
+			'email' => array('required' => true),
 			'password' => array('required' => true)
 		));
 
 		if($validation->passed()) {
 			// Login user
 			$user = new User();
-			$login = $user->login(Input::get('username'), Input::get('password'));
+			$login = $user->login(Input::get('email'), Input::get('password'));
 
 			if($login) {
 				Redirect::to('landing.php');

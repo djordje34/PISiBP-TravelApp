@@ -60,13 +60,13 @@ class User {
 
 		// check if username has been defined 
 		if(!$username && !$password && $this->exists()) {
-			Session::put($this->_sessionName, $this->data()->id);
+			Session::put($this->_sessionName, $this->data()->korisnik_id);
 		}else {
 			$user = $this->find($username);
 
 			if($user) {
 				if(password_verify($password, $this->data()->password)) {
-					Session::put($this->_sessionName, $this->data()->id);
+					Session::put($this->_sessionName, $this->data()->korisnik_id);
 					return true;
 				}
 			}

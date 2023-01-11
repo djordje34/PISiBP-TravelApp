@@ -1,5 +1,5 @@
 <?php
-
+require_once 'core/init.php';
 function checkIfUsernameExists($uname,$optId){
   $db = mysqli_connect('localhost', 'root','', 'mydb');
   $db1=mysqli_stmt_init($db);
@@ -31,7 +31,7 @@ if (isset($_POST["username"])) {
   $db = mysqli_connect('localhost', 'root','', 'mydb');
   $uname = mysqli_real_escape_string($db,$_POST["username"]);
 
-  if (!$_SESSION){
+  if (!Session::exists(Config::get('session/session_name'))){
     if (checkIfUsernameExists($uname,0)){
       $response = "<span style='color: red;text-align:center'>Zauzeto</span><script>$(':submit').attr('disabled', true);</script>";
     }

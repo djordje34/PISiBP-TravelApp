@@ -6,12 +6,6 @@ if(Input::exists()) {
     if(Token::check(Input::get('token'))) {
         $validate = new Validate();
         $validation = $validate->check($_POST, array(
-            'username' => array(
-                'required' => true,
-                'min' => 2,
-                'max' => 20,
-                'unique' => 'korisnik'
-            ),
             'password' => array(
                 'required' => true,    
                 'min' => 6
@@ -19,7 +13,8 @@ if(Input::exists()) {
             'email' => array(
                 'required' => true,
                 'min' => 2,
-                'max' => 50
+                'max' => 50,
+                'unique' => 'korisnik'
             )
         ));
         if($validation->passed()){
@@ -27,11 +22,10 @@ if(Input::exists()) {
             try{
                 $user->create(array(
                     'email' => Input::get('email'),
-                    'password' => password_hash(Input::get('password'), PASSWORD_BCRYPT),
-                    'username' => Input::get('username')
+                    'password' => password_hash(Input::get('password'), PASSWORD_BCRYPT)
                 ));
                 $db=DB::getInstance();
-                $id=get_object_vars($db->get('korisnik', array('username','=',Input::get('username')))->first())['korisnik_id'];//DONT ASK ME 
+                $id=get_object_vars($db->get('korisnik', array('email','=',Input::get('email')))->first())['korisnik_id'];//DONT ASK ME 
                 if(!$db->insert('kupac', array('kupac_id'=>$id))) {//TODO: This is cringe
                   throw new Exception('There was a problem creating this account.');
                 }
@@ -119,7 +113,6 @@ $(document).ready(function(){
               <h2 class="text-uppercase text-center mb-4">Pridružite nam se</h2>
 
               <form method="post">
-                <?php include('errors.php');?>
                 <div class="form-outline m-5 mb-3">
                   <input size="15" type="text" id="username" name="username" class="form-control form-control-lg" value="<?php echo escape(Input::get('username')); ?>"/>
                   <label class="form-label" for="form3Example1cg">Korisničko ime</label>
