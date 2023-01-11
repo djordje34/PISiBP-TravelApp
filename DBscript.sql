@@ -70,32 +70,17 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`korisnik`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`korisnik` (
-  `korisnik_id` INT NOT NULL AUTO_INCREMENT,
-  `email` VARCHAR(80) NULL,
-  `password` VARCHAR(80) NULL,
-  `username` VARCHAR(80) NULL,
-  PRIMARY KEY (`korisnik_id`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `mydb`.`kupac`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`kupac` (
+  `kupac_id` INT NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(80) NULL,
+  `password` VARCHAR(80) NULL,
   `ime` VARCHAR(80) NULL,
   `prezime` VARCHAR(80) NULL,
   `adresa` VARCHAR(80) NULL,
   `br_kartice` VARCHAR(80) NULL,
-  `kupac_id` INT NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`kupac_id`),
-  CONSTRAINT `fk_kupac_korisnik1`
-    FOREIGN KEY (`kupac_id`)
-    REFERENCES `mydb`.`korisnik` (`korisnik_id`)
-    ON DELETE CASCADE
-    ON UPDATE NO ACTION)
+  PRIMARY KEY (`kupac_id`))
 ENGINE = InnoDB;
 
 
@@ -103,15 +88,12 @@ ENGINE = InnoDB;
 -- Table `mydb`.`zaposleni`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`zaposleni` (
+  `zaposleni_id` INT NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(80) NULL,
+  `password` VARCHAR(80) NULL,
   `ime` VARCHAR(80) NULL,
   `prezime` VARCHAR(80) NULL,
-  `zaposleni_id` INT NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`zaposleni_id`),
-  CONSTRAINT `fk_zaposleni_korisnik1`
-    FOREIGN KEY (`zaposleni_id`)
-    REFERENCES `mydb`.`korisnik` (`korisnik_id`)
-    ON DELETE CASCADE
-    ON UPDATE NO ACTION)
+  PRIMARY KEY (`zaposleni_id`))
 ENGINE = InnoDB;
 
 
@@ -120,14 +102,11 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`admin` (
   `admin_id` INT NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(80) NULL,
+  `password` VARCHAR(80) NULL,
   `ime` VARCHAR(80) NULL,
   `prezime` VARCHAR(80) NULL,
-  PRIMARY KEY (`admin_id`),
-  CONSTRAINT `fk_admin_korisnik1`
-    FOREIGN KEY (`admin_id`)
-    REFERENCES `mydb`.`korisnik` (`korisnik_id`)
-    ON DELETE CASCADE
-    ON UPDATE NO ACTION)
+  PRIMARY KEY (`admin_id`))
 ENGINE = InnoDB;
 
 
@@ -144,7 +123,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`admin_uticao_zaposleni` (
   CONSTRAINT `fk_admin_has_zaposleni_admin1`
     FOREIGN KEY (`admin_id`)
     REFERENCES `mydb`.`admin` (`admin_id`)
-    ON DELETE CASCADE 
+    ON DELETE CASCADE
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_admin_has_zaposleni_zaposleni1`
     FOREIGN KEY (`zaposleni_id`)
