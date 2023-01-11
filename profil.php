@@ -19,6 +19,9 @@ if(!Session::exists(Config::get('session/session_name'))){
 <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <link rel="stylesheet" href="combined.css">
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <title>Dobrodoslica</title>
 </head>
 <body>
@@ -27,7 +30,11 @@ if(!Session::exists(Config::get('session/session_name'))){
   <div class="mask d-flex align-items-center h-100 backgroundable2">
         <div class="container h-100">
         <div class="row d-flex justify-content-center align-items-center h-100 packer">
+        <form action="">
 
+        <div id = "input"></div>
+
+        </form>
 
 
         </div>
@@ -36,3 +43,5 @@ if(!Session::exists(Config::get('session/session_name'))){
     </section>
 
 </body>
+<script type="text/babel" src="scripts/formsGenerator.js"></script>
+</html>
