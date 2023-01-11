@@ -14,8 +14,8 @@ function genUsernameField(){
 //);
 return (
 <div class="form-outline m-5 mb-3" id="uf">
-                  <input size="15" type="text" id="username" name="username" class="form-control form-control-lg" />
-                  <label class="form-label" for="username">Korisničko ime</label>
+                  <input size="15" type="email" id="email" name="email" class="form-control form-control-lg" />
+                  <label class="form-label" for="username">E-mail</label>
                 </div>
 );
 }
@@ -30,4 +30,5 @@ function genPasswordField(){
                 </div>
     );
 }
+
 root.render([genUsernameField(),genPasswordField()]);

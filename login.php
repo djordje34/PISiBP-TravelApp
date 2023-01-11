@@ -93,6 +93,6 @@ DF711B
   </div>
 </section>
 
-<script type="text/babel" src="scripts/generateRegister.js"></script>
+<script type="text/babel" src="scripts/formsGenerator.js"></script>
 </body>
 </html>

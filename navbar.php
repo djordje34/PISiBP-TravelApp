@@ -45,11 +45,8 @@
                 <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button> -->
                 </form>
                 </div>
-                <form method='post'>
-                <input type='submit' style='right:0%;margin-right:5%'
-                    class='  btn btn-danger btn-block btn-md text-body izlog' name='logout'
-                    id='logout' value='Izloguj me'>
-                </form>
+                    <a href='logout.php' class='link-danger m-3 mb-3' style = 'text-decoration:none;'>Izloguj me</a>
+                
 
         ";
         }

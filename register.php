@@ -65,7 +65,12 @@ DF711B
 <link rel="stylesheet" href="forms.css">
 <link rel="stylesheet" href="combined.css">
 <link rel="stylesheet" href="bootstrapped.css">
-<script src="usernameSchecker.js"></script>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+
+<script src="usernameChecker.js"></script>
 
 
 
@@ -114,21 +119,7 @@ $(document).ready(function(){
               <h2 class="text-uppercase text-center mb-4">Pridružite nam se</h2>
 
               <form method="post">
-                <div class="form-outline m-5 mb-3">
-                  <input size="15" type="text" id="username" name="username" class="form-control form-control-lg" value="<?php echo escape(Input::get('username')); ?>"/>
-                  <label class="form-label" for="username">Korisničko ime</label>
-                  <span id="uname_response"></span>
-                </div>
-                <div class="form-outline  m-5 mb-3">
-                  <input size="15" type="email" id="email" name="email" class="form-control form-control-lg" value="<?php echo escape(Input::get('email')); ?>"/>
-                  <label class="form-label" for="email">E-mail adresa</label>
-                </div>
-
-                <div class="form-outline  m-5 mb-3">
-                  <input size="15" type="password" id="password" name="password" class="form-control form-control-lg" />
-                  <label class="form-label" for="password">Lozinka</label>
-                </div>
-
+                <div id="input"></div>
 
                 <input type="hidden" value="<?php echo Token::generate(); ?>" name='token'/>
                 <div class="d-flex justify-content-center">
@@ -149,6 +140,6 @@ $(document).ready(function(){
   </div>
 </section>
 
-
+<script type="text/babel" src="scripts/formsGenerator.js"></script>
 </body>
 </html>
