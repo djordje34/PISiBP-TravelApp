@@ -37,4 +37,13 @@ function genProfileKartica(){
     );
 }
 
-  root.render([genProfileEditName(),genProfileAdresa(),genProfileKartica()]);
+
+function genSubmitButton(){
+  return (
+    <div class = "my-3">
+    <button type="submit" class="btn btn-dark btn-lg prikaz ">Submit</button>
+    </div>
+  );
+}
+
+  root.render([genProfileEditName(),genProfileAdresa(),genProfileKartica(),genSubmitButton()]);
