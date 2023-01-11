@@ -13,7 +13,7 @@ function genUsernameField(){
 
 //);
 return (
-<div class="form-outline m-5 mb-3" id="uf">
+<div class="form-outline mb-3" id="uf">
                   <input size="15" type="email" id="email" name="email" class="form-control form-control-lg" />
                   <label class="form-label" for="username">E-mail</label>
                 </div>
@@ -24,11 +24,13 @@ function genPasswordField(){
     const e = React.createElement;
     return (
       
-      <div class="form-outline  m-5 mb-3" ud ="pf">
+      <div class="form-outline mb-3" ud ="pf">
                   <input size="15" type="password" id="password" name="password" class="form-control form-control-lg" />
                   <label class="form-label" for="password">Lozinka</label>
                 </div>
     );
 }
+
+
 
 root.render([genUsernameField(),genPasswordField()]);

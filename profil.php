@@ -22,6 +22,7 @@ if(!Session::exists(Config::get('session/session_name'))){
 <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script>var exports = {};</script>
     <title>Dobrodoslica</title>
 </head>
 <body>
@@ -29,11 +30,15 @@ if(!Session::exists(Config::get('session/session_name'))){
   style="background-image: url('imgs/profilebg.jpg');background-size: cover;background-attachment: fixed;">
   <div class="mask d-flex align-items-center h-100 backgroundable2">
         <div class="container h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100 packer">
-        <form action="">
+        <div class="row d-flex justify-content-center align-items-center h-100 packer ">
+        <form action="" class = "p-5 d-flex flex-column align-items-center">
 
-        <div id = "input"></div>
+        <div id = "input" class = "m-5  mb-0 w-50 d-flex flex-column d-flex justify-content-center">
+        </div>
+        <div id = "personal" class = "m-5 mt-0 mb-0 w-50 d-flex flex-column d-flex justify-content-center flex-row"> 
 
+
+        </div>
         </form>
 
 
@@ -41,7 +46,9 @@ if(!Session::exists(Config::get('session/session_name'))){
         </div>
         </div>
     </section>
-
+    <script type="text/babel" src="scripts/formsGenerator.js"></script>
+<script type="text/babel" src="scripts/profileEditGrid.js"></script>
 </body>
-<script type="text/babel" src="scripts/formsGenerator.js"></script>
+
+
 </html>
