@@ -26,7 +26,7 @@ class User {
 		}
 	}
 	public function create($fields = array()) {
-		if(!$this->_db->insert('korisnik', $fields)) {
+		if(!$this->_db->insert('kupac', $fields)) {
 			throw new Exception('There was a problem creating this account.');
 		}
 	}
@@ -34,10 +34,10 @@ class User {
 	public function update($fields = array(), $id = null) {
 
 		if(!$id && $this->isLoggedIn()) {
-			$id = $this->data()->korisnik_id;
+			$id = $this->data()->kupac_id;
 		}
 
-		if(!$this->_db->update_user('korisnik', $id, $fields)) {
+		if(!$this->_db->update_user('kupac', $id, $fields)) {
 			throw new Exception('There was a problem updating.');
 		}
 	}
@@ -45,8 +45,8 @@ class User {
 	public function find($user = null) {
 		if($user) {
 			// if user had a numeric username this FAILS...
-			$field = (is_numeric($user)) ? 'korisnik_id' : 'email'; 
-			$data = $this->_db->get('korisnik', array($field, '=', $user));
+			$field = (is_numeric($user)) ? 'kupac_id' : 'email'; 
+			$data = $this->_db->get('kupac', array($field, '=', $user));
 
 			if($data->count()) {
 				$this->_data = $data->first();
@@ -60,12 +60,12 @@ class User {
 
 		// check if username has been defined 
 		if(!$email && !$password && $this->exists()) {
-			Session::put($this->_sessionName, $this->data()->korisnik_id);
+			Session::put($this->_sessionName, $this->data()->kupac_id);
 		}else {
 			$user = $this->find($email);
 			if($user) {
 				if(password_verify($password, $this->data()->password)) {
-					Session::put($this->_sessionName, $this->data()->korisnik_id);
+					Session::put($this->_sessionName, $this->data()->kupac_id);
 					return true;
 				}
 			}

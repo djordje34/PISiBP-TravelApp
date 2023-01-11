@@ -14,7 +14,7 @@ if(Input::exists()) {
                 'required' => true,
                 'min' => 2,
                 'max' => 50,
-                'unique' => 'korisnik'
+                'unique' => 'kupac'
             )
         ));
         if($validation->passed()){
@@ -24,11 +24,6 @@ if(Input::exists()) {
                     'email' => Input::get('email'),
                     'password' => password_hash(Input::get('password'), PASSWORD_BCRYPT)
                 ));
-                $db=DB::getInstance();
-                $id=get_object_vars($db->get('korisnik', array('email','=',Input::get('email')))->first())['korisnik_id'];//DONT ASK ME 
-                if(!$db->insert('kupac', array('kupac_id'=>$id))) {//TODO: This is cringe
-                  throw new Exception('There was a problem creating this account.');
-                }
                 Session::flash('home','You are registered and can log in');
                 Redirect::to('login.php');
             }

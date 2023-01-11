@@ -4,7 +4,7 @@ function checkIfUsernameExists($uname,$optId){
   $db = mysqli_connect('localhost', 'root','', 'mydb');
   $db1=mysqli_stmt_init($db);
   if (!$optId){
-  mysqli_stmt_prepare($db1, "SELECT korisnik_id FROM korisnik WHERE username=?");
+  mysqli_stmt_prepare($db1, "SELECT kupac_id FROM kupac WHERE username=?");
   mysqli_stmt_bind_param($db1, "s", $uname);
   mysqli_stmt_execute($db1);
   mysqli_stmt_bind_result($db1, $res);
@@ -13,7 +13,7 @@ function checkIfUsernameExists($uname,$optId){
   }
   else{
 
-    mysqli_stmt_prepare($db1, "SELECT korisnik_id FROM korisnik WHERE username=? and korisnik_id!=?");
+    mysqli_stmt_prepare($db1, "SELECT kupac_id FROM kupac WHERE username=? and kupac_id!=?");
     mysqli_stmt_bind_param($db1, "si", $uname,$_SESSION['id']);
     mysqli_stmt_execute($db1);
     mysqli_stmt_bind_result($db1, $res);
@@ -40,7 +40,7 @@ if (isset($_POST["username"])) {
     }
 
   }
-  else{ #UKOLIKO KORISNIK HOCE DA PROMENI USERNAME
+  else{ #UKOLIKO kupac HOCE DA PROMENI USERNAME
 
 
     

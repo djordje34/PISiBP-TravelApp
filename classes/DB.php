@@ -97,7 +97,7 @@ class DB {
             $x++;
         }
 
-        $sql = "UPDATE `{$table}` SET {$set} WHERE `korisnik_id` = ?";
+        $sql = "UPDATE `{$table}` SET {$set} WHERE `kupac_id` = ?";
         $parameters[$x-1] = $id;
 
         if(!$this->query($sql, $parameters)->error()) {
