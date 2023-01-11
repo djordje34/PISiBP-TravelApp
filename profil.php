@@ -31,10 +31,9 @@ if(!Session::exists(Config::get('session/session_name'))){
   <div class="mask d-flex align-items-center h-100 backgroundable2">
         <div class="container h-100">
         <div class="row d-flex justify-content-center align-items-center h-100 packer ">
+        
         <form action="" class = "p-5 d-flex flex-column align-items-center">
-
-        <div id = "input" class = "m-5  mb-0 w-50 d-flex flex-column d-flex justify-content-center">
-        </div>
+        <h4>Postavke profila</h4>
         <div id = "personal" class = "m-5 mt-0 mb-0 w-50 d-flex flex-column d-flex justify-content-center flex-row"> 
 
 
@@ -46,7 +45,6 @@ if(!Session::exists(Config::get('session/session_name'))){
         </div>
         </div>
     </section>
-    <script type="text/babel" src="scripts/formsGenerator.js"></script>
 <script type="text/babel" src="scripts/profileEditGrid.js"></script>
 </body>
 
