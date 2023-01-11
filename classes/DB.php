@@ -84,7 +84,7 @@ class DB {
         return false;
     }
 
-    public function update($table, $id, $fields) {
+    public function update_user($table, $id, $fields) {
         $set = '';
         $x = 1;
         $parameters = array_values($fields);
@@ -97,7 +97,7 @@ class DB {
             $x++;
         }
 
-        $sql = "UPDATE `{$table}` SET {$set} WHERE `id` = ?";
+        $sql = "UPDATE `{$table}` SET {$set} WHERE `korisnik_id` = ?";
         $parameters[$x-1] = $id;
 
         if(!$this->query($sql, $parameters)->error()) {
