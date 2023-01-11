@@ -74,13 +74,14 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`kupac` (
   `kupac_id` INT NOT NULL AUTO_INCREMENT,
-  `username` VARCHAR(80) NULL,
-  `password` VARCHAR(80) NULL,
+  `email` VARCHAR(80) NOT NULL,
+  `password` VARCHAR(80) NOT NULL,
   `ime` VARCHAR(80) NULL,
   `prezime` VARCHAR(80) NULL,
   `adresa` VARCHAR(80) NULL,
   `br_kartice` VARCHAR(80) NULL,
-  PRIMARY KEY (`kupac_id`))
+  PRIMARY KEY (`kupac_id`),
+  UNIQUE INDEX `username_UNIQUE` (`email` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
@@ -89,11 +90,12 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`zaposleni` (
   `zaposleni_id` INT NOT NULL AUTO_INCREMENT,
-  `username` VARCHAR(80) NULL,
-  `password` VARCHAR(80) NULL,
+  `email` VARCHAR(80) NOT NULL,
+  `password` VARCHAR(80) NOT NULL,
   `ime` VARCHAR(80) NULL,
   `prezime` VARCHAR(80) NULL,
-  PRIMARY KEY (`zaposleni_id`))
+  PRIMARY KEY (`zaposleni_id`),
+  UNIQUE INDEX `username_UNIQUE` (`email` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
@@ -102,11 +104,12 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`admin` (
   `admin_id` INT NOT NULL AUTO_INCREMENT,
-  `username` VARCHAR(80) NULL,
-  `password` VARCHAR(80) NULL,
+  `email` VARCHAR(80) NOT NULL,
+  `password` VARCHAR(80) NOT NULL,
   `ime` VARCHAR(80) NULL,
   `prezime` VARCHAR(80) NULL,
-  PRIMARY KEY (`admin_id`))
+  PRIMARY KEY (`admin_id`),
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
@@ -190,17 +193,17 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Rezervacije` (
   `ime` VARCHAR(80) NULL,
   `prezime` VARCHAR(80) NULL,
   `brojclanova` VARCHAR(80) NULL,
-  `korisnik_id` INT NOT NULL,
+  `kupac_id` INT NOT NULL,
   `g_id` INT NOT NULL,
   `smestaj_id` INT NOT NULL,
   `p_id` INT NOT NULL,
   PRIMARY KEY (`idRezervacije`),
-  INDEX `fk_Rezervacije_kupac1_idx` (`korisnik_id` ASC) VISIBLE,
+  INDEX `fk_Rezervacije_kupac1_idx` (`kupac_id` ASC) VISIBLE,
   INDEX `fk_Rezervacije_grad1_idx` (`g_id` ASC) VISIBLE,
   INDEX `fk_Rezervacije_smestaj1_idx` (`smestaj_id` ASC) VISIBLE,
   INDEX `fk_Rezervacije_prevoz1_idx` (`p_id` ASC) VISIBLE,
   CONSTRAINT `fk_Rezervacije_kupac1`
-    FOREIGN KEY (`korisnik_id`)
+    FOREIGN KEY (`kupac_id`)
     REFERENCES `mydb`.`kupac` (`kupac_id`)
     ON DELETE CASCADE
     ON UPDATE NO ACTION,
