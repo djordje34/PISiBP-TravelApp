@@ -34,10 +34,10 @@ class User {
 	public function update($fields = array(), $id = null) {
 
 		if(!$id && $this->isLoggedIn()) {
-			$id = $this->data()->id;
+			$id = $this->data()->korisnik_id;
 		}
 
-		if(!$this->_db->update('user', $id, $fields)) {
+		if(!$this->_db->update_user('korisnik', $id, $fields)) {
 			throw new Exception('There was a problem updating.');
 		}
 	}
@@ -63,7 +63,6 @@ class User {
 			Session::put($this->_sessionName, $this->data()->korisnik_id);
 		}else {
 			$user = $this->find($email);
-
 			if($user) {
 				if(password_verify($password, $this->data()->password)) {
 					Session::put($this->_sessionName, $this->data()->korisnik_id);
