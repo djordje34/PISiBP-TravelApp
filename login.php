@@ -52,6 +52,10 @@ DF711B
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <link rel="stylesheet" href="forms.css">
 <link rel="stylesheet" href="combined.css">
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
     <title>Log-in</title>
 </head>
 <body>
@@ -65,17 +69,10 @@ DF711B
             <div class="card-body p-5 ">
               <h2 class="text-uppercase text-center mb-4">Prijava</h2>
 
-              <form method="post">
-                <div class="form-outline m-5 mb-3">
-                  <input size="15" type="text" id="username" name="username" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3Example1cg">Korisničko ime</label>
-                </div>
+              <form method="post" id="root">
+                <div id = "input">
 
-                <div class="form-outline  m-5 mb-3">
-                  <input size="15" type="password" id="password" name="password" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3Example4cg">Lozinka</label>
                 </div>
-
 
 	              <input type="hidden" name="token" value="<?php echo Token::generate(); ?>" />
                 <div class="d-flex justify-content-center">
@@ -96,6 +93,6 @@ DF711B
   </div>
 </section>
 
-
+<script type="text/babel" src="scripts/generateRegister.js"></script>
 </body>
 </html>
