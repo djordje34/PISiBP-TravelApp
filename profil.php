@@ -1,10 +1,26 @@
 <?php 
 require_once 'navbar.php';
 require_once 'core/init.php';
-
-if(!Session::exists(Config::get('session/session_name'))){
-  Redirect::to('login.php');
+$user = new User();
+if(!$user->isLoggedIn()) {
+	Redirect::to('landing.php');
 }
+if(Input::exists()) {
+	if(Token::check(Input::get('token'))) {
+			try {
+				$user->update(array(
+					'ime' => Input::get('ime'), 
+          'prezime' => Input::get('prezime'), 
+          'adresa' => Input::get('adresa'), 
+          'br_kartice' => Input::get('kartica'), 
+				));
+				Session::flash('home', 'Your details have been updated.');
+				Redirect::to('landing.php');
+			}catch(Exception $e) {
+				die($e->getMessage());
+			}
+		}
+	}
 ?>
 
 
@@ -33,7 +49,9 @@ if(!Session::exists(Config::get('session/session_name'))){
         <div class="container h-100">
         <div class="row d-flex justify-content-center align-items-center h-100 packer ">
         
-        <form action="" class = "p-5 d-flex flex-column align-items-center">
+        <form method="post" id="profil" action="" class = "p-5 d-flex flex-column align-items-center">
+          
+        <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
         <h4>Postavke profila</h4>
         <div id = "personal" style="" class = "m-5 mt-0 mb-0 w-50 d-flex flex-column d-flex justify-content-center flex-row"> 
       
