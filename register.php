@@ -75,6 +75,7 @@ DF711B
 
 
 
+
     <title>Registracija</title>
 
 
@@ -122,17 +123,17 @@ $(document).ready(function(){
                 <?php include('errors.php');?>
                 <div class="form-outline m-5 mb-3">
                   <input size="15" type="text" id="username" name="username" class="form-control form-control-lg" value="<?php echo escape(Input::get('username')); ?>"/>
-                  <label class="form-label" for="form3Example1cg">Korisničko ime</label>
+                  <label class="form-label" for="username">Korisničko ime</label>
                   <span id="uname_response"></span>
                 </div>
                 <div class="form-outline  m-5 mb-3">
                   <input size="15" type="email" id="email" name="email" class="form-control form-control-lg" value="<?php echo escape(Input::get('email')); ?>"/>
-                  <label class="form-label" for="form3Example3cg">E-mail adresa</label>
+                  <label class="form-label" for="email">E-mail adresa</label>
                 </div>
 
                 <div class="form-outline  m-5 mb-3">
                   <input size="15" type="password" id="password" name="password" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3Example4cg">Lozinka</label>
+                  <label class="form-label" for="password">Lozinka</label>
                 </div>
 
 
