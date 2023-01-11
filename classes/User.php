@@ -45,7 +45,7 @@ class User {
 	public function find($user = null) {
 		if($user) {
 			// if user had a numeric username this FAILS...
-			$field = (is_numeric($user)) ? 'korisnik_id' : 'username'; 
+			$field = (is_numeric($user)) ? 'korisnik_id' : 'email'; 
 			$data = $this->_db->get('korisnik', array($field, '=', $user));
 
 			if($data->count()) {
@@ -56,13 +56,13 @@ class User {
 		return false;
 	}
 
-	public function login($username = null, $password = null) {
+	public function login($email = null, $password = null) {
 
 		// check if username has been defined 
-		if(!$username && !$password && $this->exists()) {
+		if(!$email && !$password && $this->exists()) {
 			Session::put($this->_sessionName, $this->data()->korisnik_id);
 		}else {
-			$user = $this->find($username);
+			$user = $this->find($email);
 
 			if($user) {
 				if(password_verify($password, $this->data()->password)) {
