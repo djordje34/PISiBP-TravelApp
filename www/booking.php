@@ -1,11 +1,12 @@
 <?php
+
 require_once 'core/init.php';
 require_once 'navbar.php';
 if (Input::get('aran_id')) {
     Session::put('aran_id', Input::get('aran_id'));
 }
-if (Input::get('booking')) {
-    echo 'DA';
+if (Input::get('booking') == 1) {
+    Redirect::to(404);
 }
 if (Input::exists()) {
     if (Token::check(Input::get('token'))) {

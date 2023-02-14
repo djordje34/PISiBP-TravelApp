@@ -84,7 +84,7 @@ class Populator(object):
         self.insertSobaSlike()
         self.insertGradSlike()
 
-        return True;
+        return True
 
 
 

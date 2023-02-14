@@ -4,9 +4,9 @@ FROM php:8.2-apache
 COPY www/slike_travel /var/www/html/slike_travel
 COPY www/slikeGradova /var/www/html/slikeGradova
 COPY www/pyscripts /var/www/html/pyscripts
-COPY www/runit.sh /var/www/html
+#COPY www/runit.sh /var/www/html
 RUN chmod 755 /var/www/html
-RUN chmod 755 /var/www/html/runit.sh
+#RUN chmod 755 /var/www/html/runit.sh
 RUN chmod 755 /var/www/html/pyscripts/populator.py
 RUN chmod 755 /var/www/html/pyscripts/generator.py
 #USER admin
