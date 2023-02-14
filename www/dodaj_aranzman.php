@@ -1,13 +1,13 @@
 <?php
 
 require_once 'core/init.php';
-require_once 'navbar.php';
-require_once 'functions/prevoz_prevod.php';
 $user = new User();
 $update = false;
 if (!$user->isLoggedIn()) {
     Redirect::to('index.php');
 }
+require_once 'navbar.php';
+require_once 'functions/prevoz_prevod.php';
 if (Input::exists('get')) {
     if (Input::get('id')) {
         $aran_id = Input::get('id');

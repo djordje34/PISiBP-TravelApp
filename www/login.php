@@ -1,10 +1,10 @@
 <?php
 
 require_once 'core/init.php';
-require_once 'navbar.php';
 if (Session::exists(Config::get('session/session_name'))) {
     Redirect::to('index.php');
 }
+require_once 'navbar.php';
 if (Input::exists()) {
     if (Token::check(Input::get('token'))) {
         $validate = new Validate();

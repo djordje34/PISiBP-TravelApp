@@ -1,13 +1,10 @@
 <?php
-
 require_once 'core/init.php';
-
 $db = DB::getInstance();
 $grad_ima_sliku = (int) $db->query('SELECT COUNT(*) AS count FROM grad_ima_sliku')->first()->count;
 if ($grad_ima_sliku == 0) {
     Redirect::to('loading.php');
 }
-
 require_once 'navbar.php';
 ?>
 <!DOCTYPE html>

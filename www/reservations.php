@@ -1,11 +1,11 @@
 <?php
 require_once 'core/init.php';
-require_once 'navbar.php';
 $trenutna_strana = 1;
 $user = new User();
 if (!$user->isLoggedIn()) {
     Redirect::to('index.php');
 }
+require_once 'navbar.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

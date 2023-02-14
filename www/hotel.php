@@ -1,13 +1,13 @@
 <?php
 
 require_once 'core/init.php';
+if (!Input::get('aran_id')) {
+    Redirect::to('ponude.php');
+}
 require_once 'navbar.php';
 require_once 'functions/stars.php';
 require_once 'functions/prevoz_prevod.php';
 require_once 'functions/convert_hours.php';
-if (!Input::get('aran_id')) {
-    Redirect::to('ponude.php');
-}
 $db = DB::getInstance();
 $aran_id = Input::get('aran_id');
 $aranzman = $db->get('aranzmani', array('aran_id', '=', $aran_id))->first();

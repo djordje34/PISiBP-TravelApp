@@ -1,12 +1,12 @@
 <?php
 
 require_once 'core/init.php';
-require_once 'navbar.php';
 $user = new User();
 $update = false;
 if (!$user->isLoggedIn()) {
     Redirect::to('index.php');
 }
+require_once 'navbar.php';
 if (Input::exists('get')) {
     if (Input::get('id')) {
         $zaposleni_id = Input::get('id');
