@@ -6,7 +6,6 @@ $update = false;
 if (!$user->isLoggedIn()) {
     Redirect::to('index.php');
 }
-require_once 'navbar.php';
 if (Input::exists('get')) {
     if (Input::get('id')) {
         $zaposleni_id = Input::get('id');
@@ -38,9 +37,8 @@ if (Input::exists()) {
         }
     }
 }
+require_once 'navbar.php';
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

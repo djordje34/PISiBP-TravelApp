@@ -7,7 +7,6 @@ if (Input::get('aran_id')) {
 if (!Input::get('aran_id') && !isset($_POST['booking'])) {
     Redirect::to('ponude.php');
 }
-require_once 'navbar.php';
 if (isset($_POST['booking'])) {
     $lista_kreveta = (Input::get('listakreveta'));
     $lista_tipova = (Input::get('listatipova'));
@@ -73,15 +72,15 @@ if (isset($_POST['booking'])) {
                 die($e->getMessage());
             }
             Session::delete('aran_id');
+            Redirect::to('ponude.php');
         } else {
             foreach ($validation->errors() as $error) {
                 echo $error, '<br>';
             }
         }
 }
+require_once 'navbar.php';
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

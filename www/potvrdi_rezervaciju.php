@@ -8,4 +8,4 @@ if (!$user->isLoggedIn()) {
 $korisnik_id = $user->data()->korisnik_id;
 $db = DB::getInstance();
 $db->query("UPDATE `rezervacije` SET `korisnik_id` = ? WHERE `rezervacije`.`rez_id` = ?", array($korisnik_id, Input::get('id')));
-Redirect::to('reservations.php'); //TODO
+Redirect::to('reservations.php');

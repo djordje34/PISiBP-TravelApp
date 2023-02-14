@@ -6,7 +6,6 @@ $update = false;
 if (!$user->isLoggedIn()) {
     Redirect::to('index.php');
 }
-require_once 'navbar.php';
 require_once 'functions/prevoz_prevod.php';
 if (Input::exists('get')) {
     if (Input::get('id')) {
@@ -84,6 +83,7 @@ if (Input::exists('post')) {
         }
     }
 }
+require_once 'navbar.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

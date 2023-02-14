@@ -4,7 +4,6 @@ require_once 'core/init.php';
 if (!Input::get('aran_id')) {
     Redirect::to('ponude.php');
 }
-require_once 'navbar.php';
 require_once 'functions/stars.php';
 require_once 'functions/prevoz_prevod.php';
 require_once 'functions/convert_hours.php';
@@ -24,6 +23,7 @@ $datum_odl = new DateTime($aranzman->vraca);
 $trajanje_aranzmana = $datum_pol->diff($datum_odl)->d;
 $aktivnosti = $db->get('ima_aktivnost', array('aran_id', '=', $aran_id))->results();
 $aktivnosti_u_gradu = $db->get('akt_u_gradu', array('smestaj_id', '=', $smestaj->smestaj_id))->results();
+require_once 'navbar.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

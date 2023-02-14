@@ -5,7 +5,6 @@ $user = new User();
 if ($user->permissionLevel() != 2) {
     Redirect::to('index.php');
 }
-require_once 'navbar.php';
 if (Input::exists()) {
     if (Token::check(Input::get('token'))) {
         $validate = new Validate();
@@ -58,6 +57,7 @@ if (Input::exists()) {
         }
     }
 }
+require_once 'navbar.php';
 ?>
 -->
 <!DOCTYPE html>
