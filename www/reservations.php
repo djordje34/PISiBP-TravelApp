@@ -73,8 +73,13 @@ $(document).ready(function(){
                 <?php
                     $db = DB::getInstance();
                     $rezervacije_query = $db->query("SELECT * FROM `rezervacije` WHERE korisnik_id is NULL");
-                    $rezervacije = $rezervacije_query->results();
+                    if (!Input::exists('get')) {
+                        $trenutna_strana = 1;
+                    } else {
+                        $trenutna_strana = (int) Input::get('strana');
+                    }
                     $broj_rezervacija = $rezervacije_query->count();
+                    $aranzmani = $db->query('SELECT * FROM aranzmani limit ? , ?', array(($trenutna_strana - 1) * 10, 10))->results();
                     if (count($rezervacije) > 0) {
                         foreach ($rezervacije as $rezervacija) {
                             $aranzman = $db->get('aranzmani', array('aran_id', '=', $rezervacija->aran_id))->first();
@@ -125,6 +130,49 @@ $(document).ready(function(){
             <div class="clearfix">
     <div class="hint-text">Prikazano <b><?php echo (($trenutna_strana - 1) * 10) + 1; echo ' - '; echo $trenutna_strana * 10;?></b> od <b><?php echo $broj_rezervacija; ?></b> rezervacija</div>
     <ul class="pagination">
+    <?php
+        echo '<li class="page-item"><a href="rezervacije.php?strana=' . 1 . '" class="page-link">Prva</a></li>';
+        $broj_strana = floor($broj_rezervacija / 10);
+        if ($broj_rezervacija % 10 != 0) {
+            $broj_strana++;
+        }
+        if ($broj_strana < 6) {
+            for ($i = 1; $i <= $broj_strana; $i++) {
+                if ($i != $trenutna_strana) {
+                    echo '<li class="page-item"><a href="rezervacije.php?strana=' . $i . '" class="page-link">' . $i . '</a></li>';
+                } else {
+                    echo '<li class="page-item active"><a href="rezervacije.php?strana=' . $i . '" class="page-link">' . $i . '</a></li>';
+                }
+            }
+        } else {
+            if ($trenutna_strana >= 3 && $trenutna_strana < $broj_strana - 3) {
+                for ($i = $trenutna_strana - 1; $i <= $trenutna_strana + 1; $i++) {
+                    if ($i != $trenutna_strana) {
+                        echo '<li class="page-item"><a href="rezervacije.php?strana=' . $i . '" class="page-link">' . $i . '</a></li>';
+                    } else {
+                        echo '<li class="page-item active"><a href="rezervacije.php?strana=' . $i . '" class="page-link">' . $i . '</a></li>';
+                    }
+                }
+            } elseif ($trenutna_strana < $broj_strana - 3) {
+                for ($i = $trenutna_strana; $i <= $trenutna_strana + 2; $i++) {
+                    if ($i != $trenutna_strana) {
+                        echo '<li class="page-item"><a href="rezervacije.php?strana=' . $i . '" class="page-link">' . $i . '</a></li>';
+                    } else {
+                        echo '<li class="page-item active"><a href="rezervacije.php?strana=' . $i . '" class="page-link">' . $i . '</a></li>';
+                    }
+                }
+            }
+            echo '...';
+            for ($i = $broj_strana - 2; $i <= $broj_strana; $i++) {
+                if ($i != $trenutna_strana) {
+                    echo '<li class="page-item"><a href="rezervacije.php?strana=' . $i . '" class="page-link">' . $i . '</a></li>';
+                } else {
+                    echo '<li class="page-item active"><a href="rezervacije.php?strana=' . $i . '" class="page-link">' . $i . '</a></li>';
+                }
+            }
+        }
+        echo '<li class="page-item"><a href="rezervacije.php?strana=' . $broj_strana . '" class="page-link">Poslednja</a></li>';
+        ?>
     </ul>
 </div>
         </div>
