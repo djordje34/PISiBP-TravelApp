@@ -72,7 +72,7 @@ if (isset($_POST['booking'])) {
                 die($e->getMessage());
             }
             Session::delete('aran_id');
-            echo 1;
+            echo $cena;
         } else {
             foreach ($validation->errors() as $error) {
                 echo $error, '<br>';
@@ -121,6 +121,9 @@ require_once 'navbar.php';
         </div>
         <div class="booking-form">
         <div id='appendForms' class='appendForms w-100'>
+        </div>
+        <div id='ukupna_cena'>
+
         </div>
 
 </div>

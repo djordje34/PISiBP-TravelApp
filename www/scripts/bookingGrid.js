@@ -60,8 +60,13 @@ function genSubmitButton(){
     <div class="form-btn" > <button class="submit-btn zakazi" type="button">ZAKAZI</button> </div>
   );
 }
+function genSubmitButton1(){
+  return (
+    <div class="form-btn" > <button class="submit-btn proveriCenu" type="button">Proveri Cenu</button> </div>
+  );
+}
 
-  root.render([genBookingEditName(),genBookingPeople(),genBookingRoomBroj(),genBookingRoom_type(),genBookingEmailPhone(),genSubmitButton()]);
+  root.render([genBookingEditName(),genBookingPeople(),genBookingRoomBroj(),genBookingRoom_type(),genBookingEmailPhone(),genSubmitButton(),genSubmitButton1()]);
   
 
 $(document).ready(function() {
@@ -98,9 +103,9 @@ $('.appendForms').empty();
         $('.appendForms').append(rtn); 
 
     }
-
 });
-$(document).on("click",".zakazi", function (event) {
+
+$(document).on("click",".proveriCenu", function (event) {
   var kreveti = $(".brojKreveta");
   var tipovi = $(".tipSobe");
   var listakreveta = [];
@@ -111,7 +116,6 @@ $(document).on("click",".zakazi", function (event) {
   for(var i = 0; i < tipovi.length; i++){
     listatipova[i] = $(tipovi[i]).val();
   }
-  console.log(listakreveta, listatipova);
   var ime = document.getElementById('ime').value
   var prezime = document.getElementById('prezime').value
   var clan_odr =    document.getElementById('clanovi_odrasli').value
@@ -121,13 +125,11 @@ $(document).on("click",".zakazi", function (event) {
   var kartica   =   document.getElementById('kartica').value
   var broj_soba   =   document.getElementById('broj_soba').value
   $.ajax({
-    url: 'booking.php',
+    url: 'cena.php',
     type: 'post',
-    data: {booking: 1, listakreveta:listakreveta, listatipova:listatipova, ime:ime, prezime:prezime, clan_odr:clan_odr, clan_deca:clan_deca, email:email, kontakt:kontakt, kartica:kartica, broj_soba:broj_soba},
+    data: {proveriCenu: 1, listakreveta:listakreveta, listatipova:listatipova, ime:ime, prezime:prezime, clan_odr:clan_odr, clan_deca:clan_deca, email:email, kontakt:kontakt, kartica:kartica, broj_soba:broj_soba},
     success: function(response){
-        if (response) {
-          window.location.href = 'ponude.php';
-        }
+      $('#ukupna_cena').empty().append(response);
     }
 });
 });
