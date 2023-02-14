@@ -105,7 +105,6 @@ class ValidateTest extends TestCase
             array(
             'email' => array(
                 'required' => true,
-                'numeric' => true,
                 'unique' => 'admin'
             ),
             'password' => array(

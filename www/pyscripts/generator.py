@@ -223,10 +223,6 @@ def generatePrevoznik():
     
     
 def generatePonude():
-    
-    
-
-
     """
     aranzman(aran_id,naziv,krece,vraca,nap,smestaj_id,p_id)
     
@@ -368,4 +364,8 @@ def generator():
     generateImaAktivnost()
     generateRandomRezervacije(150)
 
-#generator()
+
+start = time.time()
+generator()
+end = time.time()
+print(end - start)

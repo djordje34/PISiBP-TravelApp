@@ -10,6 +10,8 @@ class ConfigTest extends TestCase
 {
     public function test_error_assure()
     {
-        $this->assertFalse(Config::get(random_bytes(30)));
+        $this->assertFalse(Config::get(implode(str_split(random_bytes(30)))));
     }
 }
+
+?>

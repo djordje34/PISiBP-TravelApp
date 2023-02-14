@@ -8,6 +8,15 @@ use PHPUnit\Framework\TestCase;
 
 class PonudeTest extends TestCase
 {
+
+    public function getSmestaj(){
+
+        $db = DB::getInstance();
+        $sql = "SELECT *
+        FROM smestaj;";
+        $res = $db->query($sql)->results();
+        return $res;
+    }
     public function getPonuda()
     {
         $db = DB::getInstance();
@@ -66,7 +75,6 @@ class PonudeTest extends TestCase
         foreach ($ponude as $ponuda) {
             if (!($this->validateDate($ponuda->krece)) || !($this->validateDate($ponuda->vraca))) {
                 $tester = false;
-                $id = $ponuda->aran_id;
                 break;
             }
         }
@@ -86,5 +94,16 @@ class PonudeTest extends TestCase
     {
         $res = $this->getAllPonudeWhere("krece>now()");
         $this->assertGreaterThanOrEqual(50000, count((array)$res), count((array)$res) . "");
+    }
+    public function test_if_capacity_optimal(){
+        $check=True;
+        $res = $this->getSmestaj();
+        foreach($res as $row){
+            if($row->kapacitet<=10){
+                $check = False;
+                break;
+            }
+        }
+        $this->assertTrue($check);
     }
 }

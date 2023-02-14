@@ -16,24 +16,8 @@
     line-height: 1
 }
 
-.fa-circle:before {
-    content: "\f111"
-}
-
 .fa-map-marker-alt:before {
     content: "\f3c5"
-}
-
-.fa-minus:before {
-    content: "\f068"
-}
-
-.fa-plus:before {
-    content: "\f067"
-}
-
-.fa-star:before {
-    content: "\f005"
 }
 
 @font-face {
@@ -86,14 +70,6 @@
     }
 }
 
-/*!
- * animate.css -http://daneden.me/animate
- * Version - 3.7.0
- * Licensed under the MIT license - http://opensource.org/licenses/MIT
- *
- * Copyright (c) 2018 Daniel Eden
- */
-
 @media (min-width:1400px) {
 
     .container {
@@ -106,25 +82,6 @@
         font-size: 18px;
         width: 70%
     }
-
-    .dropdown_passenger_area button {
-        font-size: 18px
-    }
-}
-
-@media (max-width:1199px) {
-
-    .room_book_item {
-        display: inherit
-    }
-
-    .room_book_img img {
-        width: 100%
-    }
-
-    .room_booking_right_side {
-        padding: 15px 25px 25px 25px
-    }
 }
 
 @media (max-width:992px) {
@@ -135,15 +92,6 @@
 }
 
 @media (max-width:767px) {
-
-    .room_booking_right_side {
-        display: inherit
-    }
-
-    .room_person_select {
-        padding-left: 0;
-        padding-top: 15px
-    }
 
     .tour_details_heading_wrapper {
         display: inherit
@@ -161,10 +109,6 @@
 
 @media (max-width:576px) {
 
-    .room_booking_heading h3 {
-        width: auto
-    }
-
     .tour_details_top_heading h2 {
         font-size: 28px
     }
@@ -176,16 +120,6 @@
 }
 
 @media (max-width:480px) {
-
-    .room_fasa_area ul {
-        display: inherit;
-        padding-top: 0
-    }
-
-    .room_fasa_area ul li {
-        padding-right: 0;
-        padding-bottom: 8px
-    }
 
     .date_flex_area {
         display: inherit;
@@ -286,19 +220,6 @@ p:last-child {
     margin-bottom: 0
 }
 
-ul {
-    margin: 0
-}
-
-ul,
-ul li {
-    padding: 0
-}
-
-ul li {
-    list-style: none
-}
-
 section {
     position: relative
 }
@@ -315,76 +236,6 @@ section {
 
 .section_padding {
     padding: 100px 0
-}
-
-.btn:focus {
-    outline: none;
-    box-shadow: none
-}
-
-.btn {
-    display: inline-block;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    font-size: 16px;
-    border-radius: 5px;
-    box-shadow: none;
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    z-index: 0
-}
-
-.btn:hover {
-    color: var(--white-color)
-}
-
-.btn_theme {
-    color: var(--white-color);
-    background-color: var(--main-color);
-    transition: var(--transition);
-    box-shadow: none;
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    z-index: 0;
-    border: none
-}
-
-.btn_theme:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 580px;
-    height: 550px;
-    margin: auto;
-    background: var(--black-color);
-    border-radius: 50%;
-    z-index: -1;
-    transform-origin: top center;
-    transform: translateX(-50%) translateY(-5%) scale(.4);
-    transition: var(--transition)
-}
-
-.btn_theme:hover:before {
-    transition: transform 1s;
-    transform: translateX(-50%) translateY(0) scale(1);
-    transform-origin: bottom center;
-    border: none
-}
-
-.btn_md {
-    padding: 12px 35px;
-    font-size: 18px
 }
 
 .flight_Search_boxed {
@@ -413,92 +264,9 @@ section {
     border: none
 }
 
-.flight_Search_boxed span {
-    display: block;
-    font-size: 12px;
-    padding-top: 5px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap
-}
-
 .date_flex_area {
     display: flex;
     justify-content: space-around
-}
-
-.dropdown_passenger_area button {
-    border: none;
-    background: transparent;
-    padding: 0;
-    font-size: 22px;
-    font-weight: 500
-}
-
-.dropdown_passenger_area button:after {
-    display: none
-}
-
-.dropdown_passenger_area .dropdown-menu {
-    z-index: 1000;
-    min-width: 350px;
-    padding: 15px 20px;
-    font-size: 1rem;
-    color: #212529;
-    text-align: left;
-    list-style: none;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, .15);
-    border-radius: .25rem
-}
-
-.traveller-calulate-persons .passengers .passengers-types .passengers-type {
-    display: flex;
-    align-items: center;
-    padding: 8px 16px;
-    justify-content: space-between
-}
-
-.traveller-calulate-persons .passengers .passengers-types .passengers-type .text {
-    align-items: center;
-    display: flex
-}
-
-.traveller-calulate-persons .passengers .passengers-types .passengers-type .text .count {
-    margin-right: 20px;
-    width: 24px;
-    display: inline-block;
-    font-size: 1.25rem;
-    font-weight: 600
-}
-
-.traveller-calulate-persons .passengers .passengers-types .passengers-type .text .type-label span {
-    font-size: 12px;
-    color: #4c4c4c
-}
-
-.traveller-calulate-persons .passengers .passengers-types .passengers-type .button-set button {
-    font-size: 12px;
-    color: #4c4c4c;
-    border: 1px solid #d8d8d8;
-    width: 20px;
-    height: 20px
-}
-
-.traveller-calulate-persons .passengers .passengers-types {
-    padding-top: 15px
-}
-
-.traveller-calulate-persons .passengers h6 {
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--main-color)
-}
-
-.top_form_search_button {
-    text-align: center;
-    margin-top: 30px
 }
 
 .tour_details_right_boxed {
@@ -506,10 +274,6 @@ section {
     box-shadow: -4px -5px 14px rgba(0, 0, 0, .08), 5px 8px 16px rgba(0, 0, 0, .08);
     border-radius: 10px;
     padding: 25px 20px 35px 20px
-}
-
-.first_child_padding_none ul li:first-child {
-    padding-top: 0
 }
 
 .tour_details_right_box_heading h3 {
@@ -520,39 +284,10 @@ section {
     display: inline-block
 }
 
-.tour_package_details_bar_list {
-    padding-top: 20px
-}
-
-.tour_package_details_bar_list h5 {
-    font-weight: 500;
-    border-bottom: 1px solid var(--main-color);
-    padding-bottom: 10px;
-    display: inline-block
-}
-
-.tour_package_details_bar_list ul li {
-    padding-top: 15px;
-    color: var(--paragraph-color);
-    display: flex;
-    align-items: center
-}
-
-.tour_package_details_bar_list ul li i {
-    color: var(--black-color);
-    font-size: 6px;
-    padding-right: 7px
-}
-
 .tour_package_bar_price {
     display: flex;
     align-items: center;
     padding-top: 15px
-}
-
-.tour_package_bar_price h6 {
-    font-size: 16px;
-    font-weight: 500
 }
 
 .tour_package_bar_price h3 {
@@ -644,120 +379,8 @@ section {
     padding-bottom: 15px
 }
 
-.tour_details_boxed_inner ul li {
-    padding-bottom: 15px;
-    color: var(--paragraph-color);
-    display: flex
-}
-
-.tour_details_boxed_inner ul li i {
-    color: var(--black-color);
-    font-size: 6px;
-    padding-right: 7px;
-    padding-top: 6px
-}
-
-.map_area {
-    width: 100%
-}
-
-.map_area iframe {
-    width: 100%;
-    height: 300px
-}
-
 .tour_detail_right_sidebar {
     margin-bottom: 30px
-}
-
-.write_your_review_wrapper {
-    background: #fff;
-    box-shadow: -4px -5px 14px rgb(0 0 0/8%), 5px 8px 16px rgb(0 0 0/8%);
-    border-radius: 10px;
-    padding: 20px 20px;
-    margin-top: 50px
-}
-
-.write_review_inner_boxed {
-    text-align: center;
-    padding-top: 20px
-}
-
-.all_review_wrapper {
-    margin-top: 60px
-}
-
-.all_review_box {
-    background: #fff;
-    box-shadow: -4px -4px 16px rgba(0, 0, 0, .08), 4px 8px 16px rgba(0, 0, 0, .08);
-    border-radius: 12px;
-    padding: 20px 20px;
-    position: relative;
-    margin-top: 65px
-}
-
-.all_review_date_area {
-    display: flex;
-    justify-content: space-between;
-    align-items: center
-}
-
-.all_review_date h5 {
-    font-size: 16px
-}
-
-.all_review_star {
-    text-align: center
-}
-
-.all_review_star h5 {
-    font-size: 16px
-}
-
-.review_star_all i {
-    font-size: 14px;
-    color: var(--main-color)
-}
-
-.all_review_text {
-    text-align: center;
-    margin-top: -100px
-}
-
-.all_review_text img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    margin: 0 auto
-}
-
-.all_review_text h4 {
-    padding-top: 20px
-}
-
-.all_review_text p {
-    padding-top: 15px
-}
-
-.all_review_small_img {
-    display: flex;
-    align-items: center;
-    padding-top: 30px
-}
-
-.all_review_small_img_item {
-    padding-right: 11px
-}
-
-.all_review_small_img .all_review_small_img_item:last-child {
-    padding-right: 0
-}
-
-.all_review_small_img_item h5 {
-    color: var(--main-color);
-    cursor: pointer;
-    font-size: 22px;
-    font-weight: 600
 }
 
 .form-control {
@@ -766,100 +389,12 @@ section {
     font-size: 16px
 }
 
-.bg_input {
-    background-color: #f3f6fd
-}
-
 .form-control:focus {
     color: var(--heading-color);
     background-color: #fff;
     border: 2px dashed var(--main-color);
     outline: none;
     box-shadow: none
-}
-
-textarea {
-    height: 100% !important
-}
-
-#news_comment_form .form-froup {
-    margin-bottom: 30px
-}
-
-.room_book_item {
-    display: flex;
-    border: 1px solid #ddd;
-    margin-top: 30px
-}
-
-.room_booking_heading h3 {
-    font-size: 20px;
-    font-weight: 500;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 335px;
-    padding-bottom: 10px
-}
-
-.room_booking_heading h3 a {
-    color: var(--black-color)
-}
-
-.room_booking_heading h3 a:hover {
-    color: var(--main-color)
-}
-
-.room_fasa_area ul {
-    display: flex;
-    padding-top: 10px
-}
-
-.room_fasa_area ul li {
-    padding-right: 20px
-}
-
-.room_fasa_area ul li img {
-    padding-right: 8px;
-    width: 28px
-}
-
-.room_person_select {
-    padding-left: 35px;
-    padding-top: 15px
-}
-
-.room_person_select h3 {
-    font-size: 18px;
-    color: var(--main-color);
-    font-weight: 600;
-    padding-bottom: 15px
-}
-
-.room_booking_right_side {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 25px 0 25px
-}
-
-.room_select_area .nav-tabs {
-    border-bottom: none;
-    margin-bottom: 20px;
-    justify-content: center
-}
-
-.room_select_area .nav-tabs .nav-link.active {
-    color: var(--white-color);
-    background-color: var(--main-color);
-    border-color: #dee2e6 #dee2e6 #fff
-}
-
-.room_select_area .nav-tabs .nav-link {
-    margin-bottom: 0;
-    background: #f3f6fd;
-    border: 1px solid transparent;
-    border-radius: .25rem;
-    padding: 10px 110px
 }
 
 .image__gallery {
@@ -920,77 +455,14 @@ textarea {
     width: 100%
 }
 
-.gallery__item--is-acitve,
 .gallery__item:hover {
     opacity: 1
 }
-.d-block {
-    width: 1000px;
-    height: 500px;
-    object-fit: cover;
-}
-.search-container {
-    background-color: #f7a5a5;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    margin-right: -260px;
-    margin-left: -230px;
-    animation: search-container-animation 0.5s ease-in-out;
-  }
-
-  @keyframes search-container-animation {
-    from {
-      transform: scale(0);
-    }
-    to {
-      transform: scale(1);
-    }
-  }
 
   .form-control:focus {
     border-color: #ff8000;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
       0 0 8px rgba(255, 128, 0, 0.6);
-  }
-
-  .range-slider {
-    margin: 20px 0;
-    width: 100%;
-  }
-
-  .range-slider input[type="range"] {
-    -webkit-appearance: none;
-    width: 100%;
-    background: #333;
-    height: 5px;
-    border-radius: 5px;
-    outline: none;
-    padding: 0;
-    margin: 0;
-    transition: all 0.3s;
-  }
-
-  .range-slider input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 15px;
-    height: 15px;
-    background: #ff8000;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all 0.3s;
-    border: 2px solid #333;
-  }
-
-  .range-slider input[type="range"]::-moz-range-thumb {
-    width: 15px;
-    height: 15px;
-    background: #ff8000;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all 0.3s;
-    border: 2px solid #333;
   }
 .datumi{
     margin:auto;

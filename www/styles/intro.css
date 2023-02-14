@@ -1,50 +1,9 @@
 @charset "utf-8";
-/* CSS Document */
-
-/******************************
-
-[Table of Contents]
-
-1. Fonts
-2. Body and some general stuff
-3. Header
-	3.1 Top Bar
-	3.2 Logo
-	3.3 Main Nav
-	3.4 Menu
-4. Home
-	4.1 Home Slider
-	4.2 Home Slider Nav
-	4.3 Home Slider Dots
-5. Search
-6. Section Title
-7. Intro
-8. CTA
-	8.1 CTA Slider
-9. Offers
-10. Testimonials
-	10.1 Testimonials Slider
-11. Trending
-12. Contact
-13. Footer
-	13.1 Footer - About
-	13.2 Footer - Blog
-	13.3 Footer - Tags
-	13.4 Footer - Contact Info
-14. Copyright
-
-
-******************************/
-
-/***********
-1. Fonts
-***********/
 
 @import url('https://fonts.cdnfonts.com/css/saburo');
 @import url('https://fonts.cdnfonts.com/css/division-one');
 
 /*********************************
-2. Body and some general stuff
 *********************************/
 
 *
@@ -205,41 +164,11 @@ section
 	opacity: 0.4;
 	margin-right: 0px;
 }
-
-/*********************************
-3. Header
-*********************************/
-
-/*********************************
-3.1 Top Bar
-*********************************/
-
-/*********************************
-3.2 Logo
-*********************************/
-
-/*********************************
-3.3 Main Nav
-*********************************/
-
-/*********************************
-3.4 Menu
-*********************************/
-
-/*********************************
-4. Home
-*********************************/
-
 .home
 {
 	width: 100%;
 	height: 100vh;
 }
-
-
-/*********************************
-4.1 Home Slider
-*********************************/
 
 .home_slider_container
 {
@@ -353,10 +282,6 @@ section
 	fill: url(#home_grad_next);
 }
 
-/*********************************
-4.3 Home Slider Dots
-*********************************/
-
 .home_slider_dots
 {
 	position: absolute;
@@ -418,15 +343,6 @@ section
 	border: solid 2px #FFFFFF;
 }
 
-/*********************************
-5. Search
-*********************************/
-/* Fade in tabs */
-
-/*********************************
-6. Section Title
-*********************************/
-
 .section_title
 {
 	font-size: 30px;
@@ -435,11 +351,6 @@ section
 	margin-top: -8px;
 	text-transform: uppercase;
 }
-
-/*********************************
-7. Intro
-*********************************/
-
 .intro
 {
 	width: 100%;
@@ -501,27 +412,6 @@ section
 	height: 100%;
 	z-index: 3;
 }
-.intro_date
-{
-	position: absolute;
-	top: 35px;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	-moz-transform: translateX(-50%);
-	-ms-transform: translateX(-50%);
-	-o-transform: translateX(-50%);
-	transform: translateX(-50%);
-	width: auto;
-	padding-left: 39px;
-	padding-right: 39px;
-	white-space: nowrap;
-	font-size: 13px;
-	font-weight: 400;
-	color: #FFFFFF;
-	line-height: 27px;
-	background: #fa9e1c;
-	border-radius: 14px;
-}
 .intro_button
 {
 	position: absolute;
@@ -544,13 +434,6 @@ section
 	color: #FFFFFF;
 	letter-spacing: -0.05em;
 }
-.intro_price
-{
-	font-size: 14px;
-	font-weight: 400;
-	color: #FFFFFF;
-	margin-top: -4px;
-}
 .rating
 {
 	margin-top: 10px;
@@ -565,129 +448,11 @@ section
 	margin-right:
 	 0px;
 }
-.rating_1 i:first-child{color: #dbac7f;}
-.rating_2 i:first-child{color: #dbac7f;}
-.rating_2 i:nth-child(2){color: #c8a358;}
-.rating_3 i:first-child{color: #dbac7f;}
-.rating_3 i:nth-child(2){color: #c8a358;}
-.rating_3 i:nth-child(3){color: #d0943b;}
-.rating_4 i:first-child{color: #dbac7f;}
-.rating_4 i:nth-child(2){color: #c8a358;}
-.rating_4 i:nth-child(3){color: #d0943b;}
-.rating_4 i:nth-child(4){color: #d2781f;}
 .rating_5 i:first-child{color: #dbac7f;}
 .rating_5 i:nth-child(2){color: #c8a358;}
 .rating_5 i:nth-child(3){color: #d0943b;}
 .rating_5 i:nth-child(4){color: #d2781f;}
 .rating_5 i:nth-child(5){color: #dc6e00;}
-
-/*********************************
-8. CTA
-*********************************/
-
-.cta
-{
-	padding-top: 125px;
-	padding-bottom: 116px;
-	background: linear-gradient(to right, #fa9e1b, #1c1529);
-}
-.cta_background
-{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-	opacity: 0.27;
-}
-
-/*********************************
-8.1 CTA Slider
-*********************************/
-
-.cta_slider_container
-{
-
-}
-.cta_item
-{
-	padding-top: 75px;
-	padding-bottom: 61px;
-	padding-left: 90px;
-	padding-right: 90px;
-	background: #FFFFFF;
-}
-.cta_title
-{
-	font-size: 30px;
-	font-weight: 700;
-	color: #2d2c2c;
-	text-transform: uppercase;
-}
-.cta_text
-{
-	font-weight: 600;
-	line-height: 2.29;
-	margin-top: 14px;
-	margin-bottom: 0px;
-}
-.cta_button
-{
-	margin-top: 38px;
-}
-.rating_r i::before
-{
-	font-family: 'FontAwesome';
-	content: "\f006";
-	font-style: normal;
-	font-size: 19px;
-	margin-right: 4px;
-}
-.rating_r_4 i:first-child::before{color: #ffeb8d; content: "\f005";}
-.rating_r_4 i:nth-child(2)::before{color: #fed46b; content: "\f005";}
-.rating_r_4 i:nth-child(3)::before{color: #fbb53d; content: "\f005";}
-.rating_r_4 i:nth-child(4)::before{color: #fa9e1b; content: "\f005";}
-.cta_slider_nav
-{
-	position: absolute;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	-o-transform: translateY(-50%);
-	transform: translateY(-50%);
-	z-index: 10;
-	cursor: pointer;
-}
-.cta_slider_prev
-{
-	left: -75px;
-}
-.cta_slider_next
-{
-	right: -75px;
-}
-.cta_slider_prev:hover .nav_path,
-.cta_slider_prev:hover .nav_arrow
-{
-	fill: url(#cta_grad_prev);
-}
-.cta_slider_next:hover .nav_path,
-.cta_slider_next:hover .nav_arrow
-{
-	fill: url(#cta_grad_next);
-}
-
-/*********************************
-9. Offers
-*********************************/
-
-/*********************************
-10. Testimonials
-*********************************/
 
 .testimonials
 {
@@ -705,10 +470,6 @@ section
 	height: 2px;
 	background: linear-gradient(to right, #fa9e1b, #8d4fff);
 }
-
-/*********************************
-10.1 Testimonials Slider
-*********************************/
 
 .test_slider_container
 {
@@ -828,13 +589,6 @@ section
 {
 	color: #fa9e1b;
 }
-.trending_price
-{
-	font-size: 14px;
-	font-weight: 700;
-	color: #fa9e1b;
-	margin-top: 2px;
-}
 .trending_location
 {
 	font-size: 14px;
@@ -844,9 +598,6 @@ section
 	margin-top: 5px;
 }
 
-/*********************************
-12. Contact
-*********************************/
 .input_field::input-placeholder,
 .text_field::input-placeholder
 {

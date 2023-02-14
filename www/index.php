@@ -301,7 +301,7 @@ require_once 'navbar.php';
                                     <div class="test_content_container">
                                         <div class="test_content">
                                             <div class="test_item_info">
-                                                <div class="test_name">Djordje Karisic</div>
+                                                <div class="test_name">Djordje Karisić</div>
                                                 <div class="test_date">Jan 22 2023</div>
                                             </div>
                                             <div class="test_quote_title">" Best holliday ever "</div>
@@ -318,7 +318,7 @@ require_once 'navbar.php';
                                     <div class="test_content_container">
                                         <div class="test_content">
                                             <div class="test_item_info">
-                                                <div class="test_name">Mladen Cvetkovic</div>
+                                                <div class="test_name">Mladen Cvetković</div>
                                                 <div class="test_date">Jan 22 2023</div>
                                             </div>
                                             <div class="test_quote_title">" Best holliday ever "</div>
@@ -336,7 +336,7 @@ require_once 'navbar.php';
                                     <div class="test_content_container">
                                         <div class="test_content">
                                             <div class="test_item_info">
-                                                <div class="test_name">Lexy Vukovic</div>
+                                                <div class="test_name">Aleksa Vuković</div>
                                                 <div class="test_date">Jan 22 2023</div>
                                             </div>
                                             <div class="test_quote_title">" Best holliday ever "</div>
@@ -352,7 +352,7 @@ require_once 'navbar.php';
                                     <div class="test_content_container">
                                         <div class="test_content">
                                             <div class="test_item_info">
-                                                <div class="test_name">Ćole Drip</div>
+                                                <div class="test_name">Filip Stefanović</div>
                                                 <div class="test_date">Jan 22 2023</div>
                                             </div>
                                             <div class="test_quote_title">" Best holliday ever "</div>

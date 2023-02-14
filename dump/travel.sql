@@ -430,3 +430,6 @@ COLLATE = utf8mb4_0900_ai_ci;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+INSERT INTO korisnik (korisnik_id, tip) VALUES (NULL, '2');
+INSERT INTO admin (admin_id, email, password, ime, prezime, korisnik_id) VALUES (NULL, 'admin@1.1', '$2y$10$MUOykAR0LzKlpGeNGelH2ec74yMW1gULt8Eeqa9XQsu1t4jykE5Cy', NULL, NULL, '1');
