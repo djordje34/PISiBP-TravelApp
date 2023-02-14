@@ -72,7 +72,7 @@ $(document).ready(function() {
     console.log("ocitalo"+valueSelected)
     let rtn = "<div class='row'>"+
     "<div class='form-group col-md-6'>"+
-    "<label for='beds'>Broj kreveta:</label>"+
+    "<label for='beds' style='color:white'>Broj kreveta:</label>"+
     "<select class='form-control brojKreveta' name='brojKreveta' id='beds'>"+
         "<option>1</option>"+
         "<option>2</option>"+
@@ -81,7 +81,7 @@ $(document).ready(function() {
     "</select>"+
     "</div>"+
     "<div class='form-group col-md-6'>"+
-    "<label for='room_type'>Tip sobe:</label>"+
+    "<label for='room_type' style='color:white'>Tip sobe:</label>"+
     "<select class='form-control tipSobe' name='tipSobe' id='room_type'>"+
         "<option value='Soba'>Soba (Standardna)</option>"+
         "<option value='Studio'>Studio</option>"+

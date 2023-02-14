@@ -118,7 +118,9 @@ require_once 'navbar.php';
         <div id = "personal" style="">
         </div>
         </div>
+        <div class="booking-form">
         <div id='appendForms' class='appendForms w-100'>
+        </div>
 
 </div>
         </div>
