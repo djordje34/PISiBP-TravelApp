@@ -155,7 +155,7 @@ require_once 'navbar.php';
                         <div class="intro_item_overlay"></div>
                         <div class="intro_item_background" style="background-image:url(imgs/landing_1.jpg)"></div>
                         <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                            <div class="button intro_button"><div class="button_bcg"></div><a href="http://localhost/PISiBP-TravelApp/ponude.php?stavke=50&strana=1&ime=&kontinent=Afrika&drzava=Egipat&prevoz=&datum_polaska=&datum_odlaska=">Pogledati više<span></span><span></span><span></span></a></div>
+                            <div class="button intro_button"><div class="button_bcg"></div><a href="http://localhost:8001/ponude.php?stavke=50&strana=1&ime=&kontinent=Afrika&drzava=Egipat&prevoz=&datum_polaska=&datum_odlaska=">Pogledati više<span></span><span></span><span></span></a></div>
                             <div class="intro_center text-center">
                                 <h1>Egipat</h1>
                                 <div class="rating rating_5">
@@ -177,7 +177,7 @@ require_once 'navbar.php';
                         <div class="intro_item_overlay"></div>
                         <div class="intro_item_background" style="background-image:url(imgs/landing_2.jpg)"></div>
                         <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                            <div class="button intro_button"><div class="button_bcg"></div><a href="http://localhost/PISiBP-TravelApp/ponude.php?stavke=50&strana=1&ime=&kontinent=Azija&drzava=Kina&prevoz=&datum_polaska=&datum_odlaska=">Pogledati više<span></span><span></span><span></span></a></div>
+                            <div class="button intro_button"><div class="button_bcg"></div><a href="http://localhost:8001/ponude.php?stavke=50&strana=1&ime=&kontinent=Azija&drzava=Kina&prevoz=&datum_polaska=&datum_odlaska=">Pogledati više<span></span><span></span><span></span></a></div>
                             <div class="intro_center text-center">
                                 <h1>Kina</h1>
                                 <div class="rating rating_5">
@@ -199,7 +199,7 @@ require_once 'navbar.php';
                         <div class="intro_item_overlay"></div>
                         <div class="intro_item_background" style="background-image:url(imgs/landing_3.jpg)"></div>
                         <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                            <div class="button intro_button"><div class="button_bcg"></div><a href="http://localhost/PISiBP-TravelApp/ponude.php?stavke=50&strana=1&ime=&kontinent=Evropa&drzava=Francuska&prevoz=&datum_polaska=&datum_odlaska=">Pogledati više<span></span><span></span><span></span></a></div>
+                            <div class="button intro_button"><div class="button_bcg"></div><a href="http://localhost:8001/ponude.php?stavke=50&strana=1&ime=&kontinent=Evropa&drzava=Francuska&prevoz=&datum_polaska=&datum_odlaska=">Pogledati više<span></span><span></span><span></span></a></div>
                             <div class="intro_center text-center">
                                 <h1>Francuska</h1>
                                 <div class="rating rating_5">
@@ -218,7 +218,7 @@ require_once 'navbar.php';
                         <div class="intro_item_overlay"></div>
                         <div class="intro_item_background" style="background-image:url(imgs/landing_4.jpg)"></div>
                         <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                            <div class="button intro_button"><div class="button_bcg"></div><a href="http://localhost/PISiBP-TravelApp/ponude.php?stavke=50&strana=1&ime=&kontinent=Australija%20/%20Okeanija&drzava=Australija&prevoz=&datum_polaska=&datum_odlaska=">Pogledati više<span></span><span></span><span></span></a></div>
+                            <div class="button intro_button"><div class="button_bcg"></div><a href="http://localhost:8001/ponude.php?stavke=50&strana=1&ime=&kontinent=Australija%20/%20Okeanija&drzava=Australija&prevoz=&datum_polaska=&datum_odlaska=">Pogledati više<span></span><span></span><span></span></a></div>
                             <div class="intro_center text-center">
                                 <h1>Australija</h1>
                                 <div class="rating rating_5">
@@ -240,7 +240,7 @@ require_once 'navbar.php';
                         <div class="intro_item_overlay"></div>
                         <div class="intro_item_background" style="background-image:url(imgs/landing_5.jpg)"></div>
                         <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                            <div class="button intro_button"><div class="button_bcg"></div><a href="http://localhost/PISiBP-TravelApp/ponude.php?stavke=50&strana=1&ime=&kontinent=Evropa&drzava=Rusija&prevoz=&datum_polaska=&datum_odlaska=">Pogledati više<span></span><span></span><span></span></a></div>
+                            <div class="button intro_button"><div class="button_bcg"></div><a href="http://localhost:8001/ponude.php?stavke=50&strana=1&ime=&kontinent=Evropa&drzava=Rusija&prevoz=&datum_polaska=&datum_odlaska=">Pogledati više<span></span><span></span><span></span></a></div>
                             <div class="intro_center text-center">
                                 <h1>Rusija</h1>
                                 <div class="rating rating_5">
@@ -262,7 +262,7 @@ require_once 'navbar.php';
                         <div class="intro_item_overlay"></div>
                         <div class="intro_item_background" style="background-image:url(imgs/landing_6.jpg)"></div>
                         <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                            <div class="button intro_button"><div class="button_bcg"></div><a href="http://localhost/PISiBP-TravelApp/ponude.php?stavke=50&strana=1&ime=&kontinent=Evropa&drzava=Nema%C4%8Dka&prevoz=&datum_polaska=&datum_odlaska=">Pogledati više<span></span><span></span><span></span></a></div>
+                            <div class="button intro_button"><div class="button_bcg"></div><a href="http://localhost:8001/ponude.php?stavke=50&strana=1&ime=&kontinent=Evropa&drzava=Nema%C4%8Dka&prevoz=&datum_polaska=&datum_odlaska=">Pogledati više<span></span><span></span><span></span></a></div>
                             <div class="intro_center text-center">
                                 <h1>Nemačka</h1>
                                 <div class="rating rating_5">
@@ -397,7 +397,7 @@ require_once 'navbar.php';
                     <div class="trending_item clearfix">
                         <div class="trending_image"><img src="' . $slika . '" alt="imgs/proba1.jpg"></div>
                         <div class="trending_content">
-                            <div class="trending_title"><a href="http://localhost/PISiBP-TravelApp/ponude.php?stavke=25&strana=1&ime=' . $hotel->naziv . '&kontinent=&prevoz=&datum_polaska=&datum_odlaska=">' . $hotel->naziv . '</a></div>
+                            <div class="trending_title"><a href="http://localhost:8001/ponude.php?stavke=25&strana=1&ime=' . $hotel->naziv . '&kontinent=&prevoz=&datum_polaska=&datum_odlaska=">' . $hotel->naziv . '</a></div>
                             <div class="trending_location"> ' . $grad->ime . ', ' . $drzava->ime . '</div>
                             </div>
                         </div>
