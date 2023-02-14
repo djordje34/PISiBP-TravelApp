@@ -389,7 +389,7 @@ $aranzmani = array_merge($trenutni_aranzmani, $prosli_aranzmani);
                                         <div class="offers_price"> Počinje od €' . $cena . '<span>po noci</span></div>';
                                         $zvezde = round($ocena_smestaja);
                                         echo '<div class="rating rating_' . $zvezde . '">';
-                                        for ($i= 1; $i <= $zvezde; $i++) {
+                                        for ($i = 1; $i <= $zvezde; $i++) {
                                             if ($i > $ocena_smestaja && $i == $zvezde) {
                                                 echo '<i class="fas fa-star-half"></i>';
                                             } else {

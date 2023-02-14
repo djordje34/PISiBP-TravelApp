@@ -105,9 +105,9 @@ $(document).ready(function(){
         if ($broj_strana < 6) {
             for ($i = 1; $i <= $broj_strana; $i++) {
                 if ($i != $trenutna_strana) {
-                    echo '<li class="page-item"><a href="aranzmani.php?strana=' . $i . '" class="page-link">' . $i . '</a></li>';
+                    echo '<li class="page-item"><a href="zaposleni.php?strana=' . $i . '" class="page-link">' . $i . '</a></li>';
                 } else {
-                    echo '<li class="page-item active"><a href="aranzmani.php?strana=' . $i . '" class="page-link">' . $i . '</a></li>';
+                    echo '<li class="page-item active"><a href="zaposleni.php?strana=' . $i . '" class="page-link">' . $i . '</a></li>';
                 }
             }
         } else {
