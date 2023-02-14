@@ -369,9 +369,8 @@ $aranzmani = array_merge($trenutni_aranzmani, $prosli_aranzmani);
                             $slika_grada = $db->action('SELECT slika', 'grad_ima_sliku', array('grad_id', '=', $smestaj->g_id))->first()->slika;
                             $slika_grada = str_replace('\\', '/', $slika_grada);
                             $prevoz_cena = $prevoz->cena;
-                            $ocena_smestaja = $smestaj->br_zvezzdica;
-                            if(!$prevoz_cena)
-                                $prevoz_cena='(Putarina + gorivo)';
+                            if (!$prevoz_cena)
+                                $prevoz_cena = '(Putarina + gorivo)';
                             echo '
                         <div class="offers_item rating">
                             <div class="row">
@@ -389,8 +388,8 @@ $aranzmani = array_merge($trenutni_aranzmani, $prosli_aranzmani);
                                 <div class="col-lg-8">
                                     <div class="offers_content">
                                         <div class="offers_price"> Počinje od €' . $cena . '<span>po noci</span></div>';
-                                        $zvezde = round($ocenasmestaja);
-                                        echo '<div class="rating rating' . $zvezde . '">';
+                                        $zvezde = round($ocena_smestaja);
+                                        echo '<div class="rating rating_' . $zvezde . '">';
                                         for ($i= 1; $i <= $zvezde; $i++) {
                                             if ($i > $ocena_smestaja && $i == $zvezde) {
                                                 echo '<i class="fas fa-star-half"></i>';
