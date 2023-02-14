@@ -356,7 +356,6 @@ $aranzmani = array_merge($trenutni_aranzmani, $prosli_aranzmani);
                             $naziv = $aranzman->naziv;
                             $id = $aranzman->aran_id;
                             $minimalna_cena_kreveta = $db->query('SELECT gen_cena FROM aranzmani a JOIN smestaj s ON a.smestaj_id=s.smestaj_id JOIN soba ON s.smestaj_id=soba.smestaj_id JOIN sobatip_hash sh ON soba.tip = sh.id WHERE a.aran_id = ? ORDER BY gen_cena ASC', array($id))->first()->gen_cena;
-                            //TODO promeni na stvarnu minimalnu cenu po danu
                             $datum_polaska = new DateTime($aranzman->krece);
                             $datum_povratka = new DateTime($aranzman->vraca);
                             $dani = $datum_polaska->diff($datum_povratka)->d;
@@ -493,7 +492,7 @@ $aranzmani = array_merge($trenutni_aranzmani, $prosli_aranzmani);
                         }
                         echo'" data-num="' . $i . '">' . $i . '</li></a>';
                     }
-                }//TODO FIX
+                }
             ?>
             <a href=" <?php echo 'ponude.php?stavke=' . $stavke . '&strana=' . $broj_strana . '' . $search; ?>">
             <li class="paginationjs-next J-paginationjs-next " data-num="2" title="Next page">››</li></a>

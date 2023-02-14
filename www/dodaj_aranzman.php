@@ -166,7 +166,7 @@ require_once 'navbar.php';
                                     } else {
                                         echo '<option class=option value="' . $smestaj->smestaj_id . '">' . $smestaj->naziv . ' - ' . $smestaj->adresa . '</option>';
                                     }
-                                }//TODO search select
+                                }
                                 ?>
                               </select>
                             </div>

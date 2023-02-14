@@ -19,7 +19,7 @@ if (Input::get('vratiSobe')) {
         $cenaMax = (int) Input::get('cenaMax');
     }
     $checker = 1;
-    $query = $db->query("SELECT s.soba_id, s.tip, s.smestaj_id ,s.rez_id, sh.id, sh.br_kreveta, sh.gen_cena, sh.opis, sh.tip FROM soba s, sobatip_hash sh WHERE s.tip = sh.id AND sh.br_kreveta=? AND LOWER(sh.tip) LIKE ? AND sh.gen_cena>? AND sh.gen_cena<? AND s.smestaj_id=? AND s.rez_id IS NULL", array($kreveti, $tip, $cenaMin, $cenaMax, $smestaj->smestaj_id)); //SREDI OVO DA IMA SMISLA TODO
+    $query = $db->query("SELECT s.soba_id, s.tip, s.smestaj_id ,s.rez_id, sh.id, sh.br_kreveta, sh.gen_cena, sh.opis, sh.tip FROM soba s, sobatip_hash sh WHERE s.tip = sh.id AND sh.br_kreveta=? AND LOWER(sh.tip) LIKE ? AND sh.gen_cena>? AND sh.gen_cena<? AND s.smestaj_id=? AND s.rez_id IS NULL", array($kreveti, $tip, $cenaMin, $cenaMax, $smestaj->smestaj_id));
     $broj_soba = $query->count();
     if ($broj_soba) {
         $row = $query->first();

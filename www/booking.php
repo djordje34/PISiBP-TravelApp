@@ -33,7 +33,6 @@ if (isset($_POST['booking'])) {
                 $broj_zvezdica = $db->get('smestaj', array('smestaj_id', '=', $smestaj_id))->first()->br_zvezdica;
                 $dani = $datum_polaska->diff($datum_povratka)->d;
                 $cena = $db->get('prevoz', array('p_id', '=', $aranzman->p_id))->first()->cena;
-                //$cena = $br_clan * (int) Input::get('br_soba') * $aran_cena;//TODO
                 for ($i = 0; $i < (int) Input::get('broj_soba'); $i++) {
                     $tip[] = '%' . $lista_tipova[$i] . '%';
                     $soba_tip[] = $db->query('SELECT id, gen_cena FROM sobatip_hash WHERE LOWER(tip) LIKE ? AND br_kreveta = ?', array(strtolower($tip[$i]), $lista_kreveta[$i]))->first();
@@ -72,7 +71,7 @@ if (isset($_POST['booking'])) {
                 die($e->getMessage());
             }
             Session::delete('aran_id');
-            Redirect::to('ponude.php');
+            echo 1;
         } else {
             foreach ($validation->errors() as $error) {
                 echo $error, '<br>';

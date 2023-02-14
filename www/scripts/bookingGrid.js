@@ -125,7 +125,9 @@ $(document).on("click",".zakazi", function (event) {
     type: 'post',
     data: {booking: 1, listakreveta:listakreveta, listatipova:listatipova, ime:ime, prezime:prezime, clan_odr:clan_odr, clan_deca:clan_deca, email:email, kontakt:kontakt, kartica:kartica, broj_soba:broj_soba},
     success: function(response){
-        $('#prikazSoba').append(response);
+        if (response) {
+          window.location.href = 'ponude.php';
+        }
     }
 });
 });

@@ -105,7 +105,7 @@ $(document).ready(function(){
                                   <input type='submit' class='btn' onclick='return obrisiAranzman($aranzman->aran_id)' value='Obrisi'>
                                   </td>";
                             echo '</tr>';
-                        }//TODO and fix stranicenje search
+                        }
                     ?>
                 </tbody>
             </table>
