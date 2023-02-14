@@ -5,11 +5,9 @@ require_once 'navbar.php';
 if (Input::get('aran_id')) {
     Session::put('aran_id', Input::get('aran_id'));
 }
-if (Input::get('booking') == 1) {
-    Redirect::to(404);
-}
-if (Input::exists()) {
-    if (Token::check(Input::get('token'))) {
+if (isset($_POST['booking'])) {
+    $lista_kreveta = (Input::get('listakreveta'));
+    $lista_tipova = (Input::get('listatipova'));
         $validate = new Validate();
         $validation = $validate->check(
             $_POST,
@@ -19,8 +17,8 @@ if (Input::exists()) {
             'email' => array('required' => true),
             'kartica' => array('required' => true),
             'kontakt' => array('required' => true),
-            'clanovi_odrasli' => array('required' => true, 'numeric' => true),
-            'clanovi_deca' => array('numeric' => true)
+            'clan_odr' => array('required' => true, 'numeric' => true),
+            'clan_deca' => array('numeric' => true)
             )
         );
         if ($validation->passed()) {
@@ -38,8 +36,9 @@ if (Input::exists()) {
                         'br_kartice' => Input::get('kartica'),
                         'kontakt' => Input::get('kontakt'),
                         'email' => Input::get('email'),
-                        'broj_odr' => (int)Input::get('clanovi_deca'),
-                        'broj_dece' => (int) Input::get('clanovi_odrasli'),
+                        'broj_odr' => (int)Input::get('clan_odr'),
+                        'broj_dece' => (int) Input::get('clan_deca'),
+                        'broj_soba' => (int) Input::get('broj_soba'),
                         'kom' => Input::get('komentar'),
                         'cena' => 1,
                         'aran_id' => Session::get('aran_id')
@@ -47,6 +46,17 @@ if (Input::exists()) {
                     )
                 ) {
                     throw new Exception('There making this reservation.');
+                }
+                $smestaj_id = $db->get('aranzmani', array('aran_id', '=', Session::get('aran_id')))->first()->smestaj_id;
+                $rezervacija_id = $db->query('SELECT rez_id FROM rezervacije WHERE ime = ? AND prezime = ? AND br_kartice = ? AND email = ? AND broj_odr = ? AND broj_dece = ? AND cena = ? AND kom = ? AND kontakt = ? AND broj_soba = ? AND aran_id = ? AND korisnik_id IS NULL', array(Input::get('ime'), Input::get('prezime'), Input::get('kartica'), Input::get('email'), Input::get('clan_odr'), Input::get('clan_deca'), 1, Input::get('komentar'), Input::get('kontakt'), (int) Input::get('broj_soba'), (int) Session::get('aran_id')))->first()->rez_id;
+                for ($i = 0; $i < (int) Input::get('broj_soba'); $i++) {
+                    $tip = $lista_tipova[$i];
+                    $krevet = $lista_kreveta[$i];
+                    var_dump($tip, $krevet);
+                    var_dump($db->query('SELECT id FROM sobatip_hash WHERE LOWER(tip) LIKE ? AND br_kreveta = ?', array(strtolower($tip), $krevet)));
+                    $soba_tip = $db->query('SELECT id FROM sobatip_hash WHERE LOWER(tip) LIKE ? AND br_kreveta = ?', array(strtolower($tip), $krevet))->first()->id;
+                    $soba_id = $db->query('SELECT soba_id FROM `soba` WHERE tip=? AND smestaj_id = ? AND rez_id IS NULL;', array($soba_tip, $smestaj_id))->first()->soba_id;
+                    $db->query('UPDATE `soba` SET `rez_id` = ? WHERE `soba`.`soba_id` = ?;', array($rezervacija_id, $soba_id));
                 }
             } catch (Exception $e) {
                 die($e->getMessage());
@@ -57,7 +67,6 @@ if (Input::exists()) {
                 echo $error, '<br>';
             }
         }
-    }
 }
 //if (!Input::get('aran_id')) {
 //    Redirect::to('ponude.php');
@@ -100,7 +109,6 @@ if (Input::exists()) {
            
         
         <form method="post" id="profil" action="">
-        <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
         <div id = "personal" style="">
         </div>
         </div>

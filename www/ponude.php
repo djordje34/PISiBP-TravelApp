@@ -369,6 +369,7 @@ $aranzmani = array_merge($trenutni_aranzmani, $prosli_aranzmani);
                             $slika_grada = $db->action('SELECT slika', 'grad_ima_sliku', array('grad_id', '=', $smestaj->g_id))->first()->slika;
                             $slika_grada = str_replace('\\', '/', $slika_grada);
                             $prevoz_cena = $prevoz->cena;
+                            $ocena_smestaja = $smestaj->br_zvezzdica;
                             if(!$prevoz_cena)
                                 $prevoz_cena='(Putarina + gorivo)';
                             echo '
@@ -387,14 +388,17 @@ $aranzmani = array_merge($trenutni_aranzmani, $prosli_aranzmani);
                                 </div>
                                 <div class="col-lg-8">
                                     <div class="offers_content">
-                                        <div class="offers_price"> Počinje od €' . $cena . '<span>po noci</span></div>
-                                        <div class="rating rating_5">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half"></i>
-                                        </div>
+                                        <div class="offers_price"> Počinje od €' . $cena . '<span>po noci</span></div>';
+                                        $zvezde = round($ocenasmestaja);
+                                        echo '<div class="rating rating' . $zvezde . '">';
+                                        for ($i= 1; $i <= $zvezde; $i++) {
+                                            if ($i > $ocena_smestaja && $i == $zvezde) {
+                                                echo '<i class="fas fa-star-half"></i>';
+                                            } else {
+                                                echo '<i class="fas fa-star"></i>';
+                                            }
+                                        }
+                                        echo'
                                         <p class="offers_text" style="font-weight: bold; font-size: 17px;">' . $naziv . '</p>
                                         <div class="offers_icons">
                                             <ul class="offers_icons_list">
