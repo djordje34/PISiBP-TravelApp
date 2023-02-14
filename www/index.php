@@ -40,7 +40,7 @@ require_once 'navbar.php';
                         <!-- Slider Item -->
                         <div class="owl-item home_slider_item">
                             <!-- Image by https://com/@anikindimitry -->
-                            <div class="home_slider_background" style="background-image:url(imgs/home_slider.jpg)"></div>
+                            <div class="home_slider_background" style="background-image:url(imgs/home1.jpg)"></div>
 
                             <div class="home_slider_content text-center">
                                 <div class="home_slider_content_inner" data-animation-in="bounceIn" data-animation-out="animate-out zoomOutUp">
@@ -53,12 +53,12 @@ require_once 'navbar.php';
 
                         <!-- Slider Item -->
                         <div class="owl-item home_slider_item">
-                            <div class="home_slider_background" style="background-image:url(imgs/proba2.jpg)"></div>
+                            <div class="home_slider_background" style="background-image:url(imgs/home2.jpg)"></div>
 
                             <div class="home_slider_content text-center">
                                 <div class="home_slider_content_inner" data-animation-in="fadeInDownBig" data-animation-out="animate-out fadeOutUpBig">
-                                    <h1>Upoznajte svet</h1>
-                                    <h1>Zajedno sa nama</h1>
+                                    <h1>Najlepše</h1>
+                                    <h1>Destinacije</h1>
                                     <div class="button home_slider_button"><div class="button_bcg"></div><a href="ponude.php">Pogledajte nasu ponudu<span></span><span></span><span></span></a></div>
                                 </div>
                             </div>
@@ -66,12 +66,12 @@ require_once 'navbar.php';
 
                         <!-- Slider Item -->
                         <div class="owl-item home_slider_item">
-                            <div class="home_slider_background" style="background-image:url(imgs/proba1.jpeg)"></div>
+                            <div class="home_slider_background" style="background-image:url(imgs/home3.jpg)"></div>
 
                             <div class="home_slider_content text-center">
                                 <div class="home_slider_content_inner" data-animation-in="rotateIn" data-animation-out="animate-out fadeOutDownBig">
-                                    <h1>Upoznajte svet</h1>
-                                    <h1>Zajedno sa nama</h1>
+                                    <h1>Na jedan</h1>
+                                    <h1>Klik</h1>
                                     <div class="button home_slider_button"><div class="button_bcg"></div><a href="ponude.php">Pogledajte nasu ponudu<span></span><span></span><span></span></a></div>
                                 </div>
                             </div>
@@ -301,10 +301,10 @@ require_once 'navbar.php';
                                     <div class="test_content_container">
                                         <div class="test_content">
                                             <div class="test_item_info">
-                                                <div class="test_name">Djordje Karisić</div>
+                                                <div class="test_name">Djordje Karišić</div>
                                                 <div class="test_date">Jan 22 2023</div>
                                             </div>
-                                            <div class="test_quote_title">" Best holliday ever "</div>
+                                            <div class="test_quote_title">"Nesto "</div>
                                             <p class="test_quote_text">Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec.</p>
                                         </div>
                                     </div>
@@ -321,7 +321,7 @@ require_once 'navbar.php';
                                                 <div class="test_name">Mladen Cvetković</div>
                                                 <div class="test_date">Jan 22 2023</div>
                                             </div>
-                                            <div class="test_quote_title">" Best holliday ever "</div>
+                                            <div class="test_quote_title">"Nesto"</div>
                                             <p class="test_quote_text">Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec.</p>
                                         </div>
                                     </div>
@@ -339,7 +339,7 @@ require_once 'navbar.php';
                                                 <div class="test_name">Aleksa Vuković</div>
                                                 <div class="test_date">Jan 22 2023</div>
                                             </div>
-                                            <div class="test_quote_title">" Best holliday ever "</div>
+                                            <div class="test_quote_title">"Nesto "</div>
                                             <p class="test_quote_text">Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec.</p>
                                         </div>
                                     </div>
@@ -355,7 +355,7 @@ require_once 'navbar.php';
                                                 <div class="test_name">Filip Stefanović</div>
                                                 <div class="test_date">Jan 22 2023</div>
                                             </div>
-                                            <div class="test_quote_title">" Best holliday ever "</div>
+                                            <div class="test_quote_title">"Nesto "</div>
                                             <p class="test_quote_text">Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec.</p>
                                         </div>
                                     </div>
