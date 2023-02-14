@@ -32,7 +32,8 @@ if (isset($_POST['booking'])) {
                 $smestaj_id = $aranzman->smestaj_id;
                 $broj_zvezdica = $db->get('smestaj', array('smestaj_id', '=', $smestaj_id))->first()->br_zvezdica;
                 $dani = $datum_polaska->diff($datum_povratka)->d;
-                $cena = $db->get('prevoz', array('p_id', '=', $aranzman->p_id))->first()->cena;
+                $cena_prevoza = (int) $db->get('prevoz', array('p_id', '=', $aranzman->p_id))->first()->cena;
+                $cena = $cena_prevoza * (int) Input::get('clan_odr') + (($cena_prevoza / 2) * (int) Input::get('clan_deca'));
                 for ($i = 0; $i < (int) Input::get('broj_soba'); $i++) {
                     $tip[] = '%' . $lista_tipova[$i] . '%';
                     $soba_tip[] = $db->query('SELECT id, gen_cena FROM sobatip_hash WHERE LOWER(tip) LIKE ? AND br_kreveta = ?', array(strtolower($tip[$i]), $lista_kreveta[$i]))->first();
