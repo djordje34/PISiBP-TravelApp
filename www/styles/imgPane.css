@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    background-color: turquoise;
+}
+p{
+    margin: 0;
+}
+
+.image1{
+    width: 100%;
+    height: 300px;
+}
+.container{
+    margin: 25px auto;
+
+}
+
+.image{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.image .overlay {
+    position: absolute;
+    bottom: 0;
+    padding-left: 25px;
+    padding-top: 15px;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    z-index: 5;
+}
+
+.image .overlay::before{
+    content: "";
+    background: #ffff;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    left:0;
+    bottom: -150px;
+    z-index: -2;
+    opacity: 0.5;
+    transition: all 0.3s ease-out;
+}
+.image:hover .overlay{
+    color: black;
+}
+.container .image:hover .overlay .amount,
+.container .image:hover .overlay .h4,
+.container .image:hover .overlay .textmuted,
+.container .image:hover .overlay .fa-star,
+.container .image:hover .overlay .fa-star-half-alt,
+.container .image:hover .overlay .review{
+    color: black;
+}
+
+.image:hover .overlay::before{
+    bottom: 0px;
+}
+
+.amount{
+    font-size: 15px;
+
+}
+.textmuted{
+    color: #f8f8f8;
+    font-weight: 200;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.fa-star,.fa-star-half-alt{
+    color: white;
+    font-size: 10px;
+    margin: 0 1px;
+}
+.review{
+    font-size: 12px;
+    font-weight: 200;
+}

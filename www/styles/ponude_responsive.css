@@ -1,0 +1,157 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media only screen and (max-width: 1730px)
+{
+	.temp_col
+	{
+		display: none !important;
+	}
+	.col-1680-4
+	{
+		flex: 0 0 33.333333%;
+    	max-width: 33.333333%;
+	}
+	.offers
+	{
+		padding-top: 0px;
+	}
+}
+
+
+@media only screen and (max-width: 1199px)
+{
+	.footer_blog_content
+	{
+		padding-left: 74px;
+	}
+}
+
+
+@media only screen and (max-width: 991px)
+{
+	.offers
+	{
+		padding-bottom: 105px;
+	}
+	.col-1680-4
+	{
+		flex: 0 0 100%;
+    	max-width: 100%;
+	}
+	.offers_image_container
+	{
+		width: 100%;
+		height: 443px;
+		margin-bottom: 38px;
+	}
+	.offers_image_background
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+	}
+	.footer_column
+	{
+		margin-bottom: 60px;
+	}
+	.footer_column:last-child
+	{
+		margin-bottom: 0px;
+	}
+}
+
+
+@media only screen and (max-width: 767px)
+{
+	.offers_image_container
+	{
+		height: 327px;
+	}
+	.home_title
+	{
+    	font-size: 48px;
+	}
+}
+@media only screen and (max-width: 575px)
+{
+	p{font-size: 13px;}
+	.logo a img
+	{
+		width: 24px;
+	}
+	.logo a
+	{
+		font-size: 24px;
+	}
+	.logo_container
+	{
+		-webkit-transform: none;
+		-moz-transform: none;
+		-ms-transform: none;
+		-o-transform: none;
+		transform: none;
+	}
+	.logo a
+	{
+		font-size: 16px;
+	}
+	.logo a img
+	{
+		width: 16px;
+		margin-right: 7px;
+	}
+	.home
+	{
+		width: 100%;
+		height: 375px;
+		background: transparent;
+	}
+	.home_title
+	{
+		font-size: 24px;
+	}
+	.offers_image_container
+	{
+		height: calc((100vw - 30px) / 0.97);
+	}
+	.offers_price
+	{
+		font-size: 30px;
+	}
+	.offers_price span
+	{
+		font-size: 12px;
+		margin-left: 7px;
+	}
+	.offer_reviews_rating
+	{
+		width: 56px;
+	    height: 47px;
+	    font-size: 24px;
+	    line-height: 47px;
+	}
+	.offer_reviews_title
+	{
+		font-size: 11px;
+	}
+	.offers_text
+	{
+		font-size: 13px;
+	}
+	.footer_about_text
+	{
+		font-size: 13px;
+	}
+}
+
+
+@media only screen and (max-width: 479px)
+{
+	p{font-size: 13px;}
+}
