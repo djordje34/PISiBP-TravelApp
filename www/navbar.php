@@ -52,16 +52,16 @@ require_once 'core/init.php';
     if ($user->permissionLevel() == 2 || $user->permissionLevel() == 1) {
             echo "
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"aranzmani.php\">Lista aranzmana</a>
+                    <a class=\"nav-link\" href=\"aranzmani.php\">Lista aranžmana</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link \" href=\"changepassword.php\">Promena sifre</a>
+                    <a class=\"nav-link \" href=\"changepassword.php\">Promena šifre</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link \" href=\"dodaj_aranzman.php\">Dodavanje aranzmana</a>
+                    <a class=\"nav-link \" href=\"dodaj_aranzman.php\">Dodavanje aranžmana</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link \" href=\"profil.php\">Vas profil</a>
+                    <a class=\"nav-link \" href=\"profil.php\">Vaš profil</a>
                 </li>
                 <li class=\"nav-item\">
                     <a class=\"nav-link \" href=\"reservations.php\">Lista rezervacija</a>
@@ -84,7 +84,9 @@ require_once 'core/init.php';
         <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button> -->
         </form>
         </div>
+        <div class='ml-auto'>
             <a href='login.php' class='link-warning m-3 mb-3' style = 'text-decoration:none;'>Uloguj me</a>
+        </div>
         <div>
 ";
     }

@@ -246,7 +246,7 @@ $aranzmani = array_merge($trenutni_aranzmani, $prosli_aranzmani);
                             </div>
                             <div class="col-lg align-items-end">
                                 <div class="form-group">
-                                    <label for="#">Drzava</label>
+                                    <label for="#">Država</label>
                                     <div class="form-field">
                                       <div class="select-wrap">
                                         <div class="icon" id="drzaveOvde"><span class="fas fa-arrow-down"></span></div>
@@ -387,7 +387,7 @@ $aranzmani = array_merge($trenutni_aranzmani, $prosli_aranzmani);
                                 </div>
                                 <div class="col-lg-8">
                                     <div class="offers_content">
-                                        <div class="offers_price"> Pocinje od €' . $cena . '<span>po noci</span></div>
+                                        <div class="offers_price"> Počinje od €' . $cena . '<span>po noci</span></div>
                                         <div class="rating rating_5">
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
@@ -418,7 +418,7 @@ $aranzmani = array_merge($trenutni_aranzmani, $prosli_aranzmani);
                                     <form action="hotel.php" method="post" id="' . $id . '" name="' . $id . '">
                                         <input type="hidden" name="aran_id" value="' . $id . '">
                                         <div class="book_button">
-                                        <button class="book_button_1" type="submit" form="' . $id . '" value="submit">Zakazi<span></span><span></span><span></span></button>
+                                        <button class="book_button_1" type="submit" form="' . $id . '" value="submit">Zakaži<span></span><span></span><span></span></button>
                                         </div>
                                         </form>';
                             }
