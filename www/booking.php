@@ -72,7 +72,7 @@ if (isset($_POST['booking'])) {
                 die($e->getMessage());
             }
             Session::delete('aran_id');
-            echo $cena;
+            echo 1;
         } else {
             foreach ($validation->errors() as $error) {
                 echo $error, '<br>';

@@ -109,7 +109,38 @@ $('.appendForms').empty();
 
     }
 });
-
+$(document).on("click",".zakazi", function (event) {
+  var kreveti = $(".brojKreveta");
+  var tipovi = $(".tipSobe");
+  var listakreveta = [];
+  for(var i = 0; i < kreveti.length; i++){
+    listakreveta[i] = $(kreveti[i]).val();
+  }
+  var listatipova = [];
+  for(var i = 0; i < tipovi.length; i++){
+    listatipova[i] = $(tipovi[i]).val();
+  }
+  console.log(listakreveta, listatipova);
+  var ime = document.getElementById('ime').value
+  var prezime = document.getElementById('prezime').value
+  var clan_odr =    document.getElementById('clanovi_odrasli').value
+  var clan_deca =     document.getElementById('clanovi_deca').value
+  var email     =   document.getElementById('email').value
+  var kontakt   =   document.getElementById('kontakt').value
+  var kartica   =   document.getElementById('kartica').value
+  var broj_soba   =   document.getElementById('broj_soba').value
+  $.ajax({
+    url: 'booking.php',
+    type: 'post',
+    data: {booking: 1, listakreveta:listakreveta, listatipova:listatipova, ime:ime, prezime:prezime, clan_odr:clan_odr, clan_deca:clan_deca, email:email, kontakt:kontakt, kartica:kartica, broj_soba:broj_soba},
+    success: function(response){
+        if (response) {
+          window.location.href = 'ponude.php';
+        }
+    }
+});
+});
+});
 $(document).on("click",".proveriCenu", function (event) {
   var kreveti = $(".brojKreveta");
   var tipovi = $(".tipSobe");
@@ -121,21 +152,15 @@ $(document).on("click",".proveriCenu", function (event) {
   for(var i = 0; i < tipovi.length; i++){
     listatipova[i] = $(tipovi[i]).val();
   }
-  var ime = document.getElementById('ime').value
-  var prezime = document.getElementById('prezime').value
   var clan_odr =    document.getElementById('clanovi_odrasli').value
   var clan_deca =     document.getElementById('clanovi_deca').value
-  var email     =   document.getElementById('email').value
-  var kontakt   =   document.getElementById('kontakt').value
-  var kartica   =   document.getElementById('kartica').value
   var broj_soba   =   document.getElementById('broj_soba').value
   $.ajax({
     url: 'cena.php',
     type: 'post',
-    data: {proveriCenu: 1, listakreveta:listakreveta, listatipova:listatipova, ime:ime, prezime:prezime, clan_odr:clan_odr, clan_deca:clan_deca, email:email, kontakt:kontakt, kartica:kartica, broj_soba:broj_soba},
+    data: {proveriCenu: 1, listakreveta:listakreveta, listatipova:listatipova, clan_odr:clan_odr, clan_deca:clan_deca, broj_soba:broj_soba},
     success: function(response){
       $('#ukupna_cena').empty().append(response);
     }
-});
 });
 });
