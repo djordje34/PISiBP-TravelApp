@@ -15,9 +15,6 @@
 }
 body
 {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
-	font-weight: 400;
 	background: #FFFFFF;
 	color: #a5a5a5;
 }
@@ -159,6 +156,16 @@ section
 {
 	margin-top: 10px;
 }
+.rating_1 i:first-child{color: #dbac7f;}
+.rating_2 i:first-child{color: #dbac7f;}
+.rating_2 i:nth-child(2){color: #c8a358;}
+.rating_3 i:first-child{color: #dbac7f;}
+.rating_3 i:nth-child(2){color: #c8a358;}
+.rating_3 i:nth-child(3){color: #d0943b;}
+.rating_4 i:first-child{color: #dbac7f;}
+.rating_4 i:nth-child(2){color: #c8a358;}
+.rating_4 i:nth-child(3){color: #d0943b;}
+.rating_4 i:nth-child(4){color: #d2781f;}
 .rating_5 i:first-child{color: #dbac7f;}
 .rating_5 i:nth-child(2){color: #c8a358;}
 .rating_5 i:nth-child(3){color: #d0943b;}
@@ -557,3 +564,19 @@ label {
   li.paginationjs-page {
     display: inline-block;
 }
+.paginationjs-page.active,
+  .paginationjs-prev.disabled,
+  .paginationjs-next.disabled,
+  .paginationjs-ellipsis.disabled {
+	background-color: rgb(223, 119, 15);
+	cursor: not-allowed;}
+	
+.paginationjss-page a {
+		display: block;
+		color: black;
+	  }
+	
+.paginationjss-page.active {
+		background-color: black;
+		color: white;
+	  }

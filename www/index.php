@@ -417,8 +417,7 @@ require_once 'navbar.php';
     <div class="card-body">
         <h5 class="card-title">Karišić Đorđe</h5>
         <h6 class="card-subtitle mb-2 text-muted">QA Engineer</h6>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-dark">Go somewhere</a>
+        
     </div>
     </div>
     <div class="card m-3" style="width: 18rem;">
@@ -426,8 +425,7 @@ require_once 'navbar.php';
     <div class="card-body">
         <h5 class="card-title">Cvetković Mladen</h5>
         <h6 class="card-subtitle mb-2 text-muted">Frontend Engineer</h6>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-dark">Go somewhere</a>
+        
     </div>
     </div>
     <div class="card  m-3" style="width: 18rem;">
@@ -435,8 +433,7 @@ require_once 'navbar.php';
     <div class="card-body">
         <h5 class="card-title">Vuković Aleksa</h5>
         <h6 class="card-subtitle mb-2 text-muted">System Engineer</h6>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-dark">Go somewhere</a>
+        
     </div>
     </div>
 
@@ -445,8 +442,7 @@ require_once 'navbar.php';
     <div class="card-body">
         <h5 class="card-title">Stefanović Filip</h5>
         <h6 class="card-subtitle mb-2 text-muted">Backend Engineer</h6>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-dark">Go somewhere</a>
+        
     </div>
     </div>
 

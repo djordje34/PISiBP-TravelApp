@@ -41,7 +41,7 @@ $(document).ready(function(){
 </head>
 <body>
 <div class="container">
-    <div class="table-responsive">
+    <div class="table-responsive" style="width: fit-content; margin-left:-120px;">
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
