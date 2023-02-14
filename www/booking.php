@@ -4,6 +4,9 @@ require_once 'core/init.php';
 if (Input::get('aran_id')) {
     Session::put('aran_id', Input::get('aran_id'));
 }
+if (!Input::get('aran_id') && !isset($_POST['booking'])) {
+    Redirect::to('ponude.php');
+}
 require_once 'navbar.php';
 if (isset($_POST['booking'])) {
     $lista_kreveta = (Input::get('listakreveta'));
@@ -25,18 +28,20 @@ if (isset($_POST['booking'])) {
             try {
                 $db = DB::getInstance();
                 $aranzman = $db->get('aranzmani', array('aran_id', '=', Session::get('aran_id')))->first();
+                $datum_polaska = new DateTime($aranzman->krece);
+                $datum_povratka = new DateTime($aranzman->vraca);
                 $smestaj_id = $aranzman->smestaj_id;
                 $broj_zvezdica = $db->get('smestaj', array('smestaj_id', '=', $smestaj_id))->first()->br_zvezdica;
+                $dani = $datum_polaska->diff($datum_povratka)->d;
                 $cena = $db->get('prevoz', array('p_id', '=', $aranzman->p_id))->first()->cena;
-                $cena = $gen_cena + $gen_cena / 2 * ($broj_zvezdica - 3);
                 //$cena = $br_clan * (int) Input::get('br_soba') * $aran_cena;//TODO
                 for ($i = 0; $i < (int) Input::get('broj_soba'); $i++) {
                     $tip[] = '%' . $lista_tipova[$i] . '%';
                     $soba_tip[] = $db->query('SELECT id, gen_cena FROM sobatip_hash WHERE LOWER(tip) LIKE ? AND br_kreveta = ?', array(strtolower($tip[$i]), $lista_kreveta[$i]))->first();
-                    $soba_id[] = $db->query('SELECT soba_id FROM `soba` WHERE tip=? AND smestaj_id = ? AND rez_id IS NULL;', array($soba_tip, $smestaj_id))->first();
+                    $soba_id[] = $db->query('SELECT soba_id FROM `soba` WHERE tip=? AND smestaj_id = ? AND rez_id IS NULL;', array($soba_tip[$i]->id, $smestaj_id))->first();
                     $gen_cena = $soba_tip[$i]->gen_cena;
-                    $cena += $gen_cena + $gen_cena / 2 * ($broj_zvezdica - 3);
-                }//PHP MAGIC
+                    $cena += ($gen_cena + (($gen_cena / 2) * ($broj_zvezdica - 3))) * $dani;
+                }
                 if (
                     !$db->insert(
                         'rezervacije',
@@ -57,9 +62,9 @@ if (isset($_POST['booking'])) {
                 ) {
                     throw new Exception('Desila se greska pri pravljenju rezervacije.');
                 }
-                $rezervacija_id = $db->query('SELECT rez_id FROM rezervacije WHERE ime = ? AND prezime = ? AND br_kartice = ? AND email = ? AND broj_odr = ? AND broj_dece = ? AND cena = ? AND kom = ? AND kontakt = ? AND broj_soba = ? AND aran_id = ? AND korisnik_id IS NULL', array(Input::get('ime'), Input::get('prezime'), Input::get('kartica'), Input::get('email'), Input::get('clan_odr'), Input::get('clan_deca'), 1, Input::get('komentar'), Input::get('kontakt'), (int) Input::get('broj_soba'), (int) Session::get('aran_id')))->first()->rez_id;
+                $rezervacija_id = $db->query('SELECT rez_id FROM rezervacije WHERE ime = ? AND prezime = ? AND br_kartice = ? AND email = ? AND broj_odr = ? AND broj_dece = ? AND cena = ? AND kom = ? AND kontakt = ? AND broj_soba = ? AND aran_id = ? AND korisnik_id IS NULL', array(Input::get('ime'), Input::get('prezime'), Input::get('kartica'), Input::get('email'), Input::get('clan_odr'), Input::get('clan_deca'), $cena, Input::get('komentar'), Input::get('kontakt'), (int) Input::get('broj_soba'), (int) Session::get('aran_id')))->first()->rez_id;
                 for ($i = 0; $i < (int) Input::get('broj_soba'); $i++) {
-                    if ($db->query('UPDATE `soba` SET `rez_id` = ? WHERE `soba`.`soba_id` = ?;', array($rezervacija_id, $soba_id[$i]))->error()) {
+                    if ($db->query('UPDATE `soba` SET `rez_id` = ? WHERE `soba`.`soba_id` = ?;', array($rezervacija_id, $soba_id[$i]->soba_id))->error()) {
                         Session::delete('aran_id');
                         throw new Exception('Desila se greska pri rezervisanju soba.');
                     }
@@ -73,9 +78,6 @@ if (isset($_POST['booking'])) {
                 echo $error, '<br>';
             }
         }
-}
-if (!Input::get('aran_id') && !isset($_POST['booking'])) {
-    Redirect::to('ponude.php');
 }
 ?>
 
