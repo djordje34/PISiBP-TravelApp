@@ -3,7 +3,12 @@ FROM php:8.2-apache
 #RUN chown -R admin:admin /var/www/html
 COPY www/slike_travel /var/www/html/slike_travel
 COPY www/slikeGradova /var/www/html/slikeGradova
+COPY www/pyscripts /var/www/html/pyscripts
+COPY www/runit.sh /var/www/html
 RUN chmod 755 /var/www/html
+RUN chmod 755 /var/www/html/runit.sh
+RUN chmod 755 /var/www/html/pyscripts/populator.py
+RUN chmod 755 /var/www/html/pyscripts/generator.py
 #USER admin
 RUN docker-php-ext-install mysqli
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -18,34 +23,25 @@ EXPOSE 3306
 EXPOSE 8000
 EXPOSE 8001
 
-RUN pip install matplotlib
-RUN pip install mysql-connector-python
-RUN pip install selenium 
-RUN pip install faker 
-RUN pip install bs4 
-RUN pip install requests 
-RUN pip install pandas 
-RUN pip install numpy 
-RUN pip install openai 
-RUN pip install translators 
-RUN pip install bing_image_downloader 
-RUN pip install googletrans
-RUN pip install srtools
+#RUN pip install matplotlib
+#RUN pip install mysql-connector-python
+#RUN pip install selenium 
+#RUN pip install faker 
+#RUN pip install bs4 
+#RUN pip install requests 
+#RUN pip install pandas 
+#RUN pip install numpy 
+#RUN pip install openai 
+#RUN pip install translators 
+#RUN pip install bing_image_downloader 
+#RUN pip install googletrans
+#RUN pip install srtools
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
 
 
-RUN mkdir -p /scripts
-COPY runit.sh /scripts
-WORKDIR /scripts
-RUN mkdir -p /pydata
-RUN mkdir -p /pyscripts
-COPY www/pyscripts /pyscripts
-COPY www/pydata /pydata
-RUN chmod +x runit.sh
-RUN chmod 755 /scripts/runit.sh
-RUN chmod 755 /pyscripts/populator.py
+
+
 #RUN /scripts/./runit.sh
-WORKDIR /
-#ENTRYPOINT [ "scripts/runit.sh" ]
+
 #COPY './phpdocker/php-fpm/php-ini-overrides.ini /etc/php/8.2/fpm/conf.d/99-overrides.ini';

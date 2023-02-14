@@ -1,0 +1,146 @@
+naziv,drzava,kontinent
+Shanghai,China,Asia
+Beijing,China,Asia
+Shenzhen,China,Asia
+Guangzhou,China,Asia
+Chengdu,China,Asia
+Mumbai,India,Asia
+Delhi,India,Asia
+Bengaluru,India,Asia
+Hyderabad,India,Asia
+Ahmedabad,India,Asia
+Jakarta,Indonesia,Asia
+Surabaya,Indonesia,Asia
+Medan,Indonesia,Asia
+Bandung,Indonesia,Asia
+Bekasi,Indonesia,Asia
+Lagos,Nigeria,Africa
+Kano,Nigeria,Africa
+Ibadan,Nigeria,Africa
+Port Harcourt,Nigeria,Africa
+Benin City,Nigeria,Africa
+Addis Ababa,Ethiopia,Africa
+Dire Dawa,Ethiopia,Africa
+Nazret,Ethiopia,Africa
+Bahir Dar,Ethiopia,Africa
+Gondar,Ethiopia,Africa
+Cairo,Egypt,Africa
+Alexandria,Egypt,Africa
+Giza,Egypt,Africa
+Port Said,Egypt,Africa
+Suez,Egypt,Africa
+Moscow,Russia,Europe
+Saint Petersburg,Russia,Europe
+Novosibirsk,Russia,Europe
+Yekaterinburg,Russia,Europe
+Nizhniy Novgorod,Russia,Europe
+Berlin,Germany,Europe
+Hamburg,Germany,Europe
+Munich,Germany,Europe
+Koeln,Germany,Europe
+Frankfurt am Main,Germany,Europe
+London,United Kingdom,Europe
+Birmingham,United Kingdom,Europe
+Liverpool,United Kingdom,Europe
+Sheffield,United Kingdom,Europe
+Bristol,United Kingdom,Europe
+Paris,France,Europe
+Marseille,France,Europe
+Lyon,France,Europe
+Toulouse,France,Europe
+Nice,France,Europe
+Rome,Italy,Europe
+Milan,Italy,Europe
+Naples,Italy,Europe
+Turin,Italy,Europe
+Palermo,Italy,Europe
+Madrid,Spain,Europe
+Barcelona,Spain,Europe
+Valencia,Spain,Europe
+Sevilla,Spain,Europe
+Zaragoza,Spain,Europe
+Kyiv,Ukraine,Europe
+Kharkiv,Ukraine,Europe
+Donetsk,Ukraine,Europe
+Odessa,Ukraine,Europe
+Dnipro,Ukraine,Europe
+Warsaw,Poland,Europe
+Lodz,Poland,Europe
+Krakow,Poland,Europe
+Wroclaw,Poland,Europe
+Poznan,Poland,Europe
+Bucharest,Romania,Europe
+Iasi,Romania,Europe
+Timisoara,Romania,Europe
+Craiova,Romania,Europe
+Constanta,Romania,Europe
+Amsterdam,Netherlands,Europe
+Rotterdam,Netherlands,Europe
+The Hague,Netherlands,Europe
+Utrecht,Netherlands,Europe
+Eindhoven,Netherlands,Europe
+Brussels,Belgium,Europe
+Antwerpen,Belgium,Europe
+Gent,Belgium,Europe
+Charleroi,Belgium,Europe
+Liege,Belgium,Europe
+Athens,Greece,Europe
+Thessaloniki,Greece,Europe
+Patra,Greece,Europe
+Piraeus,Greece,Europe
+Larisa,Greece,Europe
+Lisbon,Portugal,Europe
+Porto,Portugal,Europe
+Amadora,Portugal,Europe
+Braga,Portugal,Europe
+Setubal,Portugal,Europe
+Stockholm,Sweden,Europe
+Goeteborg,Sweden,Europe
+Malmoe,Sweden,Europe
+Uppsala,Sweden,Europe
+Sollentuna,Sweden,Europe
+Mexico City,Mexico,North America
+Iztapalapa,Mexico,North America
+Ecatepec de Morelos,Mexico,North America
+Guadalajara,Mexico,North America
+Puebla,Mexico,North America
+Toronto,Canada,North America
+Montreal,Canada,North America
+Calgary,Canada,North America
+Ottawa,Canada,North America
+Edmonton,Canada,North America
+Guatemala City,Guatemala,North America
+Mixco,Guatemala,North America
+Villa Nueva,Guatemala,North America
+Petapa,Guatemala,North America
+San Juan Sacatepequez,Guatemala,North America
+Sao Paulo,Brazil,South America
+Rio de Janeiro,Brazil,South America
+Salvador,Brazil,South America
+Fortaleza,Brazil,South America
+Belo Horizonte,Brazil,South America
+Bogota,Colombia,South America
+Cali,Colombia,South America
+Medellin,Colombia,South America
+Barranquilla,Colombia,South America
+Cartagena,Colombia,South America
+Buenos Aires,Argentina,South America
+Cordoba,Argentina,South America
+Rosario,Argentina,South America
+Mendoza,Argentina,South America
+San Miguel de Tucuman,Argentina,South America
+Sydney,Australia,Australia/Oceania
+Melbourne,Australia,Australia/Oceania
+Brisbane,Australia,Australia/Oceania
+Perth,Australia,Australia/Oceania
+Adelaide,Australia,Australia/Oceania
+Port Moresby,Papua New Guinea,Australia/Oceania
+Lae,Papua New Guinea,Australia/Oceania
+Arawa,Papua New Guinea,Australia/Oceania
+Mount Hagen,Papua New Guinea,Australia/Oceania
+Popondetta,Papua New Guinea,Australia/Oceania
+Auckland,New Zealand,Australia/Oceania
+Wellington,New Zealand,Australia/Oceania
+Christchurch,New Zealand,Australia/Oceania
+Manukau City,New Zealand,Australia/Oceania
+North Shore,New Zealand,Australia/Oceania

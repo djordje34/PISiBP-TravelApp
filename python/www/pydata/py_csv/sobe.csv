@@ -1,0 +1,21 @@
+tip,br_kreveta,opis,gen_cena
+SUITE,1,"Soba u hotelu (dve prostorije koje ne moraju biti odvojene vratima) odgovarajuće kvadrature za kapacitet od četiri osobe sa minimum dva pomoćna ležaja ili sofom na otvaranje.Sadrži stabilnu internet konekciju, frižider, TV i AC.",17.5
+SUITE,2,"Soba u hotelu (dve prostorije koje ne moraju biti odvojene vratima) odgovarajuće kvadrature za kapacitet od četiri osobe sa minimum dva pomoćna ležaja ili sofom na otvaranje.Sadrži stabilnu internet konekciju, frižider, TV i AC.",23.45
+SUITE,3,"Soba u hotelu (dve prostorije koje ne moraju biti odvojene vratima) odgovarajuće kvadrature za kapacitet od četiri osobe sa minimum dva pomoćna ležaja ili sofom na otvaranje.Sadrži stabilnu internet konekciju, frižider, TV i AC.",35.17
+SUITE,4,"Soba u hotelu (dve prostorije koje ne moraju biti odvojene vratima) odgovarajuće kvadrature za kapacitet od četiri osobe sa minimum dva pomoćna ležaja ili sofom na otvaranje.Sadrži stabilnu internet konekciju, frižider, TV i AC.",46.9
+FAMILY,1,"Porodična soba (jedna prostorija) odgovarajuće kvadrature za četiri osobe sa minimum jednim pravim pravim i jednim pomoćnim ležajem ili sofom na otvaranje, za decu.Sadrži stabilnu internet konekciju, frižider, TV i AC.",15.0
+FAMILY,2,"Porodična soba (jedna prostorija) odgovarajuće kvadrature za četiri osobe sa minimum jednim pravim pravim i jednim pomoćnim ležajem ili sofom na otvaranje, za decu.Sadrži stabilnu internet konekciju, frižider, TV i AC.",20.1
+FAMILY,3,"Porodična soba (jedna prostorija) odgovarajuće kvadrature za četiri osobe sa minimum jednim pravim pravim i jednim pomoćnim ležajem ili sofom na otvaranje, za decu.Sadrži stabilnu internet konekciju, frižider, TV i AC.",30.15
+FAMILY,4,"Porodična soba (jedna prostorija) odgovarajuće kvadrature za četiri osobe sa minimum jednim pravim pravim i jednim pomoćnim ležajem ili sofom na otvaranje, za decu.Sadrži stabilnu internet konekciju, frižider, TV i AC.",40.2
+SUPERIOR ROOM,1,"Soba u hotelu veće kvadrature i kvalitetnije opreme od standardne. Sadrži stabilnu internet konekciju, frižider, TV, klimu i sobni sef.",20.0
+SUPERIOR ROOM,2,"Soba u hotelu veće kvadrature i kvalitetnije opreme od standardne. Sadrži stabilnu internet konekciju, frižider, TV, klimu i sobni sef.",26.8
+SUPERIOR ROOM,3,"Soba u hotelu veće kvadrature i kvalitetnije opreme od standardne. Sadrži stabilnu internet konekciju, frižider, TV, klimu i sobni sef.",40.2
+SUPERIOR ROOM,4,"Soba u hotelu veće kvadrature i kvalitetnije opreme od standardne. Sadrži stabilnu internet konekciju, frižider, TV, klimu i sobni sef.",53.6
+SOBA (STANDARDNA),1,"Smeštajna jedinica u hotelu ili vili koja nema kuhinjske elemente, ni terasu. Sadrži stabilnu internet konekciju i TV.",10.0
+SOBA (STANDARDNA),2,"Smeštajna jedinica u hotelu ili vili koja nema kuhinjske elemente, ni terasu. Sadrži stabilnu internet konekciju i TV.",13.4
+SOBA (STANDARDNA),3,"Smeštajna jedinica u hotelu ili vili koja nema kuhinjske elemente, ni terasu. Sadrži stabilnu internet konekciju i TV.",20.1
+SOBA (STANDARDNA),4,"Smeštajna jedinica u hotelu ili vili koja nema kuhinjske elemente, ni terasu. Sadrži stabilnu internet konekciju i TV.",26.8
+STUDIO,1,"“Garsonjera” - smeštajna jedinica u hotelu, bez predsoblja, u kojoj se u istom prostoru nalazi deo sa kuhinjskim elementima sa osnovnim priborom za jelo.Sadrži stabilnu internet konekciju, TV i frižider.",12.5
+STUDIO,2,"“Garsonjera” - smeštajna jedinica u hotelu, bez predsoblja, u kojoj se u istom prostoru nalazi deo sa kuhinjskim elementima sa osnovnim priborom za jelo.Sadrži stabilnu internet konekciju, TV i frižider.",16.75
+STUDIO,3,"“Garsonjera” - smeštajna jedinica u hotelu, bez predsoblja, u kojoj se u istom prostoru nalazi deo sa kuhinjskim elementima sa osnovnim priborom za jelo.Sadrži stabilnu internet konekciju, TV i frižider.",25.12
+STUDIO,4,"“Garsonjera” - smeštajna jedinica u hotelu, bez predsoblja, u kojoj se u istom prostoru nalazi deo sa kuhinjskim elementima sa osnovnim priborom za jelo.Sadrži stabilnu internet konekciju, TV i frižider.",33.5

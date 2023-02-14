@@ -2,21 +2,11 @@
 #                          Generated on phpdocker.io                          #
 ###############################################################################
 version: "3.1"
-services:
-    www:
-        build: .
-        ports: 
-            - "8001:80"
-        volumes:
-            - ./www:/var/www/html/
-        links:
-            - db
-        networks:
-            - default
+services:    
     db:
         image: mysql
-        ports: 
-            - "3306:3306"
+        restart: always
+
         environment:
             MYSQL_DATABASE: travel
             MYSQL_USER: user
@@ -25,6 +15,18 @@ services:
         volumes:
             - ./dump:/docker-entrypoint-initdb.d
             - persistent:/var/lib/mysql
+        networks:
+            - default
+        ports:
+            - "3306:3306"
+    www:
+        build: .
+        ports: 
+            - "8001:80"
+        volumes:
+            - ./www:/var/www/html/
+        links:
+            - db
         networks:
             - default
     phpmyadmin:
@@ -37,5 +39,17 @@ services:
             MYSQL_USER: user
             MYSQL_PASSWORD: test
             MYSQL_ROOT_PASSWORD: test
+    
+    pythonapp:
+        build: ./python/
+        depends_on:
+            - db
+        links:
+           - db
+        command: sh -c "sleep 50s ; python3 ./pyscripts/populator.py"
+        networks:
+            - default
+    
+    
 volumes:
     persistent:
