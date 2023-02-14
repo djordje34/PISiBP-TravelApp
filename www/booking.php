@@ -122,7 +122,7 @@ require_once 'navbar.php';
         <div class="booking-form">
         <div id='appendForms' class='appendForms w-100'>
         </div>
-        <div id='ukupna_cena'>
+        <div id='ukupna_cena' style=" text-align: center;font-size: x-large;font-weight: 600;color: white;">
 
         </div>
 

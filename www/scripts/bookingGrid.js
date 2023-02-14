@@ -57,16 +57,21 @@ function genBookingRoom_type(){
 }
 function genSubmitButton(){
   return (
+    <div class="row">
+      <div class="col-md-6">
     <div class="form-btn" > <button class="submit-btn zakazi" type="button">ZAKAZI</button> </div>
-  );
-}
-function genSubmitButton1(){
-  return (
-    <div class="form-btn" > <button class="submit-btn proveriCenu" type="button">Proveri Cenu</button> </div>
+    </div>
+      <div class="col-md-6">
+        <div class="form-btn" > <button class="submit-btn proveriCenu" type="button">Proveri Cenu</button> </div>
+      </div>
+    </div>
+
+    
   );
 }
 
-  root.render([genBookingEditName(),genBookingPeople(),genBookingRoomBroj(),genBookingRoom_type(),genBookingEmailPhone(),genSubmitButton(),genSubmitButton1()]);
+
+  root.render([genBookingEditName(),genBookingPeople(),genBookingRoomBroj(),genBookingRoom_type(),genBookingEmailPhone(),genSubmitButton()]);
   
 
 $(document).ready(function() {
