@@ -396,7 +396,7 @@ $aranzmani = array_merge($trenutni_aranzmani, $prosli_aranzmani);
                                                 echo '<i class="fas fa-star"></i>';
                                             }
                                         }
-                                        echo'
+                                        echo'</div>
                                         <p class="offers_text" style="font-weight: bold; font-size: 17px;">' . $naziv . '</p>
                                         <div class="offers_icons">
                                             <ul class="offers_icons_list">
