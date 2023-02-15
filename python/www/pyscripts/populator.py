@@ -48,10 +48,10 @@ class Populator(object):
         'DELETE FROM ima_aktivnost;','DELETE FROM grad_ima_sliku;','DELETE FROM soba_ima_sliku;',
         'DELETE FROM akt_u_gradu;','DELETE FROM aktivnosti;','DELETE FROM aranzmani;','DELETE FROM soba;',
         'DELETE FROM smestaj;','DELETE FROM grad;','DELETE FROM drzava;','DELETE FROM kontinent;',
-        'DELETE FROM sobatip_hash;','DELETE FROM prevoz;','ALTER TABLE soba AUTO_INCREMENT = 1;',
+        'DELETE FROM sobatip_hash;','DELETE FROM prevoz;','DELETE FROM rezervacije;','ALTER TABLE soba AUTO_INCREMENT = 1;',
         'ALTER TABLE kontinent AUTO_INCREMENT = 1;','ALTER TABLE drzava AUTO_INCREMENT = 1;','ALTER TABLE grad AUTO_INCREMENT = 1;',
         'ALTER TABLE smestaj AUTO_INCREMENT = 1;','ALTER TABLE sobatip_hash AUTO_INCREMENT = 1;','ALTER TABLE prevoz AUTO_INCREMENT = 1;',
-        'ALTER TABLE aranzmani AUTO_INCREMENT = 1;','ALTER TABLE aktivnosti AUTO_INCREMENT = 1;'];
+        'ALTER TABLE aranzmani AUTO_INCREMENT = 1;','ALTER TABLE aktivnosti AUTO_INCREMENT = 1;','ALTER TABLE rezervacije AUTO_INCREMENT = 1;']
         
         for query in queries:
             self.cursor.execute(query)     
@@ -73,7 +73,7 @@ class Populator(object):
     def Append(self):
         
         
-        tables = ['kontinent(ime)','drzava(ime,k_id)','grad(ime,d_id)','smestaj(naziv,adresa,kapacitet,br_zvezdica,g_id)','sobatip_hash(tip,br_kreveta,gen_cena,opis)','prevoz(tip,ime_komp,cena)','soba(smestaj_id,tip)','aranzmani(naziv,krece,vraca,smestaj_id,p_id)','aktivnosti(naziv)','akt_u_gradu(g_id,akt_id,smestaj_id)','ima_aktivnost(aran_id,akt_id)','rezervacije(ime,prezime,br_kartice,email,broj_odr,broj_dece,cena,kom,kontakt,aran_id)']
+        tables = ['kontinent(ime)','drzava(ime,k_id)','grad(ime,d_id)','smestaj(naziv,adresa,kapacitet,br_zvezdica,g_id)','sobatip_hash(tip,br_kreveta,gen_cena,opis)','prevoz(tip,ime_komp,cena)','soba(smestaj_id,tip)','aranzmani(naziv,krece,vraca,smestaj_id,p_id)','aktivnosti(naziv)','akt_u_gradu(g_id,akt_id,smestaj_id)','ima_aktivnost(aran_id,akt_id)','rezervacije(ime,prezime,br_kartice,email,broj_odr,broj_dece,cena,kom,kontakt,aran_id, broj_soba)']
         inserts = list(dataTrimming())
         for i,table in enumerate(tables):
             vals = paramValuesGenerator(table)
@@ -84,7 +84,7 @@ class Populator(object):
         self.insertSobaSlike()
         self.insertGradSlike()
 
-        return True;
+        return True
 
 
 

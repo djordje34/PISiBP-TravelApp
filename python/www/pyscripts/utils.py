@@ -57,7 +57,8 @@ def translateElement(el):
         str: mesto/rec na srpskom, spakovano kao latinica
     """
     global fr,to
-    return cyrillic_to_latin(tss.lingvanex(el, fr, to))
+
+    return cyrillic_to_latin(tss.lingvanex(el, fr, to)['text'])
 
 
 def dataframeCleaner(df,path):
@@ -205,7 +206,7 @@ def dataTrimming():
 #zbog baze mora da se menja redosled kolona....
 
     
-    def switchToKey(df,col,x):  #col ako nije nonoe ukazuje da se radi o dataframe else o series
+    def switchToKey(df,col,x):  #col ako nije  ukazuje da se radi o dataframe else o series
         if col:
             ret = np.where(df[col]==x)
             return ret[0][0]+1

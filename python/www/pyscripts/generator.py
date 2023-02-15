@@ -223,10 +223,6 @@ def generatePrevoznik():
     
     
 def generatePonude():
-    
-    
-
-
     """
     aranzman(aran_id,naziv,krece,vraca,nap,smestaj_id,p_id)
     
@@ -339,7 +335,7 @@ def generateImaAktivnost():
 def generateRandomRezervacije(n):
     #ime prezime	br_kartice	email	broj_odr	broj_dece	cena	kom	kontakt	aran_id	korisnik_id	
     faker = Faker()
-    rez = pd.DataFrame(columns=['ime','prezime','br_kartice','email','broj_odr','broj_dece','cena','kom','kontakt','aran_id'])
+    rez = pd.DataFrame(columns=['ime','prezime','br_kartice','email','broj_odr','broj_dece','cena','kom','kontakt','aran_id', 'broj_soba'])
     
     rez['ime'] = [faker.name().split(" ")[0] for _ in range(n)]
     rez['prezime'] = [faker.name().split(" ")[1] for _ in range(n)]
@@ -351,6 +347,7 @@ def generateRandomRezervacije(n):
     rez['kom'] = [random.randint(1,5) for _ in range(n)]
     rez['kontakt'] = [''.join(random.choices(string.ascii_lowercase, k=10)) for _ in range(n)]
     rez['aran_id'] = [random.randint(1,50000) for _ in range(n)]
+    rez['broj_soba'] = [random.randint(1,5) for _ in range(n)]
     
     rez.to_csv(PATH_DATA+"rand_rez.csv",index=None)
 
@@ -368,4 +365,8 @@ def generator():
     generateImaAktivnost()
     generateRandomRezervacije(150)
 
+
+start = time.time()
 #generator()
+end = time.time()
+print(end - start)

@@ -1,1 +1,0 @@
-aran['aran_id'] = aran.index+1

@@ -1,10 +1,7 @@
 FROM php:8.2-apache
 COPY www/slike_travel /var/www/html/slike_travel
 COPY www/slikeGradova /var/www/html/slikeGradova
-COPY www/pyscripts /var/www/html/pyscripts
 RUN chmod 755 /var/www/html
-RUN chmod 755 /var/www/html/pyscripts/populator.py
-RUN chmod 755 /var/www/html/pyscripts/generator.py
 RUN docker-php-ext-install mysqli
 RUN apt-get update && apt-get install -y --no-install-recommends \
     python3 \

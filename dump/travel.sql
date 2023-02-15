@@ -23,7 +23,8 @@ USE `travel` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `travel`.`korisnik` (
   `korisnik_id` INT NOT NULL AUTO_INCREMENT,
-  `tip` INT NULL DEFAULT NULL,
+  `tip` INT NOT NULL,
+  CHECK (`tip`>=1 AND `tip`<=2),
   PRIMARY KEY (`korisnik_id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
@@ -164,8 +165,8 @@ CREATE TABLE IF NOT EXISTS `travel`.`smestaj` (
   `smestaj_id` INT NOT NULL AUTO_INCREMENT,
   `naziv` VARCHAR(80) NULL DEFAULT NULL,
   `adresa` VARCHAR(80) NULL DEFAULT NULL,
-  `kapacitet` VARCHAR(45) NULL DEFAULT NULL,
-  `br_zvezdica` VARCHAR(80) NULL DEFAULT NULL,
+  `kapacitet` INT NULL DEFAULT NULL,
+  `br_zvezdica` FLOAT NULL DEFAULT NULL,
   `g_id` INT NOT NULL,
   PRIMARY KEY (`smestaj_id`),
   INDEX `fk_smestaj_grad1_idx` (`g_id` ASC) VISIBLE,
@@ -211,7 +212,7 @@ CREATE TABLE IF NOT EXISTS `travel`.`prevoz` (
   `p_id` INT NOT NULL AUTO_INCREMENT,
   `tip` VARCHAR(80) NULL DEFAULT NULL,
   `ime_komp` VARCHAR(80) NULL DEFAULT NULL,
-  `cena` VARCHAR(80) NULL DEFAULT NULL,
+  `cena` INT NULL DEFAULT NULL,
   PRIMARY KEY (`p_id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
@@ -223,7 +224,7 @@ COLLATE = utf8mb4_0900_ai_ci;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `travel`.`aranzmani` (
   `aran_id` INT NOT NULL AUTO_INCREMENT,
-  `naziv` VARCHAR(255) NULL DEFAULT NULL,
+  `naziv` VARCHAR(120) NULL DEFAULT NULL,
   `krece` DATETIME NULL DEFAULT NULL,
   `vraca` DATETIME NULL DEFAULT NULL,
   `nap` VARCHAR(255) NULL DEFAULT NULL,
@@ -328,18 +329,18 @@ COLLATE = utf8mb4_0900_ai_ci;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `travel`.`rezervacije` (
   `rez_id` INT NOT NULL AUTO_INCREMENT,
-  `ime` VARCHAR(80) NULL DEFAULT NULL,
-  `prezime` VARCHAR(80) NULL DEFAULT NULL,
-  `br_kartice` VARCHAR(80) NULL DEFAULT NULL,
-  `email` VARCHAR(80) NULL DEFAULT NULL,
-  `broj_odr` VARCHAR(80) NULL DEFAULT NULL,
-  `broj_dece` VARCHAR(80) NULL DEFAULT NULL,
-  `cena` VARCHAR(80) NULL DEFAULT NULL,
-  `kom` VARCHAR(80) NULL DEFAULT NULL,
-  `kontakt` VARCHAR(80) NULL DEFAULT NULL,
-  `broj_soba` INT NULL,
+  `ime` VARCHAR(80) NOT NULL,
+  `prezime` VARCHAR(80) NOT NULL,
+  `br_kartice` VARCHAR(80) NOT NULL,
+  `email` VARCHAR(80) NOT NULL,
+  `broj_odr` INT NOT NULL,
+  `broj_dece` INT NULL,
+  `broj_soba` INT NOT NULL,
+  `cena` FLOAT NOT NULL,
+  `kom` VARCHAR(80) NULL,
+  `kontakt` VARCHAR(80) NOT NULL,
   `aran_id` INT NOT NULL,
-  `korisnik_id` INT NULL DEFAULT NULL,
+  `korisnik_id` INT NULL,
   PRIMARY KEY (`rez_id`),
   INDEX `fk_rezervacije_aranzmani1_idx` (`aran_id` ASC) VISIBLE,
   INDEX `fk_rezervacije_korisnik1_idx` (`korisnik_id` ASC) VISIBLE,
@@ -419,7 +420,7 @@ CREATE TABLE IF NOT EXISTS `travel`.`sobatip_hash` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `tip` VARCHAR(80) NULL DEFAULT NULL,
   `br_kreveta` VARCHAR(80) NULL DEFAULT NULL,
-  `gen_cena` VARCHAR(80) NULL DEFAULT NULL,
+  `gen_cena` FLOAT NULL DEFAULT NULL,
   `opis` VARCHAR(500) NULL DEFAULT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
@@ -430,6 +431,8 @@ COLLATE = utf8mb4_0900_ai_ci;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
 
 INSERT INTO korisnik (korisnik_id, tip) VALUES (NULL, '2');
 INSERT INTO admin (admin_id, email, password, ime, prezime, korisnik_id) VALUES (NULL, 'admin@1.1', '$2y$10$MUOykAR0LzKlpGeNGelH2ec74yMW1gULt8Eeqa9XQsu1t4jykE5Cy', NULL, NULL, '1');
