@@ -474,8 +474,17 @@ $aranzmani = array_merge($trenutni_aranzmani, $prosli_aranzmani);
                             }
                             echo'" data-num="' . $i . '">' . $i . '</li></a>';
                         }
-                    } elseif ($trenutna_strana < $broj_strana - 3) {
-                        for ($i = $trenutna_strana; $i <= $trenutna_strana + 2; $i++) {
+                    } elseif ($trenutna_strana >= 3) {
+                        for ($i = $trenutna_strana - 2; $i < $broj_strana - 2; $i++) {
+                            echo '<a href="ponude.php?stavke=' . $stavke . '&strana=' . $i . $search . '" class="page-link">';
+                            echo '<li class="paginationjs-page J-paginationjs-page  ';
+                            if ($i == $trenutna_strana) {
+                                echo 'active';
+                            }
+                            echo'" data-num="' . $i . '">' . $i . '</li></a>';
+                        }
+                    } elseif ($trenutna_strana < 3) {
+                        for ($i = 1; $i <= 3; $i++) {
                             echo '<a href="ponude.php?stavke=' . $stavke . '&strana=' . $i . $search . '" class="page-link">';
                             echo '<li class="paginationjs-page J-paginationjs-page  ';
                             if ($i == $trenutna_strana) {
