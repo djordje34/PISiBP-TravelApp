@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 require_once 'core/init.php';
+require_once 'functions/pagination.php';
 $user = new User();
 if (!$user->isLoggedIn()) {
     Redirect::to('index.php');
@@ -118,47 +119,7 @@ $(document).ready(function(){
     <div class="hint-text">Prikazano <b><?php echo (($trenutna_strana - 1) * 10) + 1; echo ' - '; echo $trenutna_strana * 10;?></b> od <b><?php echo $broj_aranzmana; ?></b> aranzmana</div>
     <ul class="pagination">
         <?php
-        echo '<li class="page-item"><a href="aranzmani.php?strana=' . 1 . '" class="page-link">Prva</a></li>';
-        $broj_strana = floor($broj_aranzmana / 10);
-        if ($broj_aranzmana % 10 != 0) {
-            $broj_strana++;
-        }
-        if ($broj_strana < 6) {
-            for ($i = 1; $i <= $broj_strana; $i++) {
-                if ($i != $trenutna_strana) {
-                    echo '<li class="page-item"><a href="aranzmani.php?strana=' . $i . '" class="page-link">' . $i . '</a></li>';
-                } else {
-                    echo '<li class="page-item active"><a href="aranzmani.php?strana=' . $i . '" class="page-link">' . $i . '</a></li>';
-                }
-            }
-        } else {
-            if ($trenutna_strana >= 3 && $trenutna_strana < $broj_strana - 3) {
-                for ($i = $trenutna_strana - 1; $i <= $trenutna_strana + 1; $i++) {
-                    if ($i != $trenutna_strana) {
-                        echo '<li class="page-item"><a href="aranzmani.php?strana=' . $i . '" class="page-link">' . $i . '</a></li>';
-                    } else {
-                        echo '<li class="page-item active"><a href="aranzmani.php?strana=' . $i . '" class="page-link">' . $i . '</a></li>';
-                    }
-                }
-            } elseif ($trenutna_strana < $broj_strana - 3) {
-                for ($i = $trenutna_strana; $i <= $trenutna_strana + 2; $i++) {
-                    if ($i != $trenutna_strana) {
-                        echo '<li class="page-item"><a href="aranzmani.php?strana=' . $i . '" class="page-link">' . $i . '</a></li>';
-                    } else {
-                        echo '<li class="page-item active"><a href="aranzmani.php?strana=' . $i . '" class="page-link">' . $i . '</a></li>';
-                    }
-                }
-            }
-            echo '...';
-            for ($i = $broj_strana - 2; $i <= $broj_strana; $i++) {
-                if ($i != $trenutna_strana) {
-                    echo '<li class="page-item"><a href="aranzmani.php?strana=' . $i . '" class="page-link">' . $i . '</a></li>';
-                } else {
-                    echo '<li class="page-item active"><a href="aranzmani.php?strana=' . $i . '" class="page-link">' . $i . '</a></li>';
-                }
-            }
-        }
-        echo '<li class="page-item"><a href="aranzmani.php?strana=' . $broj_strana . '" class="page-link">Poslednja</a></li>';
+        echo pagination($broj_aranzmana, $trenutna_strana, 'aranzmani.php');
         ?>
     </ul>
 </div>
