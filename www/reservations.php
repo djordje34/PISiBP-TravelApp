@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 require_once 'core/init.php';
 $trenutna_strana = 1;
 $user = new User();
@@ -79,7 +81,7 @@ $(document).ready(function(){
                         $trenutna_strana = (int) Input::get('strana');
                     }
                     $broj_rezervacija = $rezervacije_query->count();
-                    $rezervacije = $db->query('SELECT * FROM rezervacije limit ? , ?', array(($trenutna_strana - 1) * 10, 10))->results();
+                    $rezervacije = $db->query('SELECT * FROM rezervacije WHERE korisnik_id is NULL limit ? , ?', array(($trenutna_strana - 1) * 10, 10))->results();
                     if (count($rezervacije) > 0) {
                         foreach ($rezervacije as $rezervacija) {
                             $aranzman = $db->get('aranzmani', array('aran_id', '=', $rezervacija->aran_id))->first();
@@ -124,7 +126,7 @@ $(document).ready(function(){
                             echo "</tr>";
                         }
                     }
-                    //TODO FIXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                    //TODO Fix stranicenje and search
                 ?>
           </table>
             <div class="clearfix">

@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 require_once 'core/init.php';
 require_once 'navbar.php';
@@ -387,7 +388,7 @@ $aranzmani = array_merge($trenutni_aranzmani, $prosli_aranzmani);
                                 <div class="col-lg-8">
                                     <div class="offers_content">
                                         <div class="offers_price"> Počinje od €' . $cena . '<span>po noci</span></div>';
-                                        $zvezde = round($ocena_smestaja);
+                                        $zvezde = round((float) $ocena_smestaja);
                                         echo '<div class="rating rating_' . $zvezde . '">';
                                         for ($i = 1; $i <= $zvezde; $i++) {
                                             if ($i > $ocena_smestaja && $i == $zvezde) {

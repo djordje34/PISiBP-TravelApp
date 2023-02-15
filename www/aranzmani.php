@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 require_once 'core/init.php';
 $user = new User();
 if (!$user->isLoggedIn()) {
@@ -62,10 +64,11 @@ $(document).ready(function(){
                     <tr>
                         <th>#</th>
                         <th>Ime Aranzmana</th>
-                        <th>Datum kreiranja</th>
-                        <th>Datum Isteka</th>
+                        <th>Datum Polaska</th>
+                        <th>Datum Odlaska</th>
                         <th>Prevoznik</th>
                         <th>Smestaj</th>
+                        <th>Napomena</th>
                         <th>Status</th>
                         <th>Promeni/Ukloni</th>
                     </tr>
@@ -93,6 +96,7 @@ $(document).ready(function(){
                             echo '<td>' . $aranzman->vraca . '</td>';
                             echo '<td>' . $prevoz->tip . ' - ' . $prevoz->ime_komp . '</td>';
                             echo '<td>' . $smestaj->naziv . ' - ' . $smestaj->adresa . '</td>';
+                            echo '<td>' . $aranzman->nap . '</td>';
                             if ($datum_polaska > $current_time) {
                                 echo '<td><span class="status text-success">&bull;</span> Aktivan</td>';
                             } elseif ($datum_polaska < $current_time) {

@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 require_once 'core/init.php';
 $user = new User();
@@ -72,10 +73,10 @@ require_once 'navbar.php';
         <form method="post" id="profil" action="">
       <div class="row">
       <div class="col-md-6">
-          <div class="form-group"> <input class="form-control" type="text" placeholder="$idIme" id="ime" name="ime"/> <span class="form-label">Ime</span> </div>
+          <div class="form-group"> <input class="form-control" type="text" placeholder="Ime" id="ime" name="ime"/> <span class="form-label">Ime</span> </div>
       </div>
       <div class="col-md-6">
-          <div class="form-group"> <input class="form-control" type="text" placeholder="$idPrezime" id="prezime" name="prezime"/> <span class="form-label">Prezime</span> </div>
+          <div class="form-group"> <input class="form-control" type="text" placeholder="Prezime" id="prezime" name="prezime"/> <span class="form-label">Prezime</span> </div>
       </div>
   </div>
           
@@ -94,17 +95,21 @@ require_once 'navbar.php';
 <script>
     function myFunction(){
         let x = document.getElementById('ime').value=" <?php
-            if ($update) {
+            if ($update && $zaposlen->ime) {
                 echo $zaposlen->ime;
-            } else {
+            } elseif (!$update && $user->data()->ime) {
                 echo $user->data()->ime;
+            } else {
+                echo 'Ime';
             }
         ?>";
         let y = document.getElementById('prezime').value=" <?php
-        if ($update) {
+        if ($update && $zaposlen->prezime) {
             echo $zaposlen->prezime;
-        } else {
+        } elseif (!$update && $user->data()->prezime) {
             echo $user->data()->prezime;
+        } else {
+            echo 'Prezime';
         }
         ?>";
     }

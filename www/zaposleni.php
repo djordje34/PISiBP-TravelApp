@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 require_once 'core/init.php';
 $user = new User();
 if (!$user->isLoggedIn()) {
@@ -15,10 +17,10 @@ require_once 'navbar.php';
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
     <script>
-        function obrisiAranzman(id){
-        var odgovor=confirm("Potvrda rezervacije: Da li ste sigurni?");
+        function obrisiZaposlenog(id){
+        var odgovor=confirm("Brisanje zaposlenog: Da li ste sigurni?");
         if (odgovor)
-        window.location = "obrisi_aranzman.php?id="+id;
+        window.location = "obrisi_zaposlenog.php?id="+id;
         return false;
       }
     </script>

@@ -1,10 +1,18 @@
 <?php
+declare(strict_types=1);
 
 require_once 'core/init.php';
 if (Input::get('vratiDrzave') && $_POST['vratiDrzave']) {
     $db = DB::getInstance();
-    $kontinent_id = $db->get('kontinent', array('ime', '=', Input::get('vratiDrzave')))->first()->k_id;
+    $kontinenti = $db->get('kontinent', array('ime', '=', Input::get('vratiDrzave')));
+    if ($kontinenti->count() == 0) {
+        return '';
+    }
+    $kontinent_id = $kontinenti->first()->k_id;
     $drzave = $db->get('drzava', array('k_id', '=', $kontinent_id))->results();
+    if (count($drzave) == 0) {
+        return '';
+    }
     $return_value = '<select name="drzava" id="drzava" class="form-control">
                     <option class=option value="">Sve</option>';
     foreach ($drzave as $drzava) {

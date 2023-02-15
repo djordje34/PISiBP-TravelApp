@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 require_once 'core/init.php';
 $user = new User();
@@ -119,10 +120,10 @@ require_once 'navbar.php';
 
         <div class="row">
     <div class="col-md-6">
-        <div class="form-group"> <input class="form-control" type="date" id="starting_date" name="starting_date" value="" required/> <span class="form-label"><?php if ($update) echo $aranzman->krece;?></span> </div>
+        <div class="form-group"> <input class="form-control" type="datetime-local" id="starting_date" name="starting_date" value="" required/> <span class="form-label"><?php if ($update) echo $aranzman->krece;?></span> </div>
     </div>
     <div class="col-md-6">
-        <div class="form-group"> <input class="form-control" type="date" id="return_date" name="return_date" value="" required/> <span class="form-label"><?php if ($update) echo $aranzman->vraca;?></span> </div>
+        <div class="form-group"> <input class="form-control" type="datetime-local" id="return_date" name="return_date" value="" required/> <span class="form-label"><?php if ($update) echo $aranzman->vraca;?></span> </div>
     </div>
 </div>
 

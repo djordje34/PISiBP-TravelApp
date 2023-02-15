@@ -1,9 +1,11 @@
 <?php
+declare(strict_types=1);
+
 require_once 'core/init.php';
 $db = DB::getInstance();
 $grad_ima_sliku = (int) $db->query('SELECT COUNT(*) AS count FROM grad_ima_sliku')->first()->count;
 if ($grad_ima_sliku == 0) {
-    Redirect::to('loading.php');
+    //Redirect::to('loading.php');
 }
 require_once 'navbar.php';
 ?>
@@ -380,25 +382,28 @@ require_once 'navbar.php';
                 <?php
                 $db = DB::getInstance();
                 $broj_hotela = $db->query('SELECT COUNT(*) AS broj FROM smestaj')->first()->broj;
-                $sql_hoteli = "SELECT * FROM smestaj limit ?, ?";
-                srand(floor(time() / (60 * 60 * 24)));
-                $random_hoteli = array();
-                for ($i = 0; $i < 8; $i++) {
-                    $random_hoteli[] = $db->get('smestaj', array('smestaj_id', '=', rand(1, $broj_hotela)))->first();
-                }
-                foreach ($random_hoteli as $hotel) {
-                    $grad = $db->get('grad', array('g_id', '=', $hotel->g_id))->first();
-                    $slika = $db->get('grad_ima_sliku', array('grad_id', '=', $grad->g_id))->first()->slika;
-                    $drzava = $db->get('drzava', array('d_id', '=', $grad->d_id))->first();
-                    echo '<div class="col-lg-3 col-sm-6">
-                    <div class="trending_item clearfix">
-                        <div class="trending_image"><img src="' . $slika . '" alt="imgs/proba1.jpg"></div>
-                        <div class="trending_content">
-                            <div class="trending_title"><a href="http://localhost:8001/ponude.php?stavke=25&strana=1&ime=' . $hotel->naziv . '&kontinent=&prevoz=&datum_polaska=&datum_odlaska=">' . $hotel->naziv . '</a></div>
-                            <div class="trending_location"> ' . $grad->ime . ', ' . $drzava->ime . '</div>
+                if ($broj_hotela > 0) {
+                    $sql_hoteli = "SELECT * FROM smestaj limit ?, ?";
+                    srand((int) floor(time() / (60 * 60 * 24)));
+                    $random_hoteli = array();
+                    for ($i = 0; $i < 8; $i++) {
+                        $random_hoteli[] = $db->get('smestaj', array('smestaj_id', '=', rand(1, $broj_hotela)))->first();
+                    }
+                    foreach ($random_hoteli as $hotel) {
+                        $grad = $db->get('grad', array('g_id', '=', $hotel->g_id))->first();
+                        $slika = $db->get('grad_ima_sliku', array('grad_id', '=', $grad->g_id))->first()->slika;
+                        $drzava = $db->get('drzava', array('d_id', '=', $grad->d_id))->first();
+                        echo '
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="trending_item clearfix">
+                                <div class="trending_image"><img src="' . $slika . '" alt="imgs/proba1.jpg"></div>
+                                    <div class="trending_content">
+                                    <div class="trending_title"><a href="http://localhost:8001/ponude.php?stavke=25&strana=1&ime=' . $hotel->naziv . '&kontinent=&prevoz=&datum_polaska=&datum_odlaska=">' . $hotel->naziv . '</a></div>
+                                    <div class="trending_location"> ' . $grad->ime . ', ' . $drzava->ime . '</div>
+                                </div>
                             </div>
-                        </div>
-                    </div>';
+                        </div>';
+                    }
                 }
                 ?>
             </div>
