@@ -8,6 +8,6 @@ Project documentation given in docs folder.
 
 ## TLDR; 
 
-Application created using W/LAMP stack, withelement of JQuery and vanilla JS. Python for data operations and management-list of dependencies given underneath. Dockerized enviroment includes unit testing-PHPUnit. Responsive design- Bootstrap+JQuery+JS boundaries for screen size. AJAX requests provide seamless experience for users. Simple and distinct admin/employee panel. No need for user registration. 
+Application created using W/LAMP stack, with elements of JQuery and vanilla JS. Python for data operations and management-list of dependencies given underneath. Dockerized enviroment includes unit testing-PHPUnit. Responsive design- Bootstrap+JQuery+JS boundaries for screen size. AJAX requests provide seamless experience for users. Simple and distinct admin/employee panel. No need for user registration. 
 
 
