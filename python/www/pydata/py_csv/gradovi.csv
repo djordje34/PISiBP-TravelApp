@@ -1,0 +1,146 @@
+naziv,drzava,kontinent
+Šangaj,Kina,Azija
+Peking,Kina,Azija
+Shenzhen,Kina,Azija
+Guangzhou,Kina,Azija
+Chengdu,Kina,Azija
+Mumbai,Indija,Azija
+Delhi,Indija,Azija
+Bengaluru,Indija,Azija
+Hiderabad,Indija,Azija
+Ahmedabad,Indija,Azija
+Džakarta,Indonezija,Azija
+Surabaia,Indonezija,Azija
+Medan,Indonezija,Azija
+Bandung,Indonezija,Azija
+Bekasi,Indonezija,Azija
+Lagos,Nigerija,Afrika
+Kano,Nigerija,Afrika
+Ibadan,Nigerija,Afrika
+Port Harcourt,Nigerija,Afrika
+Benin Citi,Nigerija,Afrika
+Addis Ababa,Etiopija,Afrika
+Dire Dava,Etiopija,Afrika
+Nazret,Etiopija,Afrika
+Bahir Dar,Etiopija,Afrika
+Gondar,Etiopija,Afrika
+Kairo,Egipat,Afrika
+Aleksandrija,Egipat,Afrika
+Giza,Egipat,Afrika
+Port Said,Egipat,Afrika
+Suez,Egipat,Afrika
+Moskva,Rusija,Evropa
+Sankt Peterburg,Rusija,Evropa
+Novosibirsk,Rusija,Evropa
+Jekaterinburg,Rusija,Evropa
+Nizhnii Novgorod,Rusija,Evropa
+Berlin,Nemačka,Evropa
+Hamburg,Nemačka,Evropa
+Minhen,Nemačka,Evropa
+Koeln,Nemačka,Evropa
+Frankfurt na Majni,Nemačka,Evropa
+London,Velika Britanija,Evropa
+Birmingham,Velika Britanija,Evropa
+Liverpool,Velika Britanija,Evropa
+Sheffield,Velika Britanija,Evropa
+Bristol,Velika Britanija,Evropa
+Pariz,Francuska,Evropa
+Marseille,Francuska,Evropa
+Lion,Francuska,Evropa
+Tuluz,Francuska,Evropa
+Lep,Francuska,Evropa
+Rim,Italija,Evropa
+Milan,Italija,Evropa
+Napulj,Italija,Evropa
+Torino,Italija,Evropa
+Palermo,Italija,Evropa
+Madrid,Španija,Evropa
+Barselona,Španija,Evropa
+Valencia,Španija,Evropa
+Sevilla,Španija,Evropa
+Zaragoza,Španija,Evropa
+Kiiv,Ukrajina,Evropa
+Harkov,Ukrajina,Evropa
+Donjetsk,Ukrajina,Evropa
+Odessa,Ukrajina,Evropa
+Dnjepro,Ukrajina,Evropa
+Varšava,Poljska,Evropa
+Lodz,Poljska,Evropa
+Krakov,Poljska,Evropa
+Vroclav,Poljska,Evropa
+Poznan,Poljska,Evropa
+Bukurešt,Rumunija,Evropa
+Iasi,Rumunija,Evropa
+Timisoara,Rumunija,Evropa
+Craiova,Rumunija,Evropa
+Constanta,Rumunija,Evropa
+Amsterdam,Holandija,Evropa
+Rotterdam,Holandija,Evropa
+Hag,Holandija,Evropa
+Utrecht,Holandija,Evropa
+Eindhoven,Holandija,Evropa
+Brisel,Belgija,Evropa
+Antverpen,Belgija,Evropa
+Gent,Belgija,Evropa
+Charleroi,Belgija,Evropa
+Liege,Belgija,Evropa
+Atina,Grčka,Evropa
+Solun,Grčka,Evropa
+Patra,Grčka,Evropa
+Pirej,Grčka,Evropa
+Larisa,Grčka,Evropa
+Lisabon,Portugal,Evropa
+Porto,Portugal,Evropa
+Amadora,Portugal,Evropa
+Braga,Portugal,Evropa
+Setubal,Portugal,Evropa
+Stokholm,Švedska,Evropa
+Goeteborg,Švedska,Evropa
+Malmoe,Švedska,Evropa
+Uppsala,Švedska,Evropa
+Sollentuna,Švedska,Evropa
+Meksiko,Meksiko,Severna Amerika
+Iztapalapa,Meksiko,Severna Amerika
+Ecatepec de Morelos,Meksiko,Severna Amerika
+Guadalahara,Meksiko,Severna Amerika
+Puebla,Meksiko,Severna Amerika
+Toronto,Kanada,Severna Amerika
+Montreal,Kanada,Severna Amerika
+Kalgari,Kanada,Severna Amerika
+Ottava,Kanada,Severna Amerika
+Edmonton,Kanada,Severna Amerika
+Grad Gvatemala,Gvatemala,Severna Amerika
+Mikco,Gvatemala,Severna Amerika
+Villa Nueva,Gvatemala,Severna Amerika
+Petapa,Gvatemala,Severna Amerika
+San Juan Sacatepez,Gvatemala,Severna Amerika
+Sao Paulo,Brazil,Južna Amerika
+Rio de Žaneiro,Brazil,Južna Amerika
+Salvador,Brazil,Južna Amerika
+Fortaleza,Brazil,Južna Amerika
+Belo Horizonte,Brazil,Južna Amerika
+Bogota,Kolumbija,Južna Amerika
+Cali,Kolumbija,Južna Amerika
+Medellin,Kolumbija,Južna Amerika
+Barrankuilla,Kolumbija,Južna Amerika
+Cartagena,Kolumbija,Južna Amerika
+Buenos Aires,Argentina,Južna Amerika
+Cordoba,Argentina,Južna Amerika
+Rosario,Argentina,Južna Amerika
+Mendoza,Argentina,Južna Amerika
+San Miguel de Tucuman,Argentina,Južna Amerika
+Sidnei,Australija,Australija / Okeanija
+Melbourne,Australija,Australija / Okeanija
+Brisbane,Australija,Australija / Okeanija
+Perth,Australija,Australija / Okeanija
+Adelaide,Australija,Australija / Okeanija
+Port Moresbi,Papua Nova Gvineja,Australija / Okeanija
+Lae,Papua Nova Gvineja,Australija / Okeanija
+Arava,Papua Nova Gvineja,Australija / Okeanija
+Mount Hagen,Papua Nova Gvineja,Australija / Okeanija
+Popondetta,Papua Nova Gvineja,Australija / Okeanija
+Auckland,Novi Zeland,Australija / Okeanija
+Vellington,Novi Zeland,Australija / Okeanija
+Christchurch,Novi Zeland,Australija / Okeanija
+Manukau Citi,Novi Zeland,Australija / Okeanija
+Severna obala,Novi Zeland,Australija / Okeanija

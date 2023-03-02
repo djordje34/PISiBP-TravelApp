@@ -1,0 +1,46 @@
+@keyframes gradient {
+    0% {
+    background-position: 0% 50%;
+    }
+    50% {
+    background-position: 100% 50%;
+    }
+    100% {
+    background-position: 0% 50%;
+    }
+    }
+
+
+
+.gradient-custom-3 {
+    /* fallback for old browsers */
+    background:#FDE49C;
+    background-size: 400% 400% !important;
+    animation:gradient 5s linear infinite;  /* animation set */  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right,rgba(100, 201, 207, 0.5), rgba(253, 228, 156, 0.3));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right,rgba(100, 201, 207, 0.5), rgba(253, 228, 156, 0.3));
+    }
+    .gradient-custom-4 {
+    /* fallback for old browsers */
+    background: #FDE49C;
+    background-size: 400% 400%;
+    animation:gradient 1.2s linear infinite;  /* animation set */  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right,rgba(100, 201, 207, 0.5), rgba(253, 228, 156, 0.5));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right,rgba(100, 201, 207, 0.5), rgba(253, 228, 156, 0.5));
+    }
+
+.proceed:hover{
+    animation-play-state: running;
+}
+
+.form-control:focus{
+    border-color:rgba(100, 201, 207, 0.5) !important;
+    box-shadow: 0 0 0 0.25rem rgba(100, 201, 207, 0.5) !important; /*      promeni boju focus       */
+}
+

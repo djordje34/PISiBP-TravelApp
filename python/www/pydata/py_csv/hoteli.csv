@@ -1,0 +1,436 @@
+naziv,grad,zvezdice,br_soba,adresa
+ShangriLa Palace,Šangaj,3.5,301,7851 Wolfe Harbor
+Grand Oriental Suites ,Šangaj,3.5,234,12069 Miller Run
+Emperors Residence,Šangaj,4.5,611,533 Smith Pass
+Green Orchid Palace ,Peking,3.5,240,659 Anderson Walk
+Central Suites Hotel ,Peking,3.5,272,6121 Kyle Radial
+Celestial Tower Inn,Peking,4.5,516,USNS Moreno
+Oceanic Retreat ,Shenzhen,3.0,157,98282 Hooper Parkways
+Royal Palms Resort ,Shenzhen,3.0,181,142 Martinez Views
+Cloud Nine Holiday Inn,Shenzhen,3.5,279,3228 David Parkway
+Jingting Lighthouse Hotel ,Guangzhou,3.5,234,255 Katherine Mountains
+Starview Executive Suites ,Guangzhou,3.0,136,817 Weeks Bypass
+Everglow Grand Plaza Hotel,Guangzhou,3.5,245,506 Parker Turnpike
+Golden Tiger Inn ,Chengdu,3.5,231,260 Berry Cliff
+Sichuan Palace Motel ,Chengdu,4.0,360,"PSC 0815, Box"
+Dragonfly Paradise Resort,Chengdu,3.0,100,12276 David Bridge
+Ocean Flower Grand Hotel,Mumbai,3.0,172,994 Cynthia Stravenue
+Le Valon Palace,Mumbai,4.0,415,798 Stephanie Isle
+Luxelive Inn and Suites,Mumbai,4.5,546,4343 Jason Ramp
+Radisson Raj Palace ,Delhi,3.0,112,6451 Anthony River
+Ashoka Gardens Hotel ,Delhi,4.0,364,7690 Harper Glen
+The Boulevard Residency,Delhi,3.0,151,2416 Michael Ferry
+Perpetual Palace Hotel ,Bengaluru,3.0,161,0904 Amanda Inlet
+Holiday Haven Resort ,Bengaluru,3.0,160,"PSC 5741, Box"
+Marvel Manor Hotel,Bengaluru,3.5,226,37159 Porter Lakes
+Regent Garden Hotel,Hiderabad,4.0,400,86950 Sparks Overpass
+Crown Line Hotel,Hiderabad,4.0,371,8646 Scott Greens
+Park Pine Lodge,Hiderabad,3.5,268,354 Ochoa Vista
+Elegant Rooms Inn,Ahmedabad,3.5,231,334 Taylor Estate
+Gudhka Grand,Ahmedabad,3.5,263,7819 Sharon Springs
+Plush Palms Resort,Ahmedabad,3.5,253,347 Howe Points
+Grand Regal Hotel ,Džakarta,4.0,379,7125 Keller Squares
+Zephyr Palace Resort ,Džakarta,3.0,178,015 Park Track
+Metropole Rendezvous Suites,Džakarta,3.5,262,754 Sara Plain
+Ocean Pearl Resort ,Surabaia,3.5,254,1971 Robert Road
+Royal Sky Hotel ,Surabaia,3.5,258,222 Ramirez Hills
+Monarch Palace Hotel,Surabaia,3.5,284,055 Katrina View
+Stacja Royale Hotel,Medan,3.5,280,8016 Christopher Rapid
+Nautilus Bungalow Hotel,Medan,4.0,433,Unit 4172 Box
+Koral Palms Resort,Medan,3.5,255,169 Nicole Junction
+Grand Oasis Hotel,Bandung,4.5,513,1322 Harmon View
+Forest Edge Resorts,Bandung,3.5,236,33254 Christina Springs
+Euphoria Holiday Inn,Bandung,3.5,221,67600 Ryan Creek
+Skyway Grand Resort,Bekasi,3.5,271,2796 Robert Inlet
+Royal Sage Hotel,Bekasi,3.5,294,4768 Samuel Fields
+Magnolia Suite Inn,Bekasi,3.5,286,0963 Anderson Plaza
+Coral Pearl Hotel,Lagos,4.0,429,49419 Wilkinson Orchard
+Oceanside Resort,Lagos,4.0,414,34725 Jessica Plaza
+Azure Sky Lodge,Lagos,3.5,306,938 Andrew Valleys
+Grand Luxury Resort ,Kano,3.5,233,93558 Kevin Oval
+Mediterranean Palace ,Kano,3.5,254,"PSC 6429, Box"
+Dreamy Oasis Spa,Kano,4.0,441,06002 Keller Ports
+Royal Serenade Hotel,Ibadan,3.5,282,38334 Jennifer Lake
+Sherwood Gracious Resort,Ibadan,3.0,127,60282 Eric Flats
+Summerfield Palace Retreat,Ibadan,3.0,173,828 Gregory Road
+Silver Coast Hotel,Port Harcourt,3.0,182,4288 Lopez Route
+River View Inn,Port Harcourt,4.0,415,5289 Lindsey Pass
+Beachside Holiday Resort,Port Harcourt,3.5,253,28250 Cowan Rapid
+Elegance Inn,Benin Citi,4.5,592,06224 Melissa Fords
+La Mirage Palace,Benin Citi,4.0,366,35154 Ross Ranch
+Countrywood Suites,Benin Citi,3.5,273,9193 Allison Common
+Imperial Palace Hotel,Addis Ababa,3.5,224,29006 Abigail Stream
+Maharaja Garden Inn,Addis Ababa,4.0,397,83649 Jones Key
+Royal Oasis Suites,Addis Ababa,3.5,241,960 Mcgee Summit
+Sun Star Palace,Dire Dava,3.0,163,181 Hill Court
+Heavenly View Resort,Dire Dava,4.0,357,050 Barbara Mountain
+White Pearl Hideaway,Dire Dava,3.5,264,511 Jacobs Unions
+Hotel Lotos ,Nazret,4.0,419,379 Jimmy Cliffs
+Kozy Koncept ,Nazret,3.5,256,891 Sanders Rapids
+Lux Lifestyle Resort,Nazret,3.0,11,096 Kimberly Islands
+Zamaz Zephyr Hotel ,Bahir Dar,4.0,379,8239 Jones Village
+Travelers Skyline Resort ,Bahir Dar,3.0,84,308 Lowe Cove
+Rainbow Splendor Suites,Bahir Dar,4.5,511,830 Edwards Meadow
+Moon Compass Hotel,Gondar,4.5,542,290 Torres Glen
+Shepherds Inn ,Gondar,3.5,225,74144 Michelle Creek
+Blue Oasis Resort,Gondar,3.0,138,USNS Gray
+Nubian Sands Hotel ,Kairo,3.0,120,070 Dunn Turnpike
+Windy Palms Resort ,Kairo,4.0,387,3876 Cox Trace
+Sun Lounge Hotel,Kairo,3.5,245,6988 Smith Valley
+Flamingo Palace Hotel,Aleksandrija,3.0,180,2777 Kara Locks
+Luxo Resort  Spa,Aleksandrija,3.5,241,685 Brown Valleys
+Royal Garden Suites,Aleksandrija,4.5,572,8629 Laurie Bypass
+Magnolija Grand Hotel,Giza,3.5,293,481 Snyder Stream
+Imperial Pinnacle Hotel,Giza,4.0,375,4754 Rivera View
+Kraljevski Plovak Resort,Giza,4.0,378,162 Charles Brook
+Grand Nile Palace,Port Said,4.0,402,24548 Nicole Ports
+Khedival Tower,Port Said,4.0,406,1196 Jordan Lake
+The Royal Oasis,Port Said,3.0,172,2559 Elizabeth Loop
+Mirage Resort,Suez,3.5,244,9929 Graham Curve
+Splendid Palace,Suez,3.0,168,4495 Padilla Manors
+Lagoon Island Hotel,Suez,3.0,172,707 Amanda Drive
+Grand Hotel Palace ,Moskva,4.0,414,71589 Mary Park
+Luxor International ,Moskva,3.0,187,3759 Warren Crest
+Royal Corinthia,Moskva,3.5,256,27817 Gay Courts
+Grand Astoria Hotel,Sankt Peterburg,3.0,173,09050 Snow Forks
+Aurora Palace Hotel,Sankt Peterburg,3.0,180,81372 Alexandra Mountain
+Baltic Regency Hotel,Sankt Peterburg,4.0,379,363 Saunders Skyway
+Aurora Palace Hotel ,Novosibirsk,3.5,224,2800 Daniel Loop
+White Birch Inn ,Novosibirsk,3.5,220,3275 Brad Cape
+Golden Swallows Resort,Novosibirsk,3.5,306,6673 Key Key
+Grand Imperial Hotel,Jekaterinburg,4.0,350,6033 Danielle Groves
+Zepter Palace Hotel,Jekaterinburg,4.0,379,1025 Jessica Court
+Monte Carlo Luxury Resort,Jekaterinburg,3.5,277,"PSC 5554, Box"
+Zlatna Palata Hotel,Nizhnii Novgorod,3.0,93,621 Sara Springs
+Kamelija Resort,Nizhnii Novgorod,4.0,363,791 Sullivan Keys
+Rapsodija Suite,Nizhnii Novgorod,3.5,306,691 Meza Fort
+Unikat Palace,Berlin,4.0,402,3529 Hall Lakes
+Harmony Hotel,Berlin,3.0,162,695 Romero Parkways
+Royal Retreat,Berlin,5.0,690,30107 Patricia Pass
+Atlantic Residence,Hamburg,3.0,133,607 Zachary Spring
+Starlight Hotel ,Hamburg,4.0,373,5455 Christopher Garden
+Regal Lodge,Hamburg,3.5,267,Unit 6710 Box
+Grand Bohemian Hotel ,Minhen,3.5,220,334 Alexis Curve
+Metropolitan Suites ,Minhen,4.0,382,3839 Stacey Hill
+Crown Luxury Resort,Minhen,3.5,238,"PSC 6531, Box"
+Grand Silverwood Hotel ,Koeln,3.0,50,7305 Randall Fields
+Colonial Palace Hotel ,Koeln,3.0,137,12271 Anne Groves
+Royal Acacia Resort,Koeln,3.5,303,6581 Carpenter Island
+Grand Plaza Hotel,Frankfurt na Majni,4.5,589,2717 Rodriguez Estate
+Skyview Resort,Frankfurt na Majni,3.0,114,423 Corey Branch
+Majni Palace Hotel,Frankfurt na Majni,3.5,261,6279 Victor Highway
+Grand Rulington Hotel ,London,4.0,445,440 Jason Gardens
+The Imperial Palace ,London,4.0,361,"PSC 2104, Box"
+The City Star Hotel,London,3.5,230,49408 Schneider Glen
+Magnolia Residence Hotel ,Birmingham,3.0,118,872 Bethany Route
+Sovereign Suites ,Birmingham,3.0,91,30348 Schroeder Island
+The Artesian Palace,Birmingham,3.0,169,965 William Forges
+Lamplight Lodge ,Liverpool,3.5,230,65516 Mooney Cove
+Nautical Nest ,Liverpool,3.0,56,510 Sandra Mountains
+Harbour Hideaway,Liverpool,3.0,98,"PSC 2240, Box"
+Dundee Palace Hotel,Sheffield,3.5,289,187 Jon Plain
+The Sheffield Rose Hotel,Sheffield,3.5,227,974 Joy Haven
+Eagleshire Luxury Suites,Sheffield,3.0,168,399 Donald Plains
+Harmonijska Haven Hotel,Bristol,3.5,227,003 Terry Village
+Drveni Refleksije Hotel,Bristol,3.0,164,53821 Heather Drive
+Sunčano Ostrvo Hotel,Bristol,4.0,393,907 Gonzalez Expressway
+Grand Chteaux Hotel,Pariz,4.5,522,514 Brittney Heights
+Royale de la Tour,Pariz,4.5,571,3457 Jordan Locks
+Palais de Rivoli,Pariz,4.0,371,63811 Sergio Via
+LAigle Bleu,Marseille,4.0,375,972 Victor Orchard
+La Fleur Rouge,Marseille,4.0,446,1550 Lyons Crescent
+Le Trne de Royaume,Marseille,4.5,533,7046 Jennifer Mission
+Turistički Venecija,Lion,4.0,447,8327 Rivas Lock
+Hotel Leopold ,Lion,4.0,421,USNS Gutierrez
+Zlatna Palata,Lion,3.0,177,USS Day
+Le Palais Royal,Tuluz,3.0,105,35218 Julie Creek
+Le Jardin Majestic,Tuluz,4.0,388,7267 Mindy Cape
+Chteau dArcenCiel,Tuluz,3.5,254,9423 Kathy Route
+Fontana Inn,Lep,3.5,258,23566 Garrison Canyon
+Skogland Resort,Lep,3.0,158,6918 Esparza Locks
+Venera Lodge,Lep,3.0,127,0506 Wilson Brooks
+VesuvioPalace ,Rim,4.0,440,74240 Elizabeth Spur
+NeptuneLuxury Inn ,Rim,3.5,303,786 Bailey Hills
+OlympusGrand Resort,Rim,3.0,145,714 Jennifer Alley
+Hotel Fontana Magica ,Milan,3.5,297,577 Madison Flat
+Hotel La Perla ,Milan,3.5,289,Unit 1440 Box
+Hotel Venere Dorata,Milan,4.0,352,03353 James Turnpike
+Golden Orchid Hotel,Napulj,4.5,589,95035 Vargas Harbor
+Joyous Palace Resort,Napulj,3.5,259,9856 Brett Rapid
+Sunrise Mirage Motel,Napulj,3.0,129,0899 John Forest
+Da Vinci Palace Hotel,Torino,3.5,266,Unit 0830 Box
+Bolero Residence Inn,Torino,3.0,177,332 Catherine Circle
+Il Magnifico Royal Suites,Torino,4.0,355,640 Yolanda Extension
+Lido dei Venti Hotel,Palermo,3.5,281,05731 Griffin Well
+Sulla Vela Hotel,Palermo,3.5,293,5874 Miller Plains
+Villa del Mare Resort,Palermo,3.0,182,4203 Andrew Place
+Hotel Blossoming Castle ,Madrid,3.5,299,USCGC Harrison
+Luxurious Harbour Inn ,Madrid,3.0,187,556 Skinner Unions
+Royal Garden Gateways,Madrid,4.0,352,622 Joseph Plain
+Grand Hotel Merilin,Barselona,3.5,236,173 James Shoals
+Palazzo dei Sogni ,Barselona,3.0,141,2116 Robert Ferry
+Suite Bellevue Park,Barselona,3.5,306,182 Nathan Lakes
+Royal Sandalwood Resort ,Valencia,3.0,172,913 Ernest Station
+Luxury Oasis ,Valencia,4.0,444,6602 Young Plain
+Paradise Palm Resort,Valencia,3.5,301,6704 Emma Camp
+Royal Palace Hotel,Sevilla,3.5,303,471 Jeremy Meadow
+Plaza del Sol Hotel,Sevilla,3.5,271,1373 Smith Dale
+Luxe Executive Hotel,Sevilla,3.5,257,70358 Krause Parks
+Sonora Palace Hotel,Zaragoza,3.0,46,510 Brent Islands
+Atrium Royal Hotel,Zaragoza,4.0,422,259 Allen Terrace
+Grand Calatrava Hotel,Zaragoza,3.0,164,47073 Lowery Parks
+Deny Grand Hotel ,Kiiv,4.0,396,3941 John Groves
+Phoenix Luxury Suites ,Kiiv,3.0,177,3943 Stephanie Center
+Kings Crown Hotel  Spa,Kiiv,3.5,250,43905 Andrew Forks
+Grand Oasis,Harkov,3.5,243,2344 Taylor Loaf
+Regal Splendour,Harkov,3.0,147,382 Jones Flat
+Majestic Haven,Harkov,3.5,247,"PSC 4365, Box"
+Royal Harbour Hotel,Donjetsk,3.5,304,Unit 7119 Box
+Sunseeker Suites,Donjetsk,3.5,226,436 Watson Vista
+Grand Cosmos Resort,Donjetsk,3.0,130,56345 Schultz Trace
+Monte Cristo Hotel ,Odessa,3.0,182,8871 Crystal Lakes
+Albatros Palace ,Odessa,3.5,284,558 Angela Divide
+Luxy Magnolia Resort,Odessa,4.0,415,3046 Lee Knoll
+Sun Resort,Dnjepro,4.0,384,"PSC 1377, Box"
+Royal Palace,Dnjepro,3.5,288,9536 Flowers Loop
+Riverview Castle,Dnjepro,3.0,150,650 Shaffer Loop
+Leopolis Palace Hotel,Varšava,4.0,391,089 Fischer Unions
+Residem Hotel,Varšava,3.5,265,Unit 1955 Box
+Galantis Resort  Spa,Varšava,3.5,242,02642 Walker Bridge
+Astral Palace Hotel,Lodz,4.0,391,"PSC 0084, Box"
+Grand Harmony Hotel,Lodz,4.0,362,0169 Timothy Stravenue
+Ambassador City Suites,Lodz,3.5,306,Unit 3130 Box
+Garden of the Sun,Krakov,3.0,139,4807 West Isle
+Silver Valley Resort,Krakov,3.0,179,1029 Ibarra Junction
+Castlewood Manor,Krakov,3.0,97,91323 Wendy Road
+Radisson Park Inn,Vroclav,3.5,280,774 Frazier Locks
+Grand Plaza Hotel,Vroclav,3.5,265,92155 Richardson Shoal
+Zurich Luxury Residences,Vroclav,4.0,393,06653 Lee Keys
+Royal Suite Hotel ,Poznan,3.5,281,523 Larry Flats
+Sun Breeze Hotel ,Poznan,3.5,230,89088 Amanda Plains
+Plaza Inn Resort,Poznan,4.5,575,9543 Wendy Common
+Grand Bonsai Hotel,Bukurešt,3.0,148,4530 Jeffrey View
+Sunny Haven Palace,Bukurešt,3.0,125,1069 Patel Fields
+Dreamscape Residence,Bukurešt,3.0,179,227 Charles Courts
+Orhideja Laguna,Iasi,4.0,352,USNS Nunez
+Palazzo Plaza,Iasi,3.5,232,932 Raymond Mountains
+Zvezda Lux,Iasi,3.5,224,4941 Robin Circles
+Grand Splendour Hotel,Timisoara,3.0,141,900 John Isle
+Aurora Palace Hotel,Timisoara,4.0,447,883 Francis Divide
+Moonlight Residence Hotel,Timisoara,3.0,178,USNV Riley
+Grand Prestige Hotel,Craiova,3.0,144,3241 Heather Lock
+Imperial Palace Resort,Craiova,3.5,252,97921 Rachel Stravenue
+Royal Regent Inn,Craiova,3.0,164,65239 Wendy Forks
+Riviera Palace ,Constanta,3.5,242,359 Moreno Gateway
+Sea Breeze Resort ,Constanta,4.0,434,9757 Vega Land
+Nautica Beach Club,Constanta,3.5,223,USNV Faulkner
+Amsterdam Palace Hotel,Amsterdam,3.5,258,2376 Eric Canyon
+Grand Amsterdam Lodge,Amsterdam,3.5,230,"PSC 0461, Box"
+Royal Amsterdam Inn,Amsterdam,3.5,246,43607 Edwards Island
+Monarch Grand Hotel,Rotterdam,4.0,382,65596 Joseph Causeway
+Summer Dream Palace,Rotterdam,4.0,353,019 Mann Circles
+Blue Bay Hideaway,Rotterdam,3.5,233,21687 Smith Summit
+Grand Paviljon,Hag,3.0,155,004 Darlene Locks
+Galerija Lux,Hag,3.5,251,2218 Stephen Villages
+Peras Palace,Hag,4.0,383,501 Murray Ferry
+Grand Oasis Resort,Utrecht,3.5,261,215 Foley Forks
+Gold Star Lodge,Utrecht,3.5,251,2424 Cynthia Squares
+Palace Plaza Hotel,Utrecht,3.0,89,0560 Hickman Meadows
+Eindhoven Palace Hotel ,Eindhoven,4.0,399,Unit 8078 Box
+Ruby Sunset Inn,Eindhoven,3.0,113,30356 Travis Unions
+Canal Hideaway Resort,Eindhoven,3.0,129,075 Hudson Shoal
+Grand Paradiso ,Brisel,3.5,230,9942 Ryan Vista
+Regent Park Inn ,Brisel,3.5,266,540 Christian Overpass
+The Royal Eden,Brisel,3.5,266,41986 Rebecca Wall
+Park Hotel Antwerp,Antverpen,3.0,168,14936 Johnson Corners
+Grand Central Inn,Antverpen,3.5,235,790 John Row
+Imperial Lodge,Antverpen,3.0,179,USCGC Baker
+Majestic Halls Hotel,Gent,3.0,89,"PSC 9527, Box"
+Patina Park Hotel,Gent,3.5,240,31133 Jeremy Rapids
+Crystal Peaks Resort,Gent,3.0,173,366 Serrano Stravenue
+Royal Pavilion Hotel,Charleroi,3.5,299,"PSC 1348, Box"
+Splendid Oasis Inn ,Charleroi,3.5,250,206 Gonzales Ville
+Grand Horizon Resort,Charleroi,4.0,396,1621 Misty Lock
+Grand Palais Hotel ,Liege,4.0,370,0052 Jeremy Harbors
+Crown Regency ,Liege,4.0,390,242 Stephen Isle
+Luxe Palace Suites,Liege,4.0,421,207 Bailey Oval
+Izašlji Sunce Hotel ,Atina,4.0,369,6983 Heather Course
+Ostrvo Mladosti Hotel ,Atina,3.5,248,123 Wallace Lakes
+Neptunov Prozor Hotel,Atina,4.0,435,4035 Andrew Forest
+Helios Palace,Solun,3.0,155,1056 Beth Underpass
+Skyline Residence,Solun,3.5,259,471 Evans Lodge
+Ocean Breeze Resort,Solun,4.0,386,69369 Rivas Springs
+Garden Palace Hotel,Patra,3.5,237,05395 Novak Parks
+Eden View Resort,Patra,4.0,371,231 Evans Square
+Grand Olympus Lodge,Patra,3.0,165,7587 Daniel Shoals
+Grand Oceanic ,Pirej,3.0,184,18091 Michael Extension
+Mythical Mirage ,Pirej,4.0,355,0484 Isabel Run
+Pristine Paradise,Pirej,4.0,371,"PSC 1341, Box"
+Olimp Resort,Larisa,4.0,420,92695 William Club
+Monte Vista Palace,Larisa,3.5,256,67382 Jacob Fords
+Esperides Palace,Larisa,3.5,289,4922 Natalie Crest
+Belleza Palace,Lisabon,4.0,363,78003 Elizabeth Light
+Royal Charm,Lisabon,3.5,303,3474 Clinton Keys
+Harbour Palace,Lisabon,3.0,127,496 Swanson Prairie
+Oasi Suites Porto,Porto,3.0,182,462 Calvin Orchard
+Mare Blu Hotel,Porto,4.0,444,528 Martin Loop
+Aurora Suite Porto,Porto,3.0,132,684 Daniel Lakes
+Grande Amore Hotel,Amadora,4.0,363,53002 Contreras Manors
+Luxury Amintalia Hotel,Amadora,3.5,225,671 Pamela Park
+Parkview Splendor Hotel,Amadora,4.0,400,Unit 9354 Box
+Palcio das Quinas,Braga,3.0,167,80234 Susan Mill
+Azul bano ,Braga,3.5,267,Unit 5966 Box
+Aurora Imperial,Braga,3.0,73,5690 Matthew Ports
+Monte Del Mar ,Setubal,3.5,259,740 Potter Court
+Art Nouveau Palace ,Setubal,4.0,407,577 Velasquez Park
+Helios Beach Resort,Setubal,3.0,112,613 Davidson Drives
+Utopia Suites,Stokholm,4.0,419,0341 Allison Heights
+Solace Inn,Stokholm,3.0,171,Unit 9514 Box
+Tranquility Capital Hotel,Stokholm,3.5,258,Unit 4193 Box
+Grand Viking Hotel ,Goeteborg,3.0,17,349 Nathaniel Branch
+Maritim Palace ,Goeteborg,4.0,408,7616 Jones Locks
+Lighthouse Bellevue,Goeteborg,3.0,159,310 Donald Centers
+Grand Sandiri Hotel,Malmoe,3.0,185,8442 Jason Lakes
+Summer Breeze Residence,Malmoe,3.0,129,USNV Sanders
+Northern Comfort Plaza,Malmoe,3.0,151,53463 Fields Ferry
+Princess Garden Hotel,Uppsala,4.0,414,7777 Sabrina Oval
+Riverside Retreat Hotel,Uppsala,3.0,187,4576 Jones Parkways
+Hillside Haven Hotel,Uppsala,4.0,390,4060 Morgan Circle
+Park Lane Continental,Sollentuna,3.5,247,5302 Love Club
+Grand Regal Palace,Sollentuna,3.5,293,Unit 8531 Box
+Magnolia Residence,Sollentuna,3.0,187,34787 Angela Manor
+Ocean Casa Resort ,Meksiko,3.5,300,025 Brenda Plains
+Sonata Palace,Meksiko,5.0,699,1496 Francisco Manor
+Azure Vista Resort,Meksiko,4.0,365,USCGC Spencer
+Grand Palazo Hotel ,Iztapalapa,4.0,351,9945 Sean Mountain
+Ekliptik Residence ,Iztapalapa,3.5,221,75968 Madison Tunnel
+La Maeu Vista Suites,Iztapalapa,4.0,401,932 Curry Stream
+Hotel Monumental ,Ecatepec de Morelos,4.0,436,63189 Brian Forges
+Abismo Palace ,Ecatepec de Morelos,3.0,97,95492 Jason Garden
+Royal Vistas Place,Ecatepec de Morelos,3.0,121,993 Melinda Drives
+Grand Bellona Hotel ,Guadalahara,4.5,574,1398 Fisher Streets
+El Cid Palace ,Guadalahara,3.5,300,939 Scott Pike
+Sol Azul Suites,Guadalahara,3.5,274,826 Cole Lock
+Avenida Hotel,Puebla,4.0,356,67858 Schultz Walks
+Orient Express Hotel,Puebla,4.0,410,145 Christina Lodge
+Classic Palace Hotel,Puebla,4.0,380,441 Alicia Streets
+Grand York Suites ,Toronto,3.5,243,90085 Mckinney Walk
+Park Vista Luxury Inn ,Toronto,4.5,570,8562 Marc Glen
+Regal Retreat Boutique Hotel,Toronto,3.5,264,"PSC 4235, Box"
+Bonaparte Suites ,Montreal,3.0,159,4445 Justin Loaf
+Queen Victoria Inn ,Montreal,3.0,183,Unit 5027 Box
+Grand Luxury Palace,Montreal,3.5,251,20505 Cooper Roads
+Sunway Hotel,Kalgari,3.5,229,80806 Jackson Ford
+Stay Inn Suites ,Kalgari,3.5,246,198 Christopher Park
+Riverview Resort,Kalgari,3.5,290,25082 Eric Port
+Elegant Palace Hotel,Ottava,3.0,90,76285 Green Park
+Chateau Royale ,Ottava,3.0,167,66455 Manning Parks
+Grand Canyon Inn,Ottava,4.0,395,35740 Ortiz Ford
+Grand Hotel Plaza,Edmonton,4.0,356,5841 Stephen Branch
+Royal Court Inn,Edmonton,3.0,174,71289 White Islands
+Parkview Executive Suites,Edmonton,3.0,178,4388 Brown Vista
+Emerald Palace Hotel ,Grad Gvatemala,4.0,414,672 James Views
+Garden Oasis Inn ,Grad Gvatemala,3.5,241,06254 Stephanie Parks
+Galaxia Tropical Resort,Grad Gvatemala,3.0,185,396 Clifford Meadows
+Grand Oceanside Resort ,Mikco,4.5,546,17759 Angela Springs
+Elegance on the Promenade ,Mikco,3.5,230,7655 Allison Overpass
+Seaside Luxury Hotel,Mikco,4.0,368,0027 Ryan Stream
+Hotel Brisol ,Villa Nueva,3.5,259,1147 Gregory Viaduct
+Astur Palace ,Villa Nueva,3.5,267,43789 Julie Springs
+Imperial Regency,Villa Nueva,3.0,154,1023 Allen Rue
+Lepotica Hotel ,Petapa,3.0,163,38261 Whitaker Walk
+Sunce Laguna ,Petapa,4.0,426,141 Bailey Ridge
+Zvezda Oaza,Petapa,3.0,140,2649 Connie Junction
+Las Palmas Inn,San Juan Sacatepez,3.5,287,0978 Kramer Camp
+Villa Miramar ,San Juan Sacatepez,3.0,135,1072 Simon Heights
+Kinah Ahau Resort,San Juan Sacatepez,3.5,241,010 Jennifer Springs
+Palacio dos Ventos ,Sao Paulo,3.5,259,41789 Novak Throughway
+Le Reve de la Lumire ,Sao Paulo,3.0,103,1491 Jessica Ports
+Hotel del Mar Azul,Sao Paulo,4.0,413,2880 Gregory Run
+Golden Harbour Hotel,Rio de Žaneiro,3.5,246,USNV Hall
+Tropical Coast Lodge ,Rio de Žaneiro,4.0,421,25235 Robert Hills
+Sun Ray Suites,Rio de Žaneiro,3.0,155,7295 Joseph Green
+Sunshine Regency,Salvador,4.0,391,261 Matthews Mall
+Acacia Resort,Salvador,4.5,600,18685 Amy Camp
+Vista Mar Luxury Hotel,Salvador,3.5,281,76197 Walker Path
+Golden Sun Resort ,Fortaleza,3.0,176,366 William Hills
+Surf Lagoa Hotel ,Fortaleza,3.5,304,99616 Edward Crest
+Royal Beach Palace,Fortaleza,3.5,275,827 Christopher Valley
+Hotel Estrela do Mar,Belo Horizonte,3.5,244,58058 Flores Shores
+Jardim Verde Palace,Belo Horizonte,3.5,252,0920 Diaz Haven
+Golden Ville Suites,Belo Horizonte,3.0,182,568 Alexa Coves
+Grand Plaza Hotel,Bogota,3.5,300,Unit 5402 Box
+Ocean Rose Resort,Bogota,3.5,229,275 Shane Bridge
+Royal Caribbean Inn,Bogota,3.0,161,USNV Rodriguez
+Royal Imperial Suites ,Cali,4.0,382,59899 James Gateway
+The Grand Regal Hotel ,Cali,3.5,248,01376 Torres Cape
+Ginger Blossom Resort,Cali,5.0,706,277 Jennifer Greens
+Riviera Grand Resort ,Medellin,3.5,241,70111 Tracy Bridge
+Plaza Garden Inn ,Medellin,3.0,171,Unit 2983 Box
+Gold Luxury Suites,Medellin,3.0,184,45599 Chapman Locks
+Park Lane Inn ,Barrankuilla,3.5,295,6635 Li Drive
+Clouds Retreat ,Barrankuilla,3.0,173,USCGC Myers
+Coastal Oasis Resort,Barrankuilla,3.0,130,00812 Greer Street
+Emerald Sea Hotel,Cartagena,4.5,522,8349 Jennifer Light
+Regal Palms Resort,Cartagena,3.0,132,2008 Jeremy Burgs
+Tropical Beach Retreat,Cartagena,4.5,508,7948 Phillip Highway
+Clarion Grand Suites,Buenos Aires,3.5,275,47302 Ramirez Mountains
+South Gate Inn,Buenos Aires,3.0,145,495 Adrian Mall
+Urban Sun Hotel,Buenos Aires,4.5,525,4622 Annette Walk
+La Esperanza Hotel,Cordoba,3.5,245,37067 Carter Garden
+La Casita Hotel,Cordoba,3.0,149,5447 Scott Spur
+El Rincon de Sol Hotel,Cordoba,3.5,268,0147 Kenneth Cliff
+Gran Baha Hotel,Rosario,4.0,429,458 Garza Rest
+SprezarioSuites,Rosario,4.0,368,160 Jeffrey Road
+Bellevue Grand Hotel,Rosario,4.0,383,989 Price Shoals
+Hotel Sunflower,Mendoza,4.5,535,0463 Sandra Knolls
+Royal Inn Palace,Mendoza,3.5,281,3325 Alvarez Skyway
+Olivos Grand Hotel,Mendoza,3.5,295,8018 Jessica Lane
+Hotel El Jardin ,San Miguel de Tucuman,3.5,243,4413 Alexander Shoal
+Plaza Verde Resort ,San Miguel de Tucuman,3.0,116,97105 Nathan Mountain
+Gran Amazonas Suites,San Miguel de Tucuman,3.5,250,448 Parker Island
+Luna Beach Hotel,Sidnei,4.5,519,65662 Fowler Wells
+Paradise Grand Hotel ,Sidnei,3.0,95,520 Kayla Viaduct
+Harbourside Manor,Sidnei,4.0,434,7687 Ian Ranch
+Grand Regency Resort,Melbourne,3.5,285,360 Thomas Loop
+Advenura Luxury Hotels,Melbourne,3.0,157,351 Moore Brook
+Harbourside Bliss Hotel,Melbourne,3.5,268,822 Mark Ferry
+Grand Vibrant Inn,Brisbane,4.5,537,52386 Francisco Springs
+Gulf Views Hotel,Brisbane,3.0,182,3470 Gonzalez Shoal
+Mystic Coast Resort,Brisbane,4.0,379,0652 Ballard Terrace
+Quintessential Retreat ,Perth,4.0,413,40643 Scott Hollow
+Coco Beach Resort ,Perth,3.0,158,965 Jon Corners
+Sunrise Valley Inn,Perth,4.0,363,3071 Stevens Falls
+Grand Oak,Adelaide,4.0,354,131 Eric Orchard
+Windmill Resort,Adelaide,3.5,221,30466 Webb Hollow
+Luxe Harbourside,Adelaide,4.0,368,137 Benton Manor
+Okeana Plaza ,Port Moresbi,3.5,231,511 Mcdonald Oval
+Divovi Resort ,Port Moresbi,3.0,182,386 Kayla Track
+Laguna Breeze,Port Moresbi,3.0,132,733 Daniel Crossroad
+Emerald Coast Resort ,Lae,3.5,296,394 Webb Fords
+Sea Breeze Retreat ,Lae,3.5,225,50209 Elliott Plain
+Island Paradise Inn,Lae,3.0,183,731 Brock Street
+Lotos Hotel ,Arava,3.0,139,93863 Sandra Locks
+Oaza Pomirenja ,Arava,3.0,123,Unit 4349 Box
+Sunčano Riviera,Arava,3.0,166,USS Smith
+Pacific Paradise Hotel,Mount Hagen,4.0,373,19130 Frank Springs
+Royal Dale Hotel,Mount Hagen,3.0,164,9070 Sanders Orchard
+Lagoon View Hotel,Mount Hagen,4.0,444,726 Marcus Forges
+Sunbeam Retreat ,Popondetta,3.5,298,65616 Hebert River
+Tropicana Suites ,Popondetta,3.5,276,7001 Carey Island
+Blue Lagoon Inn,Popondetta,3.0,135,6718 Christopher Crossroad
+Auckland Grand Retreat ,Auckland,4.5,557,1470 Day Spurs
+Harborview Luxor Hotel ,Auckland,3.0,117,65877 Morales Village
+Eden Manor Boutique Hotel,Auckland,4.0,353,31420 Catherine Trace
+Garden Park Hotel,Vellington,4.5,528,03179 Christina Inlet
+Uptown Manor Hotel ,Vellington,3.5,245,15328 Mary Forge
+Royal View Inn,Vellington,3.0,174,40010 Nelson Pine
+The Riverside Splendor ,Christchurch,3.5,261,02050 Bradley Ferry
+Sunny Days Resort ,Christchurch,4.0,392,Unit 6007 Box
+Grand Park View Hotel,Christchurch,4.0,436,9376 Eugene Mall
+Skyfall Inn,Manukau Citi,4.0,360,923 Schaefer Isle
+Sunrise Lodge,Manukau Citi,3.0,145,51983 Molina Village
+Kukrara Resort,Manukau Citi,3.0,174,4242 David Stream
+Grand Siesta Resort ,Severna obala,3.5,280,3255 Alicia Parkways
+Sunny Paradise Holiday Inn ,Severna obala,3.0,129,5065 Samantha Oval
+Oceanview Luxury Hotel,Severna obala,3.5,241,812 Ross Parkway

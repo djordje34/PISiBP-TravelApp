@@ -1,0 +1,74 @@
+body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: #7E57C2;
+    background-repeat: no-repeat;
+}
+
+input {
+    padding: 4px 10px 4px 10px;
+    border-radius: 0px;
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #CFD8DC;
+    color: #000;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+}
+
+input:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.hotel, .arrival, .box {
+    border: 1px solid #CFD8DC;
+    color: #9E9E9E;
+    cursor: pointer;
+}
+
+.hotel.active, .arrival.active {
+    background-color: #304FFE;
+    color: #fff !important;
+    border: 1px solid #304FFE;
+}
+
+.fa-star {
+    color: #E0E0E0;
+    cursor: pointer;
+}
+
+.fa-star.active {
+    color: #FFB300;
+}
+
+.icon-star {
+    color: #000;
+}
+
+#green {
+    color: #388E3C; 
+    background-color: #C8E6C9;
+    padding: 5px 9px;
+    cursor: pointer;
+}
+
+#blue {
+    background-color: #BBDEFB;
+    color: #1976D2;
+    padding: 5px 12px;
+    cursor: pointer;
+}

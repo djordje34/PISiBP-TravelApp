@@ -1,0 +1,21 @@
+.MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
+    .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
+        .MultiCarousel .MultiCarousel-inner .item { float: left; }
+        .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:#f1f1f1; color:#666;}
+    .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); background-color: #d05305;  border-color: #b04a01;}
+    .MultiCarousel .leftLst { left:0;background-color: #d05305 !important;  border-color: #d05305 !important; }
+    .MultiCarousel .rightLst { right:0;background-color: #d05305 !important;  border-color: #b04a01 !important; }
+    
+        .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
+
+
+.MultiCarousel .rightLst:hover{
+    background-color: #d05305;
+    border-color:#d05305
+}
+.MultiCarousel .leftLst:hover{
+    background-color: #d05305;
+    border-color:#d05305
+}
+
+
