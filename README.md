@@ -4,7 +4,7 @@ Travel Agency Website made for fictional company BARKA.
 
 Project documentation given in docs folder.
 
-3 levels of documentation; General docs with schemas providing insight on application's inner functionality, general design docs and QA/Data Science docs.
+4 levels of documentation; General docs with schemas providing insight on application's inner functionality, general design docs, docker tutorial and QA/Data Science docs.
 
 ## TLDR; 
 
